@@ -42,7 +42,17 @@ rds-2.0/
 │   ├── vitest.setup.ts             # Vitest addon setup (auto-generated)
 │   └── theme.ts                    # Custom Storybook UI theme
 ├── docs/
-│   └── PLAN.md                     # This file
+│   ├── PLAN.md                     # This file
+│   ├── scss/
+│   │   ├── README.md               # SCSS architecture overview
+│   │   ├── tokens.md               # Token reference (colors, spacing, type, breakpoints)
+│   │   ├── mixins.md               # Mixin reference with usage examples
+│   │   ├── base.md                 # Reset + global base styles explained
+│   │   └── main-scss.md            # Consumer entry point (main.scss)
+│   └── components/
+│       ├── README.md               # Component patterns & conventions
+│       ├── button.md               # Button: props, styles, stories, tests
+│       └── card.md                 # Card: props, styles, stories, tests
 ├── src/
 │   ├── index.ts                    # Main entry — re-exports all components
 │   ├── tokens/
