@@ -43,6 +43,13 @@ rds-2.0/
 │   └── theme.ts                    # Custom Storybook UI theme
 ├── docs/
 │   ├── PLAN.md                     # This file
+│   ├── tasks/
+│   │   ├── README.md               # Sprint overview & total estimates
+│   │   ├── sprint-01-project-setup.md
+│   │   ├── sprint-02-scss-foundation.md
+│   │   ├── sprint-03-storybook.md
+│   │   ├── sprint-04-components.md
+│   │   └── sprint-05-build-publish.md
 │   ├── scss/
 │   │   ├── README.md               # SCSS architecture overview
 │   │   ├── tokens.md               # Token reference (colors, spacing, type, breakpoints)
