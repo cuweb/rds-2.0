@@ -2,7 +2,7 @@
 
 Initialize Storybook 10, configure the preview with global styles, create a branded theme, and verify that all addons work with the SCSS foundation from Sprint 2.
 
-**Estimated total: ~4 hours**
+**Estimated total: ~2 hours**
 
 **Prerequisite:** Sprint 2 (SCSS foundation in place)
 
@@ -10,7 +10,7 @@ Initialize Storybook 10, configure the preview with global styles, create a bran
 
 ## Task 3.1 — Initialize Storybook 10
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Run the Storybook 10 CLI to scaffold the `.storybook/` directory and install its dependencies. Storybook 10 is ESM-only and uses feature flags during init.
@@ -41,7 +41,7 @@ After init, verify that `.storybook/main.ts` is valid ESM and the addons array i
 
 ## Task 3.2 — Configure Preview & Global Styles
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Configure `.storybook/preview.ts` to load the global SCSS styles (base reset + globals) and set default parameters for all stories.
@@ -64,7 +64,7 @@ After configuring, run `pnpm dev` (Storybook dev server) to verify it starts wit
 
 ## Task 3.3 — Create Custom Storybook Theme
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Create `.storybook/theme.ts` to brand the Storybook UI with Carleton's visual identity. Apply the theme in `preview.ts` and `manager.ts`.
@@ -85,7 +85,7 @@ Create `.storybook/theme.ts` to brand the Storybook UI with Carleton's visual id
 
 ## Task 3.4 — Verify Addons & Vitest Integration
 
-**Time estimate:** 30 minutes
+**Time estimate:** 15 minutes
 
 **Description:**
 Verify that all Storybook addons and the Vitest integration are working before moving to component development.

@@ -2,7 +2,7 @@
 
 Build the design token layer, mixin library, base styles, and consumer entry point. After this sprint, the full SCSS architecture is in place and ready for components to consume.
 
-**Estimated total: ~5 hours**
+**Estimated total: ~2.25 hours**
 
 **Prerequisite:** Sprint 1 (project tooling configured)
 
@@ -10,7 +10,7 @@ Build the design token layer, mixin library, base styles, and consumer entry poi
 
 ## Task 2.1 — Create Design Tokens
 
-**Time estimate:** 2 hours
+**Time estimate:** 1 hour
 
 **Description:**
 Create the token partials in `src/tokens/`. Tokens are SCSS variables and maps that define the visual language of the design system. These files produce **no CSS output** — they only define values for other layers to consume via `@use`.
@@ -33,7 +33,7 @@ Files to create:
 
 ## Task 2.2 — Create Mixins
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Create the mixin partials in `src/mixins/`. Mixins provide reusable style logic that consumes tokens. Like tokens, mixin files produce **no CSS output** — they define `@mixin` rules that components and base styles invoke.
@@ -55,7 +55,7 @@ Each mixin should `@use '../tokens' as tokens;` to access token values.
 
 ## Task 2.3 — Create Base Styles
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Create the base style partials in `src/base/`. Unlike tokens and mixins, base styles **produce actual CSS output** — they define the global reset and default element styles that ship with the library.
@@ -77,7 +77,7 @@ Base styles should `@use '../tokens' as tokens;` and `@use '../mixins' as mixins
 
 ## Task 2.4 — Create main.scss Entry Point
 
-**Time estimate:** 30 minutes
+**Time estimate:** 10 minutes
 
 **Description:**
 Create `src/styles/main.scss` — the consumer entry point that Vite compiles to `dist/style.css`. This file is intentionally minimal: it only aggregates the base layer. Component styles are **not** included here (they use CSS Modules and are scoped per-component).

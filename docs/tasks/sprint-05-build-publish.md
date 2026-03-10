@@ -2,7 +2,7 @@
 
 Configure the production build pipeline, verify package exports, set up CI/CD, and publish the initial version to npm. After this sprint, RDS 2.0 is a consumable package.
 
-**Estimated total: ~6.5 hours**
+**Estimated total: ~2.5 hours**
 
 **Prerequisite:** Sprint 4 (components implemented and tested)
 
@@ -10,7 +10,7 @@ Configure the production build pipeline, verify package exports, set up CI/CD, a
 
 ## Task 5.1 — Verify Vite Library Build
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 30 minutes
 
 **Description:**
 Run the Vite library build and verify the output in `dist/`. The build should produce ESM and CJS bundles, type declarations, and the compiled CSS from `main.scss`.
@@ -36,7 +36,7 @@ If the build output is incorrect, adjust `vite.config.ts` — the library mode c
 
 ## Task 5.2 — Configure Package Exports
 
-**Time estimate:** 1 hour
+**Time estimate:** 20 minutes
 
 **Description:**
 Finalize `package.json` with the correct `exports` map, `main`, `module`, `types`, `files`, and `peerDependencies` fields so consumers can import the library correctly in any module system.
@@ -77,7 +77,7 @@ Verify by running `pnpm pack` and inspecting the tarball contents — only `dist
 
 ## Task 5.3 — Test Local Consumption
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Create a temporary test project to verify the package works as a consumer would use it. This catches issues with exports, types, and CSS that automated tests won't find.
@@ -101,7 +101,7 @@ Create a temporary test project to verify the package works as a consumer would 
 
 ## Task 5.4 — Set Up GitHub Actions CI
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Create `.github/workflows/ci.yml` that runs on every pull request. The workflow validates that the codebase is clean, types check, tests pass, and both the library and Storybook build successfully.
@@ -131,7 +131,7 @@ Use pnpm store caching and Playwright browser caching to speed up runs.
 
 ## Task 5.5 — Set Up GitHub Actions Publish
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Create `.github/workflows/publish.yml` that runs when a GitHub Release is created. The workflow builds the library and publishes to npm.
@@ -159,7 +159,7 @@ Prerequisites:
 
 ## Task 5.6 — First Publish to npm
 
-**Time estimate:** 30 minutes
+**Time estimate:** 15 minutes
 
 **Description:**
 Perform the initial publish of the package to verify the full pipeline works end-to-end.

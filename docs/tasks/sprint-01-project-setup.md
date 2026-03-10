@@ -2,13 +2,13 @@
 
 Initialize the project, install dependencies, and configure all tooling. This sprint produces a fully configured development environment with no components yet.
 
-**Estimated total: ~6 hours**
+**Estimated total: ~2 hours**
 
 ---
 
 ## Task 1.1 — Initialize Project & Editor Configs
 
-**Time estimate:** 1 hour
+**Time estimate:** 15 minutes
 
 **Description:**
 Create the pnpm project, Node version file, Git ignore rules, and editor configuration. This establishes the project root and ensures consistent environments across contributors.
@@ -28,7 +28,7 @@ Create the pnpm project, Node version file, Git ignore rules, and editor configu
 
 ## Task 1.2 — Install Core Dependencies
 
-**Time estimate:** 30 minutes
+**Time estimate:** 10 minutes
 
 **Description:**
 Install React 18 (pinned for WordPress compatibility), TypeScript, and Sass as dev dependencies. React will be declared as a peer dependency for consumers.
@@ -45,7 +45,7 @@ pnpm add -D react@18 react-dom@18 @types/react@18 @types/react-dom@18 typescript
 
 ## Task 1.3 — Configure TypeScript
 
-**Time estimate:** 1 hour
+**Time estimate:** 20 minutes
 
 **Description:**
 Create two TypeScript configs: a base `tsconfig.json` for development (includes everything) and a `tsconfig.build.json` for library output (excludes tests, stories, and Storybook config).
@@ -61,7 +61,7 @@ Create two TypeScript configs: a base `tsconfig.json` for development (includes 
 
 ## Task 1.4 — Configure Vite
 
-**Time estimate:** 1 hour
+**Time estimate:** 20 minutes
 
 **Description:**
 Set up `vite.config.ts` in library mode. The config defines the build entry point, output formats (ESM + CJS), external peer dependencies, and SCSS support. SCSS works out of the box with Vite once `sass` is installed.
@@ -84,7 +84,7 @@ pnpm add -D vite @vitejs/plugin-react vite-plugin-dts
 
 ## Task 1.5 — Configure ESLint 9 + Prettier
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Set up ESLint 9 with flat config (`eslint.config.mjs`) and Prettier for formatting. This is the most complex config step since ESLint 9 uses a different config format than previous versions.
@@ -107,7 +107,7 @@ pnpm add -D eslint @eslint/js typescript-eslint eslint-plugin-react eslint-plugi
 
 ## Task 1.6 — Configure Vitest
 
-**Time estimate:** 1 hour
+**Time estimate:** 20 minutes
 
 **Description:**
 Create `vitest.config.ts` configured for browser mode using Playwright Chromium. This pairs with the Storybook Vitest addon that will be set up in Sprint 3. For now, ensure the base Vitest config works for unit tests.

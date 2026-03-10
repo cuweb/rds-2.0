@@ -2,7 +2,7 @@
 
 Implement the Button and Card components following the established patterns. Each component includes the React implementation, SCSS module, Storybook stories, and tests. This sprint validates the full component development workflow end-to-end.
 
-**Estimated total: ~7 hours**
+**Estimated total: ~3.25 hours**
 
 **Prerequisite:** Sprint 3 (Storybook running with SCSS support)
 
@@ -10,7 +10,7 @@ Implement the Button and Card components following the established patterns. Eac
 
 ## Task 4.1 — Implement Button Component
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Create `src/components/Button/` with the component implementation and scoped styles. The Button supports three variants (primary, secondary, outline), three sizes (sm, md, lg), and forwards refs.
@@ -32,7 +32,7 @@ Apply class names using a simple conditional approach (template literals or a sm
 
 ## Task 4.2 — Create Button Stories
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Create `src/components/Button/Button.stories.tsx` with stories that demonstrate every variant, size, and state. Stories serve as both documentation and test fixtures.
@@ -64,7 +64,7 @@ After creating, verify in Storybook that:
 
 ## Task 4.3 — Create Button Tests
 
-**Time estimate:** 1 hour
+**Time estimate:** 30 minutes
 
 **Description:**
 Create `src/components/Button/Button.test.tsx` with unit and interaction tests using Vitest + Testing Library.
@@ -95,7 +95,7 @@ Run tests with `pnpm test` and verify all pass.
 
 ## Task 4.4 — Implement Card Component
 
-**Time estimate:** 1.5 hours
+**Time estimate:** 45 minutes
 
 **Description:**
 Create `src/components/Card/` with the component implementation and scoped styles. The Card is a content container with an optional title and a polymorphic wrapper element (`as` prop).
@@ -118,7 +118,7 @@ The polymorphic `as` prop allows consumers to render the card as `<article>`, `<
 
 ## Task 4.5 — Create Card Stories
 
-**Time estimate:** 45 minutes
+**Time estimate:** 20 minutes
 
 **Description:**
 Create `src/components/Card/Card.stories.tsx` with stories demonstrating different content configurations and semantic wrapper elements.
@@ -142,7 +142,7 @@ Configure with `autodocs` tag and verify the polymorphic `as` prop appears in th
 
 ## Task 4.6 — Create Card Tests
 
-**Time estimate:** 45 minutes
+**Time estimate:** 20 minutes
 
 **Description:**
 Create `src/components/Card/Card.test.tsx` with unit tests using Vitest + Testing Library.
@@ -169,7 +169,7 @@ Test cases:
 
 ## Task 4.7 — Main Barrel Export & Verification
 
-**Time estimate:** 30 minutes
+**Time estimate:** 15 minutes
 
 **Description:**
 Create `src/index.ts` as the library's main entry point that re-exports all components. Then do a full verification pass.
