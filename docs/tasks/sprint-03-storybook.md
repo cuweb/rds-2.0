@@ -106,7 +106,18 @@ Verify that all Storybook addons and the Vitest integration are working before m
 
 ## Checklist
 
-- [ ] 3.1 — Initialize Storybook 10
-- [ ] 3.2 — Configure Preview & Global Styles
-- [ ] 3.3 — Create Custom Storybook Theme
-- [ ] 3.4 — Verify Addons & Vitest Integration
+- [x] 3.1 — Initialize Storybook 10
+- [x] 3.2 — Configure Preview & Global Styles
+- [x] 3.3 — Create Custom Storybook Theme
+- [x] 3.4 — Verify Addons & Vitest Integration
+
+## Notes
+
+- Storybook 10.3.5 installed with react-vite framework, docs, a11y, vitest, and chromatic addons
+- Removed CLI-generated example stories (`src/stories/`)
+- Removed duplicate `storybook` script from package.json (same as `dev`)
+- Fixed `types` condition order in package.json exports (must come before `import`/`require`)
+- Vitest config auto-updated by CLI with Storybook project + Playwright browser mode
+- `pnpm test` exits with code 1 (expected — no test files yet, resolves in Sprint 4)
+- a11y test mode set to `'error'` to fail CI on violations
+- Playwright Chromium needs to be installed: `pnpm exec playwright install chromium --with-deps`

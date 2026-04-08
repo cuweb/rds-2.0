@@ -130,9 +130,16 @@ pnpm add -D vitest @playwright/test @testing-library/react @testing-library/jest
 
 ## Checklist
 
-- [ ] 1.1 — Initialize Project & Editor Configs
-- [ ] 1.2 — Install Core Dependencies
-- [ ] 1.3 — Configure TypeScript
-- [ ] 1.4 — Configure Vite
-- [ ] 1.5 — Configure ESLint 9 + Prettier
-- [ ] 1.6 — Configure Vitest
+- [x] 1.1 — Initialize Project & Editor Configs
+- [x] 1.2 — Install Core Dependencies
+- [x] 1.3 — Configure TypeScript
+- [x] 1.4 — Configure Vite
+- [x] 1.5 — Configure ESLint 9 + Prettier
+- [x] 1.6 — Configure Vitest
+
+## Notes
+
+- Vite 8 installed (plan specified 7) — latest stable, fully compatible
+- TypeScript 6 installed (plan specified 5.x) — latest stable, works with minor DTS plugin warning
+- ESLint pinned to v9 (v10 available but React/a11y plugins don't support it yet)
+- Node 22 required — dependencies must be installed with Node 22 active (`nvm use 22`)

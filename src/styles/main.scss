@@ -1,0 +1,11 @@
+// Consumer-facing stylesheet
+// Usage: import '@carletonuniversity/rds-2.0/styles';
+
+// Normalize
+@use "modern-normalize/modern-normalize.css";
+
+// Design tokens (CSS custom properties)
+@use "../tokens.css";
+
+// Globals
+@use "../base/globals";
