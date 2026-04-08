@@ -97,7 +97,14 @@ After creating the file, verify it compiles by running a quick Sass build or Vit
 
 ## Checklist
 
-- [ ] 2.1 — Create Design Tokens
-- [ ] 2.2 — Create Mixins
-- [ ] 2.3 — Create Base Styles
-- [ ] 2.4 — Create main.scss Entry Point
+- [x] 2.1 — Create Design Tokens
+- [x] 2.2 — Create Mixins
+- [x] 2.3 — Create Base Styles
+- [x] 2.4 — Create main.scss Entry Point
+
+## Notes
+
+- Added `src/scss.d.ts` for TypeScript SCSS module declarations (not in original plan)
+- Added `cssFileName: 'style'` to Vite config so output is `dist/style.css` (matches package.json exports)
+- Added `import './styles/main.scss'` to `src/index.ts` so Vite extracts the CSS during build
+- Build output: `dist/style.css` (0.94 kB) contains reset + globals with token values compiled in

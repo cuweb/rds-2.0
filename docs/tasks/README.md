@@ -8,8 +8,8 @@ Ordered sprint breakdown for building RDS 2.0. Sprints are sequential — each b
 
 | Sprint | Focus              | Est. Time | Status      |
 | ------ | ------------------ | --------- | ----------- |
-| 1      | Project Setup      | ~2h       | Not Started |
-| 2      | SCSS Foundation    | ~2.25h    | Not Started |
+| 1      | Project Setup      | ~2h       | Complete    |
+| 2      | SCSS Foundation    | ~2.25h    | Complete    |
 | 3      | Storybook Setup    | ~2h       | Not Started |
 | 4      | Starter Components | ~3.25h    | Not Started |
 | 5      | Build & Publish    | ~2.5h     | Not Started |
