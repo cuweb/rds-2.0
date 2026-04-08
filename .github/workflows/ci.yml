@@ -24,3 +24,5 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm build-storybook
+      - run: pnpm exec playwright install chromium --with-deps
+      - run: pnpm test:storybook

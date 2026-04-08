@@ -16,6 +16,11 @@ const preview: Preview = {
     a11y: {
       test: 'error',
     },
+    options: {
+      storySort: {
+        order: ['Welcome', 'Components', 'Layouts', '*'],
+      },
+    },
   },
 };
 
