@@ -18,7 +18,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Welcome', 'Components', 'Layouts', '*'],
+        order: ['Welcome', 'Stylebook', 'Components', 'Layouts', '*'],
       },
     },
   },

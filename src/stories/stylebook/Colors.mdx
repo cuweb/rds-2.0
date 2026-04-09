@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorSwatches } from './components/ColorSwatches';
+
+<Meta title="Stylebook/Colors" />
+
+# Colors
+
+Color tokens are defined in `c2b.config.json` and generate CSS custom properties
+prefixed with `--rds-color-*`. Use these tokens for all color references to
+maintain consistency across the design system.
+
+## Brand Colors
+
+Primary and secondary palettes including hover states.
+
+<ColorSwatches filter="brand" />
+
+## Semantic Colors
+
+Used for feedback states — success, warning, error, and info.
+
+<ColorSwatches filter="semantic" />
+
+## Neutrals
+
+Background and text colors.
+
+<ColorSwatches filter="neutral" />
+
+## Usage
+
+```css
+.my-element {
+  color: var(--rds-color-primary);
+  background: var(--rds-color-off-white);
+}
+```
