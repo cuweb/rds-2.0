@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const Welcome = () => (
   <div style={{ maxWidth: 600 }}>
-    <h1>RDS 2.0</h1>
+    <h1>C2B Components</h1>
     <p>Carleton University Design System &amp; React Component Library.</p>
     <h2>Getting Started</h2>
     <p>Components will appear in the sidebar as they are built out.</p>
     <h3>Design Tokens</h3>
     <p>
       CSS custom properties are available globally via{' '}
-      <code>{"import '@carletonuniversity/rds-2.0/styles'"}</code>
+      <code>{"import '@troychaplin/c2b-storybook/styles'"}</code>
     </p>
     <div
       style={{
