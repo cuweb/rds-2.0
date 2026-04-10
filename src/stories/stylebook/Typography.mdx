@@ -8,18 +8,17 @@ import { HeadingScale, BodySizes, FontFamilies } from './components/TypographySc
 Typography tokens from `c2b.config.json` covering font families, the heading
 scale, and responsive body text sizes.
 
-## Font Families
+<FontFamilies
+  title="Font Families"
+  description="Available font family tokens with a sample paragraph in each."
+/>
 
-<FontFamilies />
+<HeadingScale
+  title="Heading Scale"
+  description="Heading sizes defined in baseStyles."
+/>
 
-## Heading Scale
-
-Headings use the primary color with sizes defined in `baseStyles`.
-
-<HeadingScale />
-
-## Body Text Sizes
-
-Body font sizes use responsive `clamp()` values that scale between a min and max.
-
-<BodySizes />
+<BodySizes
+  title="Body Text Sizes"
+  description="Responsive font sizes using clamp() values that scale between a min and max."
+/>

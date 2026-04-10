@@ -1,35 +1,38 @@
 import config from '../../../../c2b.config.json';
+import '../stylebook.css';
 
 const prefix = config.prefix;
 const radii = config.tokens.radius;
 
-export function BorderRadiusSamples() {
+type BorderRadiusSamplesProps = {
+  title?: string;
+  description?: string;
+};
+
+export function BorderRadiusSamples({ title, description }: BorderRadiusSamplesProps) {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', marginTop: '1rem' }}>
-      {Object.entries(radii).map(([name, value]) => (
-        <div
-          key={name}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.75rem',
-          }}
-        >
-          <div
-            style={{
-              width: 100,
-              height: 100,
-              border: '1px solid #191919',
-              borderRadius: value,
-            }}
-          />
-          <strong style={{ fontSize: '0.875rem' }}>{name}</strong>
-          <code style={{ fontSize: '0.75rem', color: '#666' }}>
-            var(--{prefix}--radius-{name}) · {value}
-          </code>
-        </div>
-      ))}
-    </div>
+    <section className="sb-section">
+      {(title || description) && (
+        <header className="sb-header">
+          {title && <h2>{title}</h2>}
+          {description && <p>{description}</p>}
+        </header>
+      )}
+      <div className="sb-grid">
+        {Object.entries(radii).map(([name, value]) => (
+          <div key={name} className="sb-swatch">
+            <div
+              className="sb-swatch__color"
+              style={{ backgroundColor: 'transparent', border: '1px solid #191919', borderRadius: value }}
+            />
+            <strong className="sb-swatch__name">{name}</strong>
+            <code className="sb-swatch__var">
+              var(--{prefix}--radius-{name})
+            </code>
+            <span className="sb-swatch__value">{value}</span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

@@ -1,34 +1,37 @@
 import config from '../../../../c2b.config.json';
+import '../stylebook.css';
 
 const prefix = config.prefix;
 const shadows = config.tokens.shadow;
 
-export function ShadowSamples() {
+type ShadowSamplesProps = {
+  title?: string;
+  description?: string;
+};
+
+export function ShadowSamples({ title, description }: ShadowSamplesProps) {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', marginTop: '1rem' }}>
-      {Object.entries(shadows).map(([name, value]) => (
-        <div
-          key={name}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.75rem',
-          }}
-        >
-          <div
-            style={{
-              width: 120,
-              height: 120,
-              backgroundColor: '#f0f0f0',
-              borderRadius: 8,
-              boxShadow: value,
-            }}
-          />
-          <strong style={{ fontSize: '0.875rem' }}>{name}</strong>
-          <code style={{ fontSize: '0.75rem', color: '#666' }}>var(--{prefix}--shadow-{name})</code>
-        </div>
-      ))}
-    </div>
+    <section className="sb-section">
+      {(title || description) && (
+        <header className="sb-header">
+          {title && <h2>{title}</h2>}
+          {description && <p>{description}</p>}
+        </header>
+      )}
+      <div className="sb-grid">
+        {Object.entries(shadows).map(([name, value]) => (
+          <div key={name} className="sb-swatch">
+            <div
+              className="sb-swatch__color"
+              style={{ backgroundColor: '#f0f0f0', boxShadow: value }}
+            />
+            <strong className="sb-swatch__name">{name}</strong>
+            <code className="sb-swatch__var">
+              var(--{prefix}--shadow-{name})
+            </code>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
