@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks';
-import { SpacingScale } from './components/SpacingScale';
+import { SpacingScale, PaddingScale } from './components/SpacingScale';
 
 <Meta title="Stylebook/Spacing" />
 
@@ -8,4 +8,12 @@ import { SpacingScale } from './components/SpacingScale';
 Seven spacing levels from `2x-small` to `2x-large`. Several use viewport-relative
 `min()` values for fluid scaling.
 
-<SpacingScale />
+<SpacingScale
+  title="Gap Scale"
+  description="Two blocks separated by a gap equal to the token value — how spacing reads when used as flex/grid gap."
+/>
+
+<PaddingScale
+  title="Padding Scale"
+  description="A content block wrapped in padding equal to the token value — how spacing reads when used inside a container."
+/>
