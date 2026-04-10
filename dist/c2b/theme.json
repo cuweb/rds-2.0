@@ -9,12 +9,17 @@
       "palette": [
         {
           "slug": "primary",
-          "color": "#0073aa",
+          "color": "#e91c24",
           "name": "Primary"
         },
         {
+          "slug": "primary-dark",
+          "color": "#a21218",
+          "name": "Primary Dark"
+        },
+        {
           "slug": "secondary",
-          "color": "#23282d",
+          "color": "#426587",
           "name": "Secondary"
         },
         {

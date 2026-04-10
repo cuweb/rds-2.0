@@ -20,13 +20,13 @@ export function BorderRadiusSamples() {
             style={{
               width: 100,
               height: 100,
-              backgroundColor: '#0073aa',
+              border: '1px solid #191919',
               borderRadius: value,
             }}
           />
           <strong style={{ fontSize: '0.875rem' }}>{name}</strong>
           <code style={{ fontSize: '0.75rem', color: '#666' }}>
-            var(--{prefix}-radius-{name}) · {value}
+            var(--{prefix}--radius-{name}) · {value}
           </code>
         </div>
       ))}

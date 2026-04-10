@@ -14,16 +14,23 @@
         },
 
         "color": {
-            "primary": "#0073aa",
-            "primary-hover": { "value": "#005a87", "cssOnly": true },
-            "secondary": "#23282d",
-            "secondary-hover": { "value": "#1a1e21", "cssOnly": true },
+            "primary": "#e91c24",
+            "primary-dark": "#a21218",
+            "primary-faint": { "value": "#fff1f2", "cssOnly": true },
+            "secondary": "#426587",
+            "secondary-dark": { "value": "#2c3c4e", "cssOnly": true },
             "success": "#00a32a",
             "warning": "#dba617",
-            "error": "#d63638",
+            "error": "#e91c24",
             "info": "#72aee6",
-            "off-white": "#f8f8f8",
-            "text-black": "#191919"
+            "black": "#191919",
+            "grey-dark": "#434343",
+            "grey": "#767676",
+            "grey-light": "#d6d6d6",
+            "grey-lighter": "#e6e6e6",
+            "grey-pale": "#f5f5f5",
+            "grey-faint": "#fafafa",
+            "white": "#ffffff"
         },
 
         "gradient": {

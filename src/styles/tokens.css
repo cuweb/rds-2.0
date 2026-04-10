@@ -2,10 +2,11 @@
 
 :root {
   /* Colors */
-  --rds--color-primary: #0073aa;
-  --rds--color-primary-hover: #005a87;
-  --rds--color-secondary: #23282d;
-  --rds--color-secondary-hover: #1a1e21;
+  --rds--color-primary: #e91c24;
+  --rds--color-primary-dark: #a21218;
+  --rds--color-primary-faint: #fff1f2;
+  --rds--color-secondary: #426587;
+  --rds--color-secondary-dark: #2c3c4e;
   --rds--color-success: #00a32a;
   --rds--color-warning: #dba617;
   --rds--color-error: #d63638;

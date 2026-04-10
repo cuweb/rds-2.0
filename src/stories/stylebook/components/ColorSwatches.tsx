@@ -1,68 +1,58 @@
 import config from '../../../../c2b.config.json';
+import '../stylebook.css';
 
 const prefix = config.prefix;
 const colors = config.tokens.color;
 
 type ColorEntry = { name: string; hex: string; cssVar: string; cssOnly?: boolean };
+type ColorFilter = 'primary' | 'secondary' | 'semantic' | 'neutral';
+
+// Semantic colors have no natural name prefix, so they must be listed explicitly.
+const SEMANTIC_NAMES = ['success', 'warning', 'error', 'info'] as const;
 
 function parseColors(): ColorEntry[] {
   return Object.entries(colors).map(([name, value]) => ({
     name,
     hex: typeof value === 'string' ? value : value.value,
-    cssVar: `--${prefix}-color-${name}`,
+    cssVar: `--${prefix}--color-${name}`,
     cssOnly: typeof value === 'object' && 'cssOnly' in value ? value.cssOnly : false,
   }));
 }
 
-export function ColorSwatches({ filter }: { filter?: 'brand' | 'semantic' | 'neutral' }) {
-  let entries = parseColors();
+function categoryOf(name: string): ColorFilter {
+  if (name === 'primary' || name.startsWith('primary-')) return 'primary';
+  if (name === 'secondary' || name.startsWith('secondary-')) return 'secondary';
+  if ((SEMANTIC_NAMES as readonly string[]).includes(name)) return 'semantic';
+  return 'neutral';
+}
 
-  if (filter === 'brand') {
-    entries = entries.filter((e) => e.name.startsWith('primary') || e.name.startsWith('secondary'));
-  } else if (filter === 'semantic') {
-    entries = entries.filter((e) =>
-      ['success', 'warning', 'error', 'info'].includes(e.name),
-    );
-  } else if (filter === 'neutral') {
-    entries = entries.filter(
-      (e) => !['primary', 'primary-hover', 'secondary', 'secondary-hover', 'success', 'warning', 'error', 'info'].includes(e.name),
-    );
-  }
+type ColorSwatchesProps = {
+  filter?: ColorFilter;
+  title?: string;
+  description?: string;
+};
+
+export function ColorSwatches({ filter, title, description }: ColorSwatchesProps) {
+  const entries = parseColors().filter((e) => !filter || categoryOf(e.name) === filter);
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '1rem' }}>
-      {entries.map((entry) => (
-        <div
-          key={entry.name}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: 130,
-            gap: '0.5rem',
-          }}
-        >
-          <div
-            style={{
-              width: 80,
-              height: 80,
-              backgroundColor: entry.hex,
-              borderRadius: 8,
-              border: '1px solid rgba(0,0,0,0.1)',
-            }}
-          />
-          <strong style={{ fontSize: '0.875rem' }}>{entry.name}</strong>
-          <code style={{ fontSize: '0.75rem', color: '#666', textAlign: 'center' }}>
-            var({entry.cssVar})
-          </code>
-          <span style={{ fontSize: '0.75rem', color: '#999' }}>{entry.hex}</span>
-          {entry.cssOnly && (
-            <span style={{ fontSize: '0.625rem', color: '#aaa', fontStyle: 'italic' }}>
-              CSS only
-            </span>
-          )}
-        </div>
-      ))}
-    </div>
+    <section className="sb-section">
+      {(title || description) && (
+        <header className="sb-header">
+          {title && <h2>{title}</h2>}
+          {description && <p>{description}</p>}
+        </header>
+      )}
+      <div className="sb-grid">
+        {entries.map((entry) => (
+          <div key={entry.name} className="sb-swatch">
+            <div className="sb-swatch__color" style={{ backgroundColor: entry.hex }} />
+            <strong className="sb-swatch__name">{entry.name}</strong>
+            <code className="sb-swatch__var">var({entry.cssVar})</code>
+            <span className="sb-swatch__value">{entry.hex}</span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

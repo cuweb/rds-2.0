@@ -1,0 +1,87 @@
+/*
+ * Stylebook-only styles.
+ *
+ * IMPORTANT: This file is imported from components under src/stories/stylebook/
+ * which are only consumed by .mdx story files — NOT from src/index.ts.
+ * As a result, these styles are not included in the published library bundle.
+ *
+ * Selectors are doubled up (.sb-section.sb-section) to beat Storybook's
+ * docs-theme specificity without using !important.
+ */
+
+.sb-section {
+  margin: var( --rds--spacing-x-large) 0;
+}
+
+.sb-section .sb-header {
+  margin-bottom: var(--rds--spacing-medium);
+}
+
+.sb-section .sb-header h2 {
+  margin: 0;
+}
+
+.sb-section .sb-header p {
+  margin: 0;
+  margin-top: var(--rds--spacing-x-small);
+  color: #555;
+}
+
+.sb-section .sb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--rds--spacing-medium);
+}
+
+.sb-section .sb-grid--wide {
+  gap: var(--rds--spacing-large);
+}
+
+.sb-section .sb-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 260px; */
+  gap: 0.5rem;
+}
+
+.sb-section .sb-swatch__color {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sb-section .sb-swatch__name {
+  font-size: 0.875rem;
+}
+
+.sb-section .sb-swatch__var {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+}
+
+.sb-section .sb-swatch__value {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.sb-section .sb-swatch__flag {
+  font-size: 0.625rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.sb-section .sb-gradient {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 240px;
+}
+
+.sb-section .sb-gradient__bar {
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

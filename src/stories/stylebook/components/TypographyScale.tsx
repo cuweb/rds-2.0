@@ -20,7 +20,7 @@ export function HeadingScale() {
                 fontSize: styles.fontSize,
                 fontWeight: styles.fontWeight,
                 fontStyle: 'fontStyle' in styles ? styles.fontStyle : undefined,
-                color: `var(--${prefix}-color-${baseStyles.heading.color})`,
+                color: `var(--${prefix}--color-${baseStyles.heading.color})`,
                 lineHeight: 1.2,
               }}
             >
@@ -47,7 +47,7 @@ export function BodySizes() {
               {name} — The quick brown fox jumps over the lazy dog
             </p>
             <code style={{ fontSize: '0.75rem', color: '#666' }}>
-              var(--{prefix}-font-size-{name}) · {size.min} → {size.max}
+              var(--{prefix}--font-size-{name}) · {size.min} → {size.max}
             </code>
           </div>
         );
@@ -67,7 +67,7 @@ export function FontFamilies() {
               {name} — The quick brown fox jumps over the lazy dog
             </p>
             <code style={{ fontSize: '0.75rem', color: '#666' }}>
-              var(--{prefix}-font-family-{name}) · {family}
+              var(--{prefix}--font-family-{name}) · {family}
             </code>
           </div>
         );

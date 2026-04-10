@@ -19,7 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "npm run c2b && storybook dev -p 6006 --no-open",
+    "dev": "npm run c2b && storybook dev -p 6006",
     "build": "vite build && npm run c2b",
     "build-storybook": "storybook build",
     "c2b": "c2b generate",

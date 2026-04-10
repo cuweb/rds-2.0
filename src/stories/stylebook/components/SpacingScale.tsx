@@ -21,7 +21,7 @@ export function SpacingScale() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <strong style={{ fontSize: '0.875rem' }}>{name}</strong>
             <code style={{ fontSize: '0.75rem', color: '#666' }}>
-              var(--{prefix}-spacing-{def.slug}) · {def.value}
+              var(--{prefix}--spacing-{name}) · {def.value}
             </code>
           </div>
         </div>
