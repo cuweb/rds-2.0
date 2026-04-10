@@ -7,20 +7,20 @@ html {
 }
 
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-base);
-  color: var(--color-neutral-900);
-  background-color: var(--color-white);
+  font-family: var(--rds--font-family-inter);
+  font-size: var(--rds--font-size-medium);
+  font-weight: var(--rds--font-weight-normal);
+  line-height: 1.6;
+  color: var(--rds--color-text-black);
+  background-color: var(--rds--color-off-white);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--rds--color-primary);
   outline-offset: 2px;
 }
 
 ::selection {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--rds--color-primary);
+  color: var(--rds--color-off-white);
 }

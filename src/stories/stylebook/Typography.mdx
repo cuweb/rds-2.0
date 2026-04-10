@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { HeadingScale, BodySizes, FontFamilies } from './components/TypographyScale';
+
+<Meta title="Stylebook/Typography" />
+
+# Typography
+
+Typography tokens from `c2b.config.json` covering font families, the heading
+scale, and responsive body text sizes.
+
+<FontFamilies
+  title="Font Families"
+  description="Available font family tokens with a sample paragraph in each."
+/>
+
+<HeadingScale
+  title="Heading Scale"
+  description="Heading sizes defined in baseStyles."
+/>
+
+<BodySizes
+  title="Body Text Sizes"
+  description="Responsive font sizes using clamp() values that scale between a min and max."
+/>

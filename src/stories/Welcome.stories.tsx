@@ -23,32 +23,32 @@ const Welcome = () => (
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--color-primary)',
-          borderRadius: 'var(--radius-md)',
+          backgroundColor: 'var(--rds--color-primary)',
+          borderRadius: 'var(--rds--radius-md)',
         }}
       />
       <div
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--color-primary-dark)',
-          borderRadius: 'var(--radius-md)',
+          backgroundColor: 'var(--rds--color-primary-dark)',
+          borderRadius: 'var(--rds--radius-md)',
         }}
       />
       <div
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--color-secondary)',
-          borderRadius: 'var(--radius-md)',
+          backgroundColor: 'var(--rds--color-secondary)',
+          borderRadius: 'var(--rds--radius-md)',
         }}
       />
       <div
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--color-secondary-dark)',
-          borderRadius: 'var(--radius-md)',
+          backgroundColor: 'var(--rds--color-secondary-dark)',
+          borderRadius: 'var(--rds--radius-md)',
         }}
       />
     </div>
