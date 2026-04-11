@@ -5,14 +5,18 @@
   --rds--color-primary: #e91c24;
   --rds--color-primary-dark: #a21218;
   --rds--color-primary-faint: #fff1f2;
-  --rds--color-secondary: #426587;
-  --rds--color-secondary-dark: #2c3c4e;
   --rds--color-success: #00a32a;
   --rds--color-warning: #dba617;
-  --rds--color-error: #d63638;
+  --rds--color-error: #e91c24;
   --rds--color-info: #72aee6;
-  --rds--color-off-white: #f8f8f8;
-  --rds--color-text-black: #191919;
+  --rds--color-black: #191919;
+  --rds--color-grey-dark: #434343;
+  --rds--color-grey: #767676;
+  --rds--color-grey-light: #d6d6d6;
+  --rds--color-grey-lighter: #e6e6e6;
+  --rds--color-grey-pale: #f5f5f5;
+  --rds--color-grey-faint: #fafafa;
+  --rds--color-white: #ffffff;
 
   /* Gradients */
   --rds--gradient-fade-out: linear-gradient(135deg,rgb(134,255,223) 0%,rgb(143,51,228) 100%);
@@ -32,10 +36,16 @@
   --rds--font-family-system: -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Font Sizes */
+  --rds--font-size-x-small: 0.75em;
   --rds--font-size-small: clamp(0.875rem, 0.875rem + ((0.125) * ((100vw - 320px) / 1280)), 1rem);
   --rds--font-size-medium: clamp(1rem, 1rem + ((0.125) * ((100vw - 320px) / 1280)), 1.125rem);
   --rds--font-size-large: clamp(1.125rem, 1.125rem + ((0.125) * ((100vw - 320px) / 1280)), 1.25rem);
   --rds--font-size-x-large: clamp(1.25rem, 1.25rem + ((0.25) * ((100vw - 320px) / 1280)), 1.5rem);
+  --rds--font-size-2x-large: clamp(1.5rem, 1.5rem + ((0.375) * ((100vw - 320px) / 1280)), 1.875rem);
+  --rds--font-size-3x-large: clamp(1.875rem, 1.875rem + ((0.375) * ((100vw - 320px) / 1280)), 2.25rem);
+  --rds--font-size-4x-large: clamp(2.25rem, 2.25rem + ((0.75) * ((100vw - 320px) / 1280)), 3rem);
+  --rds--font-size-5x-large: clamp(2.75rem, 2.75rem + ((1) * ((100vw - 320px) / 1280)), 3.75rem);
+  --rds--font-size-6x-large: clamp(3.25rem, 3.25rem + ((1.25) * ((100vw - 320px) / 1280)), 4.5rem);
 
   /* Shadows */
   --rds--shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
@@ -45,8 +55,15 @@
   --rds--shadow-crisp: 6px 6px 0px rgb(0, 0, 0);
 
   /* Font Weights */
+  --rds--font-weight-light: 300;
   --rds--font-weight-normal: 400;
+  --rds--font-weight-medium: 500;
   --rds--font-weight-bold: 700;
+
+  /* Line Heights */
+  --rds--line-height-tight: 1.2;
+  --rds--line-height-normal: 1.6;
+  --rds--line-height-loose: 1.8;
 
   /* Border Radius */
   --rds--radius-sm: 2px;
@@ -54,6 +71,6 @@
   --rds--radius-lg: 8px;
 
   /* Layout */
-  --rds--layout-content-size: 768px;
+  --rds--layout-content-size: 1024px;
   --rds--layout-wide-size: 1280px;
 }

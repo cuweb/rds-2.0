@@ -10,9 +10,9 @@ body {
   font-family: var(--rds--font-family-inter);
   font-size: var(--rds--font-size-medium);
   font-weight: var(--rds--font-weight-normal);
-  line-height: 1.6;
-  color: var(--rds--color-text-black);
-  background-color: var(--rds--color-off-white);
+  line-height: var(--rds--line-height-normal);
+  color: var(--rds--color-black);
+  background-color: var(--rds--color-grey-faint);
 }
 
 :focus-visible {
@@ -22,5 +22,5 @@ body {
 
 ::selection {
   background-color: var(--rds--color-primary);
-  color: var(--rds--color-off-white);
+  color: var(--rds--color-white);
 }

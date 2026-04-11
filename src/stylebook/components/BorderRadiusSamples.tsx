@@ -1,15 +1,15 @@
-import config from '../../../../c2b.config.json';
+import config from '../../../c2b.config.json';
 import '../stylebook.css';
 
 const prefix = config.prefix;
-const shadows = config.tokens.shadow;
+const radii = config.tokens.radius;
 
-type ShadowSamplesProps = {
+type BorderRadiusSamplesProps = {
   title?: string;
   description?: string;
 };
 
-export function ShadowSamples({ title, description }: ShadowSamplesProps) {
+export function BorderRadiusSamples({ title, description }: BorderRadiusSamplesProps) {
   return (
     <section className="sb-section">
       {(title || description) && (
@@ -19,16 +19,17 @@ export function ShadowSamples({ title, description }: ShadowSamplesProps) {
         </header>
       )}
       <div className="sb-grid">
-        {Object.entries(shadows).map(([name, value]) => (
+        {Object.entries(radii).map(([name, value]) => (
           <div key={name} className="sb-swatch">
             <div
               className="sb-swatch__color"
-              style={{ backgroundColor: '#f0f0f0', boxShadow: value }}
+              style={{ backgroundColor: 'transparent', border: '1px solid #191919', borderRadius: value }}
             />
             <strong className="sb-swatch__name">{name}</strong>
             <code className="sb-swatch__var">
-              var(--{prefix}--shadow-{name})
+              var(--{prefix}--radius-{name})
             </code>
+            <span className="sb-swatch__value">{value}</span>
           </div>
         ))}
       </div>
