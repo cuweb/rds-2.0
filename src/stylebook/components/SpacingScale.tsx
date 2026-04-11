@@ -1,4 +1,4 @@
-import config from '../../../../c2b.config.json';
+import config from '../../../c2b.config.json';
 import '../stylebook.css';
 
 const prefix = config.prefix;

@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { ColorSwatches } from './components/ColorSwatches';
-import { GradientSwatches } from './components/GradientSwatches';
 
 <Meta title="Stylebook/Colors" />
 
@@ -17,9 +16,9 @@ maintain consistency across the design system.
 />
 
 <ColorSwatches
-  filter="secondary"
-  title="Secondary Colors"
-  description="The secondary palette and its variants."
+  filter="neutral"
+  title="Neutrals"
+  description="Background and text colors."
 />
 
 <ColorSwatches
@@ -29,12 +28,7 @@ maintain consistency across the design system.
 />
 
 <ColorSwatches
-  filter="neutral"
-  title="Neutrals"
-  description="Background and text colors."
-/>
-
-<GradientSwatches
+  filter="gradient"
   title="Gradients"
   description="Gradient tokens defined alongside colors. Each generates a CSS custom property using its slug."
 />
@@ -43,7 +37,7 @@ maintain consistency across the design system.
 
 ```css
 .my-element {
-  color: var(--rds-color-primary);
-  background: var(--rds-color-off-white);
+  color: var(--rds--color-primary);
+  background: var(--rds--color-grey-faint);
 }
 ```

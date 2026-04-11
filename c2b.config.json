@@ -2,14 +2,14 @@
     "prefix": "rds",
 
     "output": {
-        "tokensPath": "src/styles/tokens.css",
-        "wpDir": "dist/c2b",
+        "tokensPath": "src/styles/automated/tokens.css",
+        "wpDir": "dist/cutheme",
         "wpThemeable": false
     },
 
     "tokens": {
         "layout": {
-            "contentSize": "768px",
+            "contentSize": "1024px",
             "wideSize": "1280px"
         },
 
@@ -17,12 +17,10 @@
             "primary": "#e91c24",
             "primary-dark": "#a21218",
             "primary-faint": { "value": "#fff1f2", "cssOnly": true },
-            "secondary": "#426587",
-            "secondary-dark": { "value": "#2c3c4e", "cssOnly": true },
-            "success": "#00a32a",
-            "warning": "#dba617",
-            "error": "#e91c24",
-            "info": "#72aee6",
+            "success": { "value": "#00a32a", "cssOnly": true },
+            "warning": { "value": "#dba617", "cssOnly": true },
+            "error": { "value": "#e91c24", "cssOnly": true },
+            "info": { "value": "#72aee6", "cssOnly": true },
             "black": "#191919",
             "grey-dark": "#434343",
             "grey": "#767676",
@@ -55,10 +53,16 @@
         },
 
         "fontSize": {
-            "small":   { "min": "0.875rem", "max": "1rem" },
-            "medium":  { "min": "1rem", "max": "1.125rem" },
-            "large":   { "min": "1.125rem", "max": "1.25rem" },
-            "x-large": { "min": "1.25rem", "max": "1.5rem" }
+            "x-small":    { "min": "0.65rem", "max": "0.75rem", "cssOnly": true },
+            "small":    { "min": "0.875rem", "max": "1rem" },
+            "medium":   { "min": "1rem",     "max": "1.125rem" },
+            "large":    { "min": "1.125rem", "max": "1.25rem" },
+            "x-large":  { "min": "1.25rem",  "max": "1.5rem" },
+            "2x-large": { "value": "1.875rem", "fluid": { "min": "1.5rem", "max": "1.875rem" }, "cssOnly": true },
+            "3x-large": { "value": "2.25rem",  "fluid": { "min": "1.875rem", "max": "2.25rem" }, "cssOnly": true },
+            "4x-large": { "value": "3rem",     "fluid": { "min": "2.25rem", "max": "3rem" }, "cssOnly": true },
+            "5x-large": { "value": "3.75rem",  "fluid": { "min": "2.75rem", "max": "3.75rem" }, "cssOnly": true },
+            "6x-large": { "value": "4.5rem",   "fluid": { "min": "3.25rem", "max": "4.5rem" }, "cssOnly": true }
         },
 
         "spacing": {
@@ -80,8 +84,16 @@
         },
 
         "fontWeight": {
+            "light":  "300",
             "normal": "400",
-            "bold": "700"
+            "medium": "500",
+            "bold":   "700"
+        },
+
+        "lineHeight": {
+            "tight":  "1.2",
+            "normal": "1.6",
+            "loose":  "1.8"
         },
 
         "radius": {
@@ -95,23 +107,23 @@
         "body": {
             "fontFamily": "inter",
             "fontSize": "medium",
-            "fontWeight": "400",
-            "lineHeight": "1.6",
-            "color": "text-black",
-            "background": "off-white"
+            "fontWeight": "normal",
+            "lineHeight": "normal",
+            "color": "black",
+            "background": "grey-faint"
         },
         "heading": {
             "fontFamily": "inter",
             "color": "primary"
         },
-        "h1": { "fontSize": "4.5rem", "fontWeight": "500" },
-        "h2": { "fontSize": "3rem", "fontWeight": "500" },
-        "h3": { "fontSize": "2.5rem", "fontWeight": "500" },
-        "h4": { "fontSize": "2rem", "fontWeight": "500" },
-        "h5": { "fontSize": "1.5rem", "fontWeight": "500" },
-        "h6": { "fontSize": "1.45rem", "fontWeight": "500", "fontStyle": "italic" },
-        "caption": { "fontSize": "small", "fontStyle": "italic", "fontWeight": "300", "color": "warning" },
-        "button": { "color": "off-white", "background": "primary" },
+        "h1": { "fontSize": "6x-large", "fontWeight": "medium" },
+        "h2": { "fontSize": "5x-large", "fontWeight": "medium" },
+        "h3": { "fontSize": "4x-large", "fontWeight": "medium" },
+        "h4": { "fontSize": "3x-large", "fontWeight": "medium" },
+        "h5": { "fontSize": "2x-large", "fontWeight": "medium" },
+        "h6": { "fontSize": "x-large", "fontWeight": "medium", "fontStyle": "italic" },
+        "caption": { "fontSize": "small", "fontStyle": "italic", "fontWeight": "light", "color": "warning" },
+        "button": { "color": "white", "background": "primary" },
         "link": { "color": "primary", "hoverColor": "error" },
         "spacing": {
             "blockGap": "medium",

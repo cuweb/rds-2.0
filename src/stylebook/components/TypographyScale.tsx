@@ -1,4 +1,4 @@
-import config from '../../../../c2b.config.json';
+import config from '../../../c2b.config.json';
 import '../stylebook.css';
 
 const prefix = config.prefix;
@@ -15,6 +15,16 @@ type SectionProps = {
   title?: string;
   description?: string;
 };
+
+// fontSize tokens have two possible shapes:
+//   { min, max }                                           — simple clamp
+//   { value, fluid: { min, max }, cssOnly }                — explicit value + fluid range
+// This normalizes both into a common { min, max } pair for display.
+type FontSizeValue = { min: string; max: string } | { value: string; fluid: { min: string; max: string }; cssOnly?: boolean };
+
+function getFluidRange(size: FontSizeValue): { min: string; max: string } {
+  return 'fluid' in size ? size.fluid : { min: size.min, max: size.max };
+}
 
 function SectionWrapper({
   title,
@@ -45,10 +55,10 @@ export function HeadingScale({ title, description }: SectionProps) {
             <div
               className="sb-stack__sample"
               style={{
-                fontSize: styles.fontSize,
-                fontWeight: styles.fontWeight,
+                fontSize: `var(--${prefix}--font-size-${styles.fontSize})`,
+                fontWeight: `var(--${prefix}--font-weight-${styles.fontWeight})`,
                 fontStyle: 'fontStyle' in styles ? styles.fontStyle : undefined,
-                lineHeight: 1.2,
+                lineHeight: `var(--${prefix}--line-height-tight)`,
               }}
             >
               Heading {level.slice(1)}
@@ -66,15 +76,21 @@ export function HeadingScale({ title, description }: SectionProps) {
 export function BodySizes({ title, description }: SectionProps) {
   return (
     <SectionWrapper title={title} description={description}>
-      {Object.entries(fontSizes).map(([name, size]) => {
-        const clamp = `clamp(${size.min}, 2vw, ${size.max})`;
+      {(Object.entries(fontSizes) as [string, FontSizeValue][]).map(([name, size]) => {
+        const { min, max } = getFluidRange(size);
         return (
           <div key={name} className="sb-stack__item">
-            <p className="sb-stack__sample" style={{ fontSize: clamp, lineHeight: 1.6 }}>
+            <p
+              className="sb-stack__sample"
+              style={{
+                fontSize: `var(--${prefix}--font-size-${name})`,
+                lineHeight: `var(--${prefix}--line-height-normal)`,
+              }}
+            >
               {SAMPLE_PARAGRAPH}
             </p>
             <code className="sb-stack__meta">
-              var(--{prefix}--font-size-{name}) · {size.min} → {size.max}
+              var(--{prefix}--font-size-{name}) · {min} → {max}
             </code>
           </div>
         );

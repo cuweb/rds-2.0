@@ -39,7 +39,7 @@ const Welcome = () => (
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--rds--color-secondary)',
+          backgroundColor: 'var(--rds--color-primary-faint)',
           borderRadius: 'var(--rds--radius-md)',
         }}
       />
@@ -47,7 +47,7 @@ const Welcome = () => (
         style={{
           width: 60,
           height: 60,
-          backgroundColor: 'var(--rds--color-secondary-dark)',
+          backgroundColor: 'var(--rds--color-grey)',
           borderRadius: 'var(--rds--radius-md)',
         }}
       />

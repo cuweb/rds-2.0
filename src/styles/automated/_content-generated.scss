@@ -3,10 +3,10 @@
 body {
   font-family: var(--rds--font-family-inter);
   font-size: var(--rds--font-size-medium);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--rds--color-text-black);
-  background-color: var(--rds--color-off-white);
+  font-weight: var(--rds--font-weight-normal);
+  line-height: var(--rds--line-height-normal);
+  color: var(--rds--color-black);
+  background-color: var(--rds--color-grey-faint);
   --rds--root-padding-top: 0;
   --rds--root-padding-right: var(--rds--spacing-large);
   --rds--root-padding-bottom: 0;
@@ -60,50 +60,50 @@ body {
 }
 
 :where(h1) {
-  font-size: 4.5rem;
-  font-style: var(--rds--font-weight-normal);
-  font-weight: 500;
+  font-size: var(--rds--font-size-6x-large);
+  font-style: normal;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(h2) {
-  font-size: 3rem;
-  font-style: var(--rds--font-weight-normal);
-  font-weight: 500;
+  font-size: var(--rds--font-size-5x-large);
+  font-style: normal;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(h3) {
-  font-size: 2.5rem;
-  font-style: var(--rds--font-weight-normal);
-  font-weight: 500;
+  font-size: var(--rds--font-size-4x-large);
+  font-style: normal;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(h4) {
-  font-size: 2rem;
-  font-style: var(--rds--font-weight-normal);
-  font-weight: 500;
+  font-size: var(--rds--font-size-3x-large);
+  font-style: normal;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(h5) {
-  font-size: 1.5rem;
-  font-style: var(--rds--font-weight-normal);
-  font-weight: 500;
+  font-size: var(--rds--font-size-2x-large);
+  font-style: normal;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(h6) {
-  font-size: 1.45rem;
+  font-size: var(--rds--font-size-x-large);
   font-style: italic;
-  font-weight: 500;
+  font-weight: var(--rds--font-weight-medium);
 }
 
 :where(figcaption) {
   font-size: var(--rds--font-size-small);
   font-style: italic;
-  font-weight: 300;
+  font-weight: var(--rds--font-weight-light);
   color: var(--rds--color-warning);
 }
 
 :where(button) {
-  color: var(--rds--color-off-white);
+  color: var(--rds--color-white);
   background-color: var(--rds--color-primary);
 }
 

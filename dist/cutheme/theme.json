@@ -18,39 +18,44 @@
           "name": "Primary Dark"
         },
         {
-          "slug": "secondary",
-          "color": "#426587",
-          "name": "Secondary"
-        },
-        {
-          "slug": "success",
-          "color": "#00a32a",
-          "name": "Success"
-        },
-        {
-          "slug": "warning",
-          "color": "#dba617",
-          "name": "Warning"
-        },
-        {
-          "slug": "error",
-          "color": "#d63638",
-          "name": "Error"
-        },
-        {
-          "slug": "info",
-          "color": "#72aee6",
-          "name": "Info"
-        },
-        {
-          "slug": "off-white",
-          "color": "#f8f8f8",
-          "name": "Off White"
-        },
-        {
-          "slug": "text-black",
+          "slug": "black",
           "color": "#191919",
-          "name": "Text Black"
+          "name": "Black"
+        },
+        {
+          "slug": "grey-dark",
+          "color": "#434343",
+          "name": "Grey Dark"
+        },
+        {
+          "slug": "grey",
+          "color": "#767676",
+          "name": "Grey"
+        },
+        {
+          "slug": "grey-light",
+          "color": "#d6d6d6",
+          "name": "Grey Light"
+        },
+        {
+          "slug": "grey-lighter",
+          "color": "#e6e6e6",
+          "name": "Grey Lighter"
+        },
+        {
+          "slug": "grey-pale",
+          "color": "#f5f5f5",
+          "name": "Grey Pale"
+        },
+        {
+          "slug": "grey-faint",
+          "color": "#fafafa",
+          "name": "Grey Faint"
+        },
+        {
+          "slug": "white",
+          "color": "#ffffff",
+          "name": "White"
         }
       ],
       "gradients": [
@@ -130,6 +135,15 @@
       ],
       "fontSizes": [
         {
+          "slug": "x-small",
+          "size": "0.75em",
+          "name": "X Small",
+          "fluid": {
+            "min": "0.75rem",
+            "max": "0.75em"
+          }
+        },
+        {
           "slug": "small",
           "size": "1rem",
           "name": "Small",
@@ -198,13 +212,20 @@
       ]
     },
     "layout": {
-      "contentSize": "768px",
+      "contentSize": "1024px",
       "wideSize": "1280px"
     },
     "custom": {
       "fontWeight": {
+        "light": "300",
         "normal": "400",
+        "medium": "500",
         "bold": "700"
+      },
+      "lineHeight": {
+        "tight": "1.2",
+        "normal": "1.6",
+        "loose": "1.8"
       },
       "radius": {
         "sm": "2px",
@@ -222,8 +243,8 @@
       "lineHeight": "1.6"
     },
     "color": {
-      "text": "var(--wp--preset--color--text-black)",
-      "background": "var(--wp--preset--color--off-white)"
+      "text": "var(--wp--preset--color--black)",
+      "background": "var(--wp--preset--color--grey-faint)"
     },
     "spacing": {
       "blockGap": "var(--wp--preset--spacing--50)",
@@ -252,35 +273,35 @@
       },
       "h2": {
         "typography": {
-          "fontSize": "3rem",
+          "fontSize": "3.75rem",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "2.5rem",
+          "fontSize": "3rem",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h4": {
         "typography": {
-          "fontSize": "2rem",
+          "fontSize": "2.25rem",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h5": {
         "typography": {
-          "fontSize": "1.5rem",
+          "fontSize": "1.875rem",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h6": {
         "typography": {
-          "fontSize": "1.45rem",
+          "fontSize": "var(--wp--preset--font-size--x-large)",
           "fontStyle": "italic",
           "fontWeight": "500"
         }
@@ -292,12 +313,12 @@
           "fontWeight": "300"
         },
         "color": {
-          "text": "var(--wp--preset--color--warning)"
+          "text": "#dba617"
         }
       },
       "button": {
         "color": {
-          "text": "var(--wp--preset--color--off-white)",
+          "text": "var(--wp--preset--color--white)",
           "background": "var(--wp--preset--color--primary)"
         }
       },
@@ -307,7 +328,7 @@
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--error)"
+            "text": "#e91c24"
           }
         }
       }
