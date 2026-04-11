@@ -84,7 +84,6 @@
 
 .sb-section .sb-stack__item {
   padding-bottom: var(--rds--spacing-medium);
-  border-bottom: 1px solid var(--rds--color-grey);
 }
 
 .sb-section .sb-stack__item:last-child {
