@@ -34,13 +34,13 @@
         },
 
         "gradient": {
-            "fade-out": {
-                "value": "linear-gradient(135deg,rgb(134,255,223) 0%,rgb(143,51,228) 100%)",
-                "slug": "custom-fade-out"
+            "red-to-dark-red": {
+                "value": "linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%)",
+                "slug": "custom-red-to-dark-red"
             },
-            "fade-in": {
-                "value": "linear-gradient(0deg,rgb(227,7,97) 0%,rgb(0,195,255) 100%)",
-                "slug": "custom-fade-in"
+            "dark-grey-to-black": {
+                "value": "linear-gradient(135deg,rgb(118,118,118) 0%,rgb(25,25,25) 100%)",
+                "slug": "custom-dark-grey-to-black"
             }
         },
 
