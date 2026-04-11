@@ -138,3 +138,74 @@
   text-align: center;
   padding: var(--rds--spacing-x-large) var(--rds--spacing-x-small);
 }
+
+/* ---------- Welcome page ---------- */
+
+.welcome-hero {
+  padding: var(--rds--spacing-2x-large) 0;
+  border-bottom: 1px solid var(--rds--color-grey-lighter);
+  margin-bottom: var(--rds--spacing-2x-large);
+}
+
+.welcome-hero .welcome-hero__title {
+  color: var(--rds--color-primary);
+  font-size: var(--rds--font-size-6x-large);
+  font-weight: var(--rds--font-weight-bold);
+  line-height: var(--rds--line-height-tight);
+  margin: 0 0 var(--rds--spacing-medium);
+}
+
+.welcome-hero .welcome-hero__tagline {
+  font-size: var(--rds--font-size-x-large);
+  color: var(--rds--color-grey-dark);
+  line-height: var(--rds--line-height-normal);
+  margin: 0 0 var(--rds--spacing-medium);
+  max-width: 60ch;
+}
+
+.welcome-hero .welcome-hero__body {
+  font-size: var(--rds--font-size-medium);
+  color: var(--rds--color-black);
+  line-height: var(--rds--line-height-normal);
+  max-width: 60ch;
+  margin: 0;
+}
+
+.welcome-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--rds--spacing-medium);
+  margin-bottom: var(--rds--spacing-2x-large);
+}
+
+.welcome-highlights .welcome-highlight {
+  display: block;
+  padding: var(--rds--spacing-large);
+  background-color: var(--rds--color-grey-pale);
+  border: 1px solid var(--rds--color-grey-lighter);
+  border-radius: var(--rds--radius-lg);
+  text-decoration: none;
+  color: var(--rds--color-black);
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.welcome-highlights .welcome-highlight:hover {
+  background-color: var(--rds--color-grey-lighter);
+  border-color: var(--rds--color-primary);
+  transform: translateY(-2px);
+}
+
+.welcome-highlights .welcome-highlight__title {
+  display: block;
+  color: var(--rds--color-primary);
+  font-size: var(--rds--font-size-large);
+  font-weight: var(--rds--font-weight-bold);
+  margin-bottom: var(--rds--spacing-x-small);
+}
+
+.welcome-highlights .welcome-highlight__description {
+  display: block;
+  font-size: var(--rds--font-size-small);
+  color: var(--rds--color-grey-dark);
+  line-height: var(--rds--line-height-normal);
+}

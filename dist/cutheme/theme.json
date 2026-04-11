@@ -18,6 +18,11 @@
           "name": "Primary Dark"
         },
         {
+          "slug": "secondary",
+          "color": "#426587",
+          "name": "Secondary"
+        },
+        {
           "slug": "black",
           "color": "#191919",
           "name": "Black"
@@ -60,14 +65,14 @@
       ],
       "gradients": [
         {
-          "slug": "custom-fade-out",
-          "gradient": "linear-gradient(135deg,rgb(134,255,223) 0%,rgb(143,51,228) 100%)",
-          "name": "Fade Out"
+          "slug": "custom-red-to-dark-red",
+          "gradient": "linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%)",
+          "name": "Red To Dark Red"
         },
         {
-          "slug": "custom-fade-in",
-          "gradient": "linear-gradient(0deg,rgb(227,7,97) 0%,rgb(0,195,255) 100%)",
-          "name": "Fade In"
+          "slug": "custom-dark-grey-to-black",
+          "gradient": "linear-gradient(135deg,rgb(118,118,118) 0%,rgb(25,25,25) 100%)",
+          "name": "Dark Grey To Black"
         }
       ]
     },
@@ -120,63 +125,143 @@
             {
               "fontFamily": "Inter",
               "fontStyle": "normal",
+              "fontWeight": "300",
+              "src": [
+                "file:./assets/fonts/inter/inter-300-normal.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
               "fontWeight": "400",
               "src": [
                 "file:./assets/fonts/inter/inter-400-normal.woff2"
               ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": [
+                "file:./assets/fonts/inter/inter-700-normal.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "italic",
+              "fontWeight": "300",
+              "src": [
+                "file:./assets/fonts/inter/inter-300-italic.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "italic",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/inter/inter-400-italic.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "italic",
+              "fontWeight": "700",
+              "src": [
+                "file:./assets/fonts/inter/inter-700-italic.woff2"
+              ]
             }
           ]
-        },
-        {
-          "slug": "system",
-          "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
-          "name": "System"
         }
       ],
       "fontSizes": [
         {
-          "slug": "x-small",
-          "size": "0.75em",
-          "name": "X Small",
+          "slug": "small",
+          "size": "0.9rem",
+          "name": "Small",
           "fluid": {
             "min": "0.75rem",
-            "max": "0.75em"
+            "max": "0.9rem"
           }
         },
         {
-          "slug": "small",
+          "slug": "medium",
           "size": "1rem",
-          "name": "Small",
+          "name": "Medium",
           "fluid": {
             "min": "0.875rem",
             "max": "1rem"
           }
         },
         {
-          "slug": "medium",
+          "slug": "large",
           "size": "1.125rem",
-          "name": "Medium",
+          "name": "Large",
           "fluid": {
             "min": "1rem",
             "max": "1.125rem"
           }
         },
         {
-          "slug": "large",
+          "slug": "x-large",
           "size": "1.25rem",
-          "name": "Large",
+          "name": "X Large",
           "fluid": {
             "min": "1.125rem",
             "max": "1.25rem"
           }
         },
         {
-          "slug": "x-large",
+          "slug": "2x-large",
           "size": "1.5rem",
-          "name": "X Large",
+          "name": "2x Large",
           "fluid": {
             "min": "1.25rem",
             "max": "1.5rem"
+          }
+        },
+        {
+          "slug": "heading-small",
+          "size": "1.5rem",
+          "name": "Heading Small",
+          "fluid": {
+            "min": "1.25rem",
+            "max": "1.5rem"
+          }
+        },
+        {
+          "slug": "heading-medium",
+          "size": "2rem",
+          "name": "Heading Medium",
+          "fluid": {
+            "min": "1.75rem",
+            "max": "2rem"
+          }
+        },
+        {
+          "slug": "heading-large",
+          "size": "2.5rem",
+          "name": "Heading Large",
+          "fluid": {
+            "min": "2rem",
+            "max": "2.5rem"
+          }
+        },
+        {
+          "slug": "heading-x-large",
+          "size": "3rem",
+          "name": "Heading X Large",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "3rem"
+          }
+        },
+        {
+          "slug": "heading-primary",
+          "size": "3.5rem",
+          "name": "Heading Primary",
+          "fluid": {
+            "min": "3rem",
+            "max": "3.5rem"
           }
         }
       ],
@@ -190,24 +275,14 @@
           "name": "Natural"
         },
         {
-          "slug": "deep",
-          "shadow": "12px 12px 50px rgba(0, 0, 0, 0.4)",
-          "name": "Deep"
-        },
-        {
           "slug": "sharp",
           "shadow": "6px 6px 0px rgba(0, 0, 0, 0.2)",
           "name": "Sharp"
         },
         {
           "slug": "outlined",
-          "shadow": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+          "shadow": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(214, 214, 214)",
           "name": "Outlined"
-        },
-        {
-          "slug": "crisp",
-          "shadow": "6px 6px 0px rgb(0, 0, 0)",
-          "name": "Crisp"
         }
       ]
     },
@@ -266,35 +341,35 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "4.5rem",
+          "fontSize": "6x-large",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "3.75rem",
+          "fontSize": "5x-large",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "3rem",
+          "fontSize": "4x-large",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h4": {
         "typography": {
-          "fontSize": "2.25rem",
+          "fontSize": "3x-large",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
       },
       "h5": {
         "typography": {
-          "fontSize": "1.875rem",
+          "fontSize": "var(--wp--preset--font-size--2x-large)",
           "fontStyle": "normal",
           "fontWeight": "500"
         }
