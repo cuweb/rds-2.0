@@ -17,6 +17,8 @@
             "primary": "#e91c24",
             "primary-dark": "#a21218",
             "primary-faint": { "value": "#fff1f2", "cssOnly": true },
+            "secondary": "#426587",
+            "secondary-dark": { "value": "#2c3c4e", "cssOnly": true },
             "success": { "value": "#00a32a", "cssOnly": true },
             "warning": { "value": "#dba617", "cssOnly": true },
             "error": { "value": "#e91c24", "cssOnly": true },

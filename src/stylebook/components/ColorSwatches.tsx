@@ -5,7 +5,7 @@ const prefix = config.prefix;
 const colors = config.tokens.color;
 const gradients = config.tokens.gradient;
 
-type SwatchFilter = 'primary' | 'semantic' | 'neutral' | 'gradient';
+type SwatchFilter = 'primary' | 'secondary' | 'semantic' | 'neutral' | 'gradient';
 
 // Semantic colors have no natural name prefix, so they must be listed explicitly.
 const SEMANTIC_NAMES = ['success', 'warning', 'error', 'info'] as const;
@@ -19,6 +19,7 @@ type SwatchEntry = {
 
 function categoryOf(name: string): Exclude<SwatchFilter, 'gradient'> {
   if (name === 'primary' || name.startsWith('primary-')) return 'primary';
+  if (name === 'secondary' || name.startsWith('secondary-')) return 'secondary';
   if ((SEMANTIC_NAMES as readonly string[]).includes(name)) return 'semantic';
   return 'neutral';
 }
