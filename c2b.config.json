@@ -110,7 +110,7 @@
     "baseStyles": {
         "body": {
             "fontFamily": "inter",
-            "fontSize": "medium",
+            "fontSize": "large",
             "fontWeight": "normal",
             "lineHeight": "normal",
             "color": "black",
@@ -120,12 +120,12 @@
             "fontFamily": "inter",
             "color": "primary"
         },
-        "h1": { "fontSize": "6x-large", "fontWeight": "medium" },
-        "h2": { "fontSize": "5x-large", "fontWeight": "medium" },
-        "h3": { "fontSize": "4x-large", "fontWeight": "medium" },
-        "h4": { "fontSize": "3x-large", "fontWeight": "medium" },
-        "h5": { "fontSize": "2x-large", "fontWeight": "medium" },
-        "h6": { "fontSize": "x-large", "fontWeight": "medium", "fontStyle": "italic" },
+        "h1": { "fontSize": "heading-primary", "fontWeight": "medium" },
+        "h2": { "fontSize": "heading-x-large", "fontWeight": "medium" },
+        "h3": { "fontSize": "heading-large", "fontWeight": "medium" },
+        "h4": { "fontSize": "heading-medium", "fontWeight": "medium" },
+        "h5": { "fontSize": "heading-small", "fontWeight": "medium" },
+        "h6": { "fontSize": "heading-small", "fontWeight": "medium", "fontStyle": "italic" },
         "caption": { "fontSize": "small", "fontStyle": "italic", "fontWeight": "light", "color": "warning" },
         "button": { "color": "white", "background": "primary" },
         "link": { "color": "primary", "hoverColor": "error" },
