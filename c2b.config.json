@@ -16,7 +16,6 @@
         "color": {
             "primary": "#e91c24",
             "primary-dark": "#a21218",
-            "primary-faint": { "value": "#fff1f2", "cssOnly": true },
             "secondary": "#426587",
             "secondary-dark": { "value": "#2c3c4e", "cssOnly": true },
             "success": { "value": "#00a32a", "cssOnly": true },
@@ -34,13 +33,13 @@
         },
 
         "gradient": {
-            "fade-out": {
-                "value": "linear-gradient(135deg,rgb(134,255,223) 0%,rgb(143,51,228) 100%)",
-                "slug": "custom-fade-out"
+            "red-to-dark-red": {
+                "value": "linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%)",
+                "slug": "custom-red-to-dark-red"
             },
-            "fade-in": {
-                "value": "linear-gradient(0deg,rgb(227,7,97) 0%,rgb(0,195,255) 100%)",
-                "slug": "custom-fade-in"
+            "dark-grey-to-black": {
+                "value": "linear-gradient(135deg,rgb(118,118,118) 0%,rgb(25,25,25) 100%)",
+                "slug": "custom-dark-grey-to-black"
             }
         },
 
@@ -48,23 +47,28 @@
             "inter": {
                 "value": "Inter, sans-serif",
                 "fontFace": [
-                    { "weight": "400", "style": "normal", "src": "inter-400-normal.woff2" }
+                    { "weight": "300", "style": "normal", "src": "inter-300-normal.woff2" },
+                    { "weight": "400", "style": "normal", "src": "inter-400-normal.woff2" },
+                    { "weight": "700", "style": "normal", "src": "inter-700-normal.woff2" },
+                    { "weight": "300", "style": "italic", "src": "inter-300-italic.woff2" },
+                    { "weight": "400", "style": "italic", "src": "inter-400-italic.woff2" },
+                    { "weight": "700", "style": "italic", "src": "inter-700-italic.woff2" }
                 ]
-            },
-            "system": "-apple-system, BlinkMacSystemFont, sans-serif"
+            }
         },
 
         "fontSize": {
-            "x-small":    { "min": "0.65rem", "max": "0.75rem", "cssOnly": true },
-            "small":    { "min": "0.875rem", "max": "1rem" },
-            "medium":   { "min": "1rem",     "max": "1.125rem" },
-            "large":    { "min": "1.125rem", "max": "1.25rem" },
-            "x-large":  { "min": "1.25rem",  "max": "1.5rem" },
-            "2x-large": { "value": "1.875rem", "fluid": { "min": "1.5rem", "max": "1.875rem" }, "cssOnly": true },
-            "3x-large": { "value": "2.25rem",  "fluid": { "min": "1.875rem", "max": "2.25rem" }, "cssOnly": true },
-            "4x-large": { "value": "3rem",     "fluid": { "min": "2.25rem", "max": "3rem" }, "cssOnly": true },
-            "5x-large": { "value": "3.75rem",  "fluid": { "min": "2.75rem", "max": "3.75rem" }, "cssOnly": true },
-            "6x-large": { "value": "4.5rem",   "fluid": { "min": "3.25rem", "max": "4.5rem" }, "cssOnly": true }
+            "x-small": { "value": "0.75rem", "fluid": { "min": "0.65rem", "max": "0.75rem" }, "cssOnly": true },
+            "small":   { "value": "0.9rem", "fluid": { "min": "0.75rem", "max": "0.9rem" } },
+            "medium":  { "value": "1rem", "fluid": { "min": "0.875rem", "max": "1rem" } },
+            "large":   { "value": "1.125rem", "fluid": { "min": "1rem", "max": "1.125rem" } },
+            "x-large": { "value": "1.25rem", "fluid": { "min": "1.125rem", "max": "1.25rem" } },
+            "2x-large": { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
+            "heading-small":   { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
+            "heading-medium":  { "value": "2rem",   "fluid": { "min": "1.75rem", "max": "2rem" } },
+            "heading-large":   { "value": "2.5rem", "fluid": { "min": "2rem",    "max": "2.5rem" } },
+            "heading-x-large": { "value": "3rem",   "fluid": { "min": "2.5rem",  "max": "3rem" } },
+            "heading-primary": { "value": "3.5rem", "fluid": { "min": "3rem",    "max": "3.5rem" } }
         },
 
         "spacing": {
