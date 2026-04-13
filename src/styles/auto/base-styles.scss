@@ -3,10 +3,10 @@
 body {
   font-family: var(--rds--font-family-inter);
   font-size: var(--rds--font-size-large);
-  font-weight: var(--rds--font-weight-normal);
+  font-weight: 300;
   line-height: var(--rds--line-height-normal);
   color: var(--rds--color-black);
-  background-color: var(--rds--color-grey-faint);
+  background-color: var(--rds--color-white);
   --rds--root-padding-top: 0;
   --rds--root-padding-right: var(--rds--spacing-large);
   --rds--root-padding-bottom: 0;
@@ -56,43 +56,43 @@ body {
 
 :where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--rds--font-family-inter);
-  color: var(--rds--color-primary);
+  color: var(--rds--color-grey-dark);
 }
 
 :where(h1) {
   font-size: var(--rds--font-size-heading-primary);
   font-style: normal;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(h2) {
   font-size: var(--rds--font-size-heading-x-large);
   font-style: normal;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(h3) {
   font-size: var(--rds--font-size-heading-large);
   font-style: normal;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(h4) {
   font-size: var(--rds--font-size-heading-medium);
   font-style: normal;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(h5) {
   font-size: var(--rds--font-size-heading-small);
   font-style: normal;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(h6) {
   font-size: var(--rds--font-size-heading-small);
   font-style: italic;
-  font-weight: var(--rds--font-weight-medium);
+  font-weight: 600;
 }
 
 :where(figcaption) {

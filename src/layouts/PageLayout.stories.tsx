@@ -45,6 +45,9 @@ export const PageLayout: Story = {
         <div className="alignfull has-global-padding is-layout-constrained">
             <h1>Basic Markup</h1>
 
+            <p>This is an example page. It is different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
+            <p>Hi there! I am a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And getting caught in the rain.)</p>
+
             <SinglePara />
 
             <h2>Inline Elements</h2>

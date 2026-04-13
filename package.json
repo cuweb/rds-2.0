@@ -71,7 +71,6 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@troychaplin/component2block": "^0.2.1",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.0.1",
@@ -97,5 +96,8 @@
     "vite": "^8.0.8",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.4"
+  },
+  "dependencies": {
+    "@troychaplin/component2block": "link:../component2block"
   }
 }
