@@ -2,14 +2,14 @@
 /**
  * Component Library WordPress Integration
  *
- * Loads the library's theme.json as a default base layer and enqueues
+ * Loads the library's theme-rds.json as a default base layer and enqueues
  * design token CSS variables. Automatically loads tokens.wp.css
  * (themeable) if present, otherwise falls back to tokens.css (locked).
  *
  * Setup:
- *   1. Copy this file, theme.json, and your token CSS file into your theme
- *      (e.g. assets/c2b/)
- *   2. Add to your theme's functions.php:
+ *   1. Add this function to your theme
+ *   2. Copy theme-rds.json to the root of your theme, and your token CSS file into your theme
+ *   2. Add tokens.css to your theme and include it in your build, or enqueue it
  *      require_once get_template_directory() . '/assets/c2b/integrate.php';
  *
  * @package component2block
@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Inject the library's theme.json as a WordPress default base layer.
+ * Inject the library's theme-rds.json as a WordPress default base layer.
  *
  * This registers design tokens (colors, spacing, fonts, etc.) as
- * WordPress presets. The active theme's theme.json overrides any
+ * WordPress presets. The active theme's theme-rds.json overrides any
  * values defined here.
  */
 add_filter( 'wp_theme_json_data_default', function ( $theme_json ) {
-	$library_json_path = __DIR__ . '/theme.json';
+	$library_json_path = __DIR__ . '/theme-rds.json';
 
 	if ( ! file_exists( $library_json_path ) ) {
 		return $theme_json;
@@ -85,19 +85,19 @@ add_action( 'enqueue_block_editor_assets', $c2b_enqueue_tokens );
 /**
  * Locked mode enforcement.
  *
- * When the library was built with wpThemeable: false (detected by the
+ * When the library was built with themeable: false (detected by the
  * absence of tokens.wp.css), enforce design system restrictions at the
- * theme layer so the theme's theme.json cannot override them:
+ * theme layer so the theme's theme-rds.json cannot override them:
  *
  *   - Layout sizes (contentSize, wideSize) are locked
  *   - Custom color/gradient creation is disabled in the Site Editor
  *
- * When wpThemeable: true (tokens.wp.css exists), none of these
+ * When themeable: true (tokens.wp.css exists), none of these
  * restrictions apply — the theme has full control.
  */
 if ( ! file_exists( __DIR__ . '/tokens.wp.css' ) ) {
 	add_filter( 'wp_theme_json_data_theme', function ( $theme_json ) {
-		$library_json_path = __DIR__ . '/theme.json';
+		$library_json_path = __DIR__ . '/theme-rds.json';
 
 		if ( ! file_exists( $library_json_path ) ) {
 			return $theme_json;

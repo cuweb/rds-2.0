@@ -21,22 +21,6 @@ const SinglePara = () => (
   </p>
 );
 
-const DoublePara = () => (
-  <>
-    <p>
-      Aliquam luctus, velit eget suscipit tincidunt, sem ex tempus turpis, quis pulvinar metus
-      sapien in urna. Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium
-      architecto a distinctio aut reprehenderit ducimus. Perferendis excepturi delectus nihil
-      voluptatem non.
-    </p>
-    <p>
-      Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium architecto a
-      distinctio aut reprehenderit ducimus. Perferendis excepturi delectus nihil voluptatem non.
-      Molestiae quas dolores accusamus in. Praesent quis ligula quis nulla malesuada tempor.
-    </p>
-  </>
-);
-
 export const PageLayout: Story = {
   render: () => (
     <>
@@ -58,105 +42,87 @@ export const PageLayout: Story = {
       </header>
 
       <main>
-        <h1>Basic Markup</h1>
+        <div className="alignfull has-global-padding is-layout-constrained">
+            <h1>Basic Markup</h1>
 
-        <SinglePara />
+            <p>This is an example page. It is different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
+            <p>Hi there! I am a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And getting caught in the rain.)</p>
 
-        <h2>Heading Two</h2>
-        <SinglePara />
-        <SinglePara />
+            <SinglePara />
 
-        <h3>Heading Three</h3>
-        <SinglePara />
+            <h2>Inline Elements</h2>
+            <p>
+            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+            <mark>highlighted text</mark>. Keyboard shortcuts look like{' '}
+            <kbd>Cmd</kbd> + <kbd>K</kbd>, and abbreviations like{' '}
+            <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
+            </p>
 
-        <h4>Heading Four</h4>
-        <DoublePara />
+            <h2>Heading Two</h2>
+            <SinglePara />
+            <SinglePara />
 
-        <h5>Heading Five</h5>
-        <SinglePara />
+            <h3>Heading Three</h3>
+            <SinglePara />
 
-        <h6>Heading Six</h6>
-        <SinglePara />
+            <h4>Heading Four</h4>
+            <SinglePara />
 
-        <h2>Inline Elements</h2>
-        <p>
-          A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
-          <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
-          <mark>highlighted text</mark>. Keyboard shortcuts look like{' '}
-          <kbd>Cmd</kbd> + <kbd>K</kbd>, and abbreviations like{' '}
-          <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
-        </p>
+            <h5>Heading Five</h5>
+            <SinglePara />
 
-        <h2>Unordered List</h2>
-        <ul>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tortor
-            pellentesque, posuere tellus vitae, sagittis justo.
-          </li>
-          <li>
-            Suspendisse <a href="https://carleton.ca">velit eget suscipit tincidunt</a> vel orci
-            vulputate, eget vulputate neque porttitor.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <h6>Heading Six</h6>
+            <SinglePara />
+
+            <h2>Unordered List</h2>
             <ul>
-              <li>Aenean sit amet tortor pellentesque, posuere tellus vitae, sagittis justo.</li>
-              <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
-              <li>
-                Nested deeper
+            <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tortor
+                pellentesque, posuere tellus vitae, sagittis justo.
+            </li>
+            <li>
+                Suspendisse <a href="https://carleton.ca">velit eget suscipit tincidunt</a> vel orci
+                vulputate, eget vulputate neque porttitor.
+            </li>
+            <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 <ul>
-                  <li>Third level item one.</li>
-                  <li>Third level item two.</li>
+                <li>Aenean sit amet tortor pellentesque, posuere tellus vitae, sagittis justo.</li>
+                <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
+                <li>
+                    Nested deeper
+                    <ul>
+                    <li>Third level item one.</li>
+                    <li>Third level item two.</li>
+                    </ul>
+                </li>
                 </ul>
-              </li>
+            </li>
+            <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
             </ul>
-          </li>
-          <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
-        </ul>
 
-        <h2>Ordered List</h2>
-        <ol>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tortor
-            pellentesque.
-          </li>
-          <li>Suspendisse condimentum magna vel orci vulputate, eget vulputate neque porttitor.</li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <SinglePara />
+
+            <h2>Ordered List</h2>
             <ol>
-              <li>Aenean sit amet tortor pellentesque, posuere tellus vitae, sagittis justo.</li>
-              <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
+            <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tortor
+                pellentesque.
+            </li>
+            <li>Suspendisse condimentum magna vel orci vulputate, eget vulputate neque porttitor.</li>
+            <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <ol>
+                <li>Aenean sit amet tortor pellentesque, posuere tellus vitae, sagittis justo.</li>
+                <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
+                </ol>
+            </li>
+            <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
             </ol>
-          </li>
-          <li>Vivamus imperdiet turpis nec elit ultricies, sed tempus diam dignissim.</li>
-        </ol>
 
-        <h2>Blockquote</h2>
-        <blockquote cite="https://carleton.ca">
-          <p>
-            Nobis voluptatem dolorum et eum doloremque cupiditate velit. Praesentium architecto a
-            distinctio aut reprehenderit ducimus. Perferendis excepturi delectus nihil voluptatem
-            non.
-          </p>
-          <footer>
-            — <cite>Jane Doe, Department of Examples</cite>
-          </footer>
-        </blockquote>
-
-        <h2>Code Block</h2>
-        <pre>
-          <code>{`function greet(name) {
-  return \`Hello, \${name}!\`;
-}
-
-greet('Raven');`}</code>
-        </pre>
-
-        <DoublePara />
-
-        <hr />
-
-        <DoublePara />
+            <SinglePara />
+        </div>
       </main>
 
       <footer>
