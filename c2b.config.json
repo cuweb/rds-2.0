@@ -73,13 +73,13 @@
         },
 
         "spacing": {
-            "2x-small": { "value": "0.25rem", "slug": "20" },
-            "x-small":  { "value": "0.5rem",  "slug": "30" },
-            "small":    { "value": "min(0.75rem, 1vw)",  "slug": "40" },
+            "2x-small": { "value": "0.44rem", "slug": "20" },
+            "x-small":  { "value": "0.67rem",  "slug": "30" },
+            "small":    { "value": "min(1rem, 1vw)",  "slug": "40" },
             "medium":   { "value": "min(1.5rem, 2vw)",   "slug": "50" },
             "large":    { "value": "min(2.25rem, 3vw)",   "slug": "60" },
-            "x-large":  { "value": "min(3rem, 4vw)",      "slug": "70" },
-            "2x-large": { "value": "min(4.5rem, 6vw)",    "slug": "80" }
+            "x-large":  { "value": "min(3.38rem, 4vw)",      "slug": "70" },
+            "2x-large": { "value": "min(5.06rem, 6vw)",    "slug": "80" }
         },
 
         "shadow": {
@@ -119,7 +119,7 @@
         },
         "heading": {
             "fontFamily": "inter",
-            "color": "grey-dark"
+            "color": "black"
         },
         "h1": { "fontSize": "heading-primary", "fontWeight": "600" },
         "h2": { "fontSize": "heading-x-large", "fontWeight": "600" },

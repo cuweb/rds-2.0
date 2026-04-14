@@ -24,13 +24,13 @@
   --rds--gradient-dark-grey-to-black: linear-gradient(135deg,rgb(118,118,118) 0%,rgb(25,25,25) 100%);
 
   /* Spacing */
-  --rds--spacing-2x-small: 0.25rem;
-  --rds--spacing-x-small: 0.5rem;
-  --rds--spacing-small: min(0.75rem, 1vw);
+  --rds--spacing-2x-small: 0.44rem;
+  --rds--spacing-x-small: 0.67rem;
+  --rds--spacing-small: min(1rem, 1vw);
   --rds--spacing-medium: min(1.5rem, 2vw);
   --rds--spacing-large: min(2.25rem, 3vw);
-  --rds--spacing-x-large: min(3rem, 4vw);
-  --rds--spacing-2x-large: min(4.5rem, 6vw);
+  --rds--spacing-x-large: min(3.38rem, 4vw);
+  --rds--spacing-2x-large: min(5.06rem, 6vw);
 
   /* Font Families */
   --rds--font-family-inter: Inter, sans-serif;
