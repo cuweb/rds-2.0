@@ -15,9 +15,9 @@ const meta: Meta<typeof Body> = {
 export default meta
 type Story = StoryObj<typeof Body>
 
-export const Primary: Story = {}
-
-Primary.args = {
-  children: 'Body component',
-  className: 'cu-utils--alignfull',
+export const Primary: Story = {
+  args: {
+    children: 'Body component',
+    className: 'cu-utils--alignfull',
+  },
 }

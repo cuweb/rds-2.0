@@ -40,7 +40,4 @@ export const Primary: Story = {
         </p>
     ),
   },
-  render: (args) => (
-        <Section {...args} />
-  ),
 }
