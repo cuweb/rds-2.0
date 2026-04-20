@@ -1,0 +1,46 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+Prefix the change with one of these keywords:
+
+- _Added_: for new features.`
+- _Breaking_: for higher visibility of breaking changes
+- _Changed_: for changes in existing functionality.
+- _Deprecated_: for soon-to-be removed features.
+- _Removed_: for now removed features.
+- _Fixed_: for any bug fixes.
+- _Security_: in case of vulnerabilities.
+
+## [Unreleased]
+
+## [0.1.0]
+
+### Added
+
+- _Added_: Project scaffolding with Vite library build, outputting ESM, CJS, and rolled-up type declarations
+- _Added_: Design token system powered by `@troychaplin/component2block`, generating CSS custom properties and SCSS from a single config source
+- _Added_: Full token set — colors, gradients, font sizes, font weights, line heights, spacing, shadows, border radii, and layout widths
+- _Added_: Fluid typography using `clamp()` across 11 font-size tokens
+- _Added_: Fluid spacing scale with viewport-relative values for responsive layouts
+- _Added_: Base styles built on `modern-normalize`, global resets, focus-visible outlines, and selection styles
+- _Added_: Generated base element styles for body, headings (h1–h6), links, buttons, and figcaptions
+- _Added_: WordPress layout compatibility classes (`.is-layout-constrained`, `.alignfull`, `.alignwide`, `.has-global-padding`)
+- _Added_: Inter typeface self-hosted with `@font-face` declarations for weights 300, 400, and 600
+- _Added_: SCSS mixins for responsive `above` and `below` media queries
+- _Added_: Storybook 10 with `@storybook/react-vite`, auto-generated docs, and custom story sorting
+- _Added_: Storybook accessibility addon with a11y violations configured to fail as errors
+- _Added_: Live stylebook pages for colors, typography, spacing, and effects with interactive filtering
+- _Added_: Overview, Getting Started, and Changelog documentation pages in Storybook
+- _Added_: Page layout story as a full-page visual regression test for base HTML element styling
+- _Added_: Vitest with dual test projects for unit tests and Storybook interaction tests via Playwright
+- _Added_: Testing Library setup with `@testing-library/react`, `jest-dom`, and `user-event`
+- _Added_: ESLint 9 flat config with TypeScript strict rules, React, React Hooks, JSX a11y, Storybook, and Prettier integration
+- _Added_: Prettier for consistent formatting of TypeScript, TSX, and SCSS
+- _Added_: Husky pre-commit hook running lint and typecheck
+- _Added_: Size-limit checks for published JS and CSS bundles (10 kB each)
+- _Added_: WordPress theme output via `c2b generate` for syncing tokens to `theme.json`-compatible formats
+
