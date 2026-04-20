@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Main } from '../components/Main/Main';
 
 const meta: Meta = {
   title: 'Layouts/Templates',
@@ -41,8 +42,8 @@ export const PageLayout: Story = {
         </nav>
       </header>
 
-      <main>
-        <div className="alignfull has-global-padding is-layout-constrained">
+      <Main>
+            
             <h1>Basic Markup</h1>
 
             <p>This is an example page. It is different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
@@ -50,14 +51,16 @@ export const PageLayout: Story = {
 
             <SinglePara />
 
-            <h2>Inline Elements</h2>
-            <p>
-            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
-            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
-            <mark>highlighted text</mark>. Keyboard shortcuts look like{' '}
-            <kbd>Cmd</kbd> + <kbd>K</kbd>, and abbreviations like{' '}
-            <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
-            </p>
+            <div className="alignfull has-global-padding is-layout-constrained" style={{ backgroundColor: 'var(--rds--color-grey-pale)', padding: 'var(--rds--spacing-large)' }}>
+                <h2>Inline Elements</h2>
+                <p>
+                    A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+                    <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+                    <mark>highlighted text</mark>. Keyboard shortcuts look like{' '}
+                    <kbd>Cmd</kbd> + <kbd>K</kbd>, and abbreviations like{' '}
+                    <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
+                </p>
+            </div>
 
             <h2>Heading Two</h2>
             <SinglePara />
@@ -122,8 +125,8 @@ export const PageLayout: Story = {
             </ol>
 
             <SinglePara />
-        </div>
-      </main>
+
+        </Main>
 
       <footer>
         <p>&copy; Carleton University — Raven Design System 2.0</p>

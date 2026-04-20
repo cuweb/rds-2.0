@@ -17,9 +17,13 @@ Prefix the change with one of these keywords:
 
 ## [Unreleased]
 
-## [0.1.0]
+- _Added_: `Main` layout component with WordPress layout-compatible class structure
+- _Added_: Storybook story for `Main` component
+- _Added_: `Main` component export from package entry point
+- _Changed_: Page layout story to use `Main` component instead of raw markup
+- _Changed_: Page layout story inline elements section to use full-width grey background block
 
-### Added
+## [0.1.0]
 
 - _Added_: Project scaffolding with Vite library build, outputting ESM, CJS, and rolled-up type declarations
 - _Added_: Design token system powered by `@troychaplin/component2block`, generating CSS custom properties and SCSS from a single config source
@@ -43,4 +47,3 @@ Prefix the change with one of these keywords:
 - _Added_: Husky pre-commit hook running lint and typecheck
 - _Added_: Size-limit checks for published JS and CSS bundles (10 kB each)
 - _Added_: WordPress theme output via `c2b generate` for syncing tokens to `theme.json`-compatible formats
-
