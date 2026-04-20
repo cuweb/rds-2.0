@@ -3,11 +3,13 @@ import './stylebook/stylebook.css';
 
 <Meta title="Overview" name="Overview" />
 
-<div className="welcome-hero">
-  <h1 className="welcome-hero__title">Raven Design System 2.0</h1>
-  <p className="welcome-hero__tagline">[TAGLINE PLACEHOLDER — update me]</p>
-  <p className="welcome-hero__body">[BODY COPY PLACEHOLDER — update me with a short description of what RDS 2.0 is, who it is for, and what it enables.]</p>
-</div>
+# Raven Design System
+
+Raven Design System (RDS) is Carleton University's design system — a shared visual language that brings consistency and cohesion to web experiences across campus. By providing a curated set of components and layouts, RDS helps teams build interfaces that feel unmistakably Carleton while reducing duplication and design debt.
+
+## Purpose
+
+University websites serve diverse audiences — prospective students, current students, faculty, alumni, and the broader community. RDS exists to ensure that no matter which team is building the experience, the result is polished, accessible, and on-brand.
 
 <div className="welcome-highlights">
   <a className="welcome-highlight" href="?path=/docs/overview-stylebook-colors--docs">
@@ -32,11 +34,63 @@ import './stylebook/stylebook.css';
 
 ## What's inside
 
-- **Design tokens** — colors, typography, spacing, shadows, radii, gradients
+- **Design tokens** — colors, typography, spacing, shadows, radii, and gradients — shared across both React components and the WordPress block theme
 - **React components** — _coming soon_
-- **WordPress integration** — ready-made styles and blocks for the Carleton editor
+- **WordPress integration** — a block theme powered by RDS tokens with per-block styles, custom templates, and editor enhancements
 - **Accessibility tested** — automated a11y checks on every story
 
----
+### Design Tokens
 
-Source: [github.com/cuweb/rds-2.0](https://github.com/cuweb/rds-2.0)
+A single set of tokens drives the visual language for both the component library and the WordPress block theme:
+
+- **Colors** — Brand primaries, secondaries, feedback states (success, warning, error, info), and a full neutral scale
+- **Gradients** — Brand gradient presets for backgrounds and decorative elements
+- **Typography** — The Inter typeface with fluid font sizes, four weight options, and three line-height scales
+- **Spacing** — A seven-step fluid spacing scale from 2x-small to 2x-large
+- **Shadows** — Natural, Sharp, and Outlined elevation presets
+- **Border Radius** — Small, medium, and large radius values
+- **Layout** — Content (1024px) and wide (1280px) max-width constraints
+
+### Components
+
+Over **50 production-ready components** spanning the full range of university web needs:
+
+- **Core UI** — Buttons, badges, avatars, cards, tables, dialogs, and more — the building blocks of every page
+- **Banners & Heroes** — Full-width banners, splash screens, and page headers that set the tone for each section
+- **Navigation** — Responsive top and side navigation with support for multi-level menus
+- **Content** — Text and media pairings, quotes, testimonials, timelines, image grids, and sliders for rich storytelling
+- **Forms** — Validated form fields, search inputs, and add-ons powered by Formik and Yup
+- **Media** — Figures, video embeds, and interactive 360 views
+- **Data** — Calendars, filter panels, and listing views for structured content
+- **Feedback** — Toasts, callouts, and placeholder skeletons to keep users informed
+- **Footers** — Multiple footer variants tailored for departments, athletics, and cookie consent
+- **Error Pages** — Branded 403 and 404 pages
+
+### Layouts
+
+**10 layout primitives** provide the structural scaffolding for pages — from simple article wrappers and sidebars to full-bleed image covers and decorative wave sections.
+
+### Skeleton Loaders
+
+Every major component has a matching **skeleton loader** so content areas feel responsive even before data arrives.
+
+### WordPress
+
+The Carleton block theme consumes RDS tokens so that the WordPress editor and front-end stay in sync with the design system:
+
+- **Theme configuration** — A `theme.json` built from RDS tokens defining the color palette, gradients, fluid typography, spacing scale, and shadow presets
+- **Per-block styles** — Scoped CSS for core blocks (buttons, tables, and more) auto-enqueued only when the block is used
+- **Block variations** — Custom button styles (e.g. secondary) and navigation defaults that match RDS conventions
+- **Templates & Parts** — Starter templates for pages, posts, and fallback layouts with reusable header and footer parts
+- **Editor styles** — Dedicated editor CSS so authors see the same token-driven styles while editing
+
+## Design Principles
+
+- **Consistency** — A unified look and feel across all Carleton web properties
+- **Accessibility** — Components are built with WCAG compliance in mind
+- **Composability** — Small, focused components that combine into complex interfaces
+- **Theming** — Powered by a custom Tailwind CSS theme that encodes Carleton's brand tokens
+
+## Explore
+
+Use the sidebar to browse components, layouts, and their variations. Each story showcases real usage patterns, available props, and visual states.
