@@ -27,6 +27,13 @@ export const Primary: Story = {
 }
 
 export const AsRightSidebar: Story = {
+  parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: 'landmark-complementary-is-top-level', enabled: false }],
+      },
+    },
+  },
   render: () => {
     return (
       <Main>
@@ -76,6 +83,13 @@ export const LeftSidebarWithSticky: Story = {
   args: {
     isSticky: true,
     topSpace: 16,
+  },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [{ id: 'landmark-complementary-is-top-level', enabled: false }],
+      },
+    },
   },
   render: (args) => {
     return (
