@@ -6,6 +6,7 @@
 
 // Global Styles
 @use "./base/globals";
+@use "./base/utils";
 
 // Generated base element styles (must come after @use rules)
 @use "./auto/base-styles.scss";

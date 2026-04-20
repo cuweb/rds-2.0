@@ -1,0 +1,4 @@
+// Global width classes for Gutenberg alignments, to be used in Section component
+.cu-utils--aligncontent { max-width: var(--rds--layout-content-size); }
+.cu-utils--alignwide { max-width: var(--rds--layout-wide-size); }
+.cu-utils--alignfull { max-width: var(--rds--layout-full-size); }

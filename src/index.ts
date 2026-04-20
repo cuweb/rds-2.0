@@ -5,3 +5,4 @@ import './styles/main.scss';
 
 // Layouts
 export { Main } from './components/Main/Main';
+export { Section } from './components/Section/Section';
