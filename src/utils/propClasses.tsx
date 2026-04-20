@@ -10,5 +10,5 @@ export const gridColumnClasses = {
   '3': 'three',
   '4': 'four',
   '1/3': 'one-third',
-  '2/3': 'two-third',
+  '2/3': 'two-thirds',
 }
