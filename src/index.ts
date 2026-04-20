@@ -4,5 +4,7 @@
 import './styles/main.scss';
 
 // Layouts
+export { Article } from './components/Article/Article';
+export { Body } from './components/Body/Body';
 export { Main } from './components/Main/Main';
 export { Section } from './components/Section/Section';
