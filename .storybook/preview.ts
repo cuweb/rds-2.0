@@ -18,7 +18,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Overview', ['About RDS', 'Getting Started', 'Changelog', 'Stylebook'], 'Components', 'Layouts', '*'],
+        order: ['Overview', ['About RDS', 'Getting Started', 'Changelog', 'Stylebook'], 'Templates', 'Components', 'Layouts', '*'],
       },
     },
   },

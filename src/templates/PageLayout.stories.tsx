@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Main } from '../components/Main/Main';
+import { Section } from '../components/Section/Section';
 
 const meta: Meta = {
-  title: 'Layouts/Templates',
+  title: 'Templates/Layouts',
   parameters: {
     layout: 'fullscreen',
   },
@@ -61,7 +62,7 @@ export const PageLayout: Story = {
 
             <SinglePara />
 
-            <div className="alignfull has-global-padding is-layout-constrained" style={{ backgroundColor: 'var(--rds--color-grey-pale)', padding: 'var(--rds--spacing-large)' }}>
+            <div className="alignwide has-global-padding is-layout-constrained" style={{ backgroundColor: 'var(--rds--color-grey-pale)', padding: 'var(--rds--spacing-large)' }}>
                 <h2>Inline Elements</h2>
                 <p>
                     A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
@@ -71,6 +72,17 @@ export const PageLayout: Story = {
                     <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
                 </p>
             </div>
+
+            <Section as='section' maxWidth='alignfull' isGrey>
+                <h2>Inline Elements</h2>
+                <p>
+                    A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+                    <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+                    <mark>highlighted text</mark>. Keyboard shortcuts look like{' '}
+                    <kbd>Cmd</kbd> + <kbd>K</kbd>, and abbreviations like{' '}
+                    <abbr title="Raven Design System">RDS</abbr> should render with dotted underlines.
+                </p>
+            </Section>
 
             <h2>Heading Two</h2>
             <SinglePara />
