@@ -30,7 +30,11 @@
             "grey-lighter": "#e6e6e6",
             "grey-pale": "#f5f5f5",
             "grey-faint": "#fafafa",
-            "white": "#ffffff"
+            "white": "#ffffff",
+            "purple": { "value": "#636FAC", "cssOnly": true },
+            "purple-light": { "value": "#D3DAE9", "cssOnly": true },
+            "teal": { "value": "#3A8082", "cssOnly": true },
+            "teal-light": { "value": "#C8DAD7", "cssOnly": true }
         },
 
         "gradient": {
@@ -104,7 +108,8 @@
         "radius": {
             "sm": "2px",
             "md": "4px",
-            "lg": "8px"
+            "lg": "8px",
+            "full": "9999px"
         }
     },
 

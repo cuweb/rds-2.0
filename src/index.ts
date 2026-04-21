@@ -1,3 +1,8 @@
+// Badge
+export { Badge } from './components/Badge/Badge'
+
+// LinkProvider
+export { LinkProvider } from './components/LinkProvider/index'
 // Main library entry — re-exports all components
 
 // Import base styles so Vite extracts them to dist/style.css

@@ -18,6 +18,10 @@
   --rds--color-grey-pale: #f5f5f5;
   --rds--color-grey-faint: #fafafa;
   --rds--color-white: #ffffff;
+  --rds--color-purple: #636FAC;
+  --rds--color-purple-light: #D3DAE9;
+  --rds--color-teal: #3A8082;
+  --rds--color-teal-light: #C8DAD7;
 
   /* Gradients */
   --rds--gradient-red-to-dark-red: linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%);
@@ -68,6 +72,7 @@
   --rds--radius-sm: 2px;
   --rds--radius-md: 4px;
   --rds--radius-lg: 8px;
+  --rds--radius-full: 9999px;
 
   /* Layout */
   --rds--layout-content-size: 1024px;
