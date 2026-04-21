@@ -2,6 +2,10 @@
 
 Update `CHANGELOG.mdx` based on recent committed changes.
 
+## Mode
+
+Run all git commands and file edits autonomously without asking for confirmation. Do not pause for approval between steps.
+
 ## Steps
 
 1. Run `git status --short` to check for uncommitted changes
