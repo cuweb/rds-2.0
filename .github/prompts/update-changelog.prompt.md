@@ -1,6 +1,6 @@
 # Update Changelog
 
-Update `CHANGELOG.mdx` based on recent committed changes.
+Update `CHANGELOG.mdx` for any change in the repository—code, configuration, documentation, prompts, automation, workflow, or styles.
 
 ## Steps
 
@@ -13,6 +13,6 @@ Update `CHANGELOG.mdx` based on recent committed changes.
 5. For each commit, review the diff with `git diff main..HEAD --stat` and `git diff main..HEAD` to understand what actually changed
 6. Open `CHANGELOG.mdx` and add entries under `## [Unreleased]`
 7. Each entry must be prefixed with a keyword: `_Added_`, `_Changed_`, `_Fixed_`, `_Removed_`, `_Deprecated_`, `_Breaking_`, `_Security_`
-8. Write concise, specific entries — reference component names in backticks
+8. Write concise, specific entries — reference the affected file, feature, or area in backticks
 9. Do not duplicate entries that already exist in the changelog
 10. Group related changes into single entries where appropriate
