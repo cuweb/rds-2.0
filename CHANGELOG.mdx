@@ -15,11 +15,16 @@ Prefix the change with one of these keywords:
 - _Fixed_: for any bug fixes.
 - _Security_: in case of vulnerabilities.
 
-
-
 ## [Unreleased]
 
 - _Changed_: Updated `create-release.prompt.md` and `update-changelog.prompt.md` to clarify and automate release and changelog workflows, ensuring all types of changes (code, config, docs, prompts, automation, workflow, styles) are included in the changelog and release process.
+- _Added_: `Badge` component with color, radius, and link support ([src/components/Badge/Badge.tsx](src/components/Badge/Badge.tsx), [src/components/Badge/styles.scss](src/components/Badge/styles.scss))
+- _Added_: `BadgeGroup` component for grouping badges with optional absolute positioning ([src/components/BadgeGroup/BadgeGroup.tsx](src/components/BadgeGroup/BadgeGroup.tsx), [src/components/BadgeGroup/styles.scss](src/components/BadgeGroup/styles.scss))
+- _Added_: Storybook stories for `Badge` and `BadgeGroup` ([src/components/Badge/Badge.stories.tsx](src/components/Badge/Badge.stories.tsx), [src/components/BadgeGroup/BadgeGroup.stories.tsx](src/components/BadgeGroup/BadgeGroup.stories.tsx))
+- _Added_: `LinkProvider` context for custom link components ([src/components/LinkProvider/LinkContext.tsx](src/components/LinkProvider/LinkContext.tsx), [src/components/LinkProvider/index.tsx](src/components/LinkProvider/index.tsx), [src/components/LinkProvider/useLinkContext.tsx](src/components/LinkProvider/useLinkContext.tsx))
+- _Added_: `borderRadiusClasses` utility for badge radius options ([src/utils/propClasses.tsx](src/utils/propClasses.tsx))
+- _Added_: New color tokens for `purple` and `teal` and new `full` border radius ([c2b.config.json](c2b.config.json), [src/styles/auto/tokens.css](src/styles/auto/tokens.css))
+- _Changed_: Exported `Badge`, `BadgeGroup`, and `LinkProvider` from package entry point ([src/index.ts](src/index.ts))
 
 ## [0.2.1]
 
@@ -76,3 +81,4 @@ Prefix the change with one of these keywords:
 - _Added_: Husky pre-commit hook running lint and typecheck
 - _Added_: Size-limit checks for published JS and CSS bundles (10 kB each)
 - _Added_: WordPress theme output via `c2b generate` for syncing tokens to `theme.json`-compatible formats
+
