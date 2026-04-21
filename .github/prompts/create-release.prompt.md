@@ -1,6 +1,7 @@
-# Create Release
 
-Create a release branch, update version and changelog, commit and push.
+# Create Release (Automated Merge)
+
+Automate the release process: create a release branch, update version and changelog, commit, merge to main, tag, and push.
 
 ## Steps
 
@@ -30,6 +31,16 @@ Create a release branch, update version and changelog, commit and push.
 
 8. Commit the changes: `git add --all && git commit -m "release: {version}"`
 
-9. Push the branch: `git push --set-upstream origin release/{version}`
+9. Checkout main: `git checkout main`
 
-10. Tell the user the release branch is ready for a PR into main
+10. Pull latest main: `git pull`
+
+11. Merge the release branch: `git merge --no-ff release/{version}`
+
+12. Tag the release: `git tag v{version}`
+
+13. Push main and tags: `git push origin main && git push origin v{version}`
+
+14. Delete the release branch locally: `git branch -d release/{version}`
+
+15. Tell the user the release is complete and main is up to date with the new tag.
