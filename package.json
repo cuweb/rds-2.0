@@ -1,6 +1,6 @@
 {
   "name": "@carletonuniversity/rds-2.0",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React component library and design system for Carleton University",
   "type": "module",
   "private": false,
