@@ -1,16 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { FC } from 'react'
-import { LinkContext } from './LinkContext'
+import { FC, ReactNode } from 'react'
+import { LinkContext, LinkComponent } from './LinkContext'
 
-export interface ILinkProvider {
-  type: any
-  children: React.ReactNode
+export interface LinkProviderProps {
+  component: LinkComponent
+  children: ReactNode
 }
 
-export const Link: FC<ILinkProvider> = ({ type, children }): React.ReactElement => {
-  return <LinkContext.Provider value={type}>{children}</LinkContext.Provider>
-}
+export const LinkProvider: FC<LinkProviderProps> = ({ component, children }) => (
+  <LinkContext.Provider value={component}>{children}</LinkContext.Provider>
+)
 
 export { useLinkContext } from './useLinkContext'
 export { LinkContext } from './LinkContext'
-export const LinkProvider = Object.assign(Link, { Link, useLinkContext })
+export type { LinkComponent } from './LinkContext'

@@ -1,6 +1,8 @@
-import { createContext, ComponentType } from 'react'
+import { createContext, ComponentType, ComponentProps } from 'react'
 
-type LinkComponentType = ComponentType<React.ComponentProps<'a'>>
-const DefaultLinkComponent: LinkComponentType = (props) => <a {...props} />
+export type LinkComponent = ComponentType<ComponentProps<'a'>>
 
-export const LinkContext = createContext<LinkComponentType>(DefaultLinkComponent)
+// eslint-disable-next-line jsx-a11y/anchor-has-content -- children flows through {...props}
+const DefaultLink: LinkComponent = (props) => <a {...props} />
+
+export const LinkContext = createContext<LinkComponent>(DefaultLink)

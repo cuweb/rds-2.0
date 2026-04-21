@@ -4,41 +4,28 @@ import './styles.scss'
 
 type borderRadiusKeys = keyof typeof borderRadiusClasses
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface BadgeProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string
-  link?: string
+  href?: string
   rounded?: borderRadiusKeys
   color?: 'grey' | 'white' | 'black80' | 'white80' | 'green' | 'red' | 'yellow' | 'blue' | 'purple' | 'teal'
-  noWordBreak?: boolean
 }
 
-export const Badge = ({
-  text,
-  link,
-  rounded = 'md',
-  color = 'grey',
-  ...rest
-}: BadgeProps) => {
+export const Badge = ({ text, href, rounded = 'md', color = 'grey', ...rest }: BadgeProps) => {
   const LinkComponent = useLinkContext()
+  const classes = `cu-badge cu-badge--${color} cu-badge--radius-${rounded}`
 
-  const content = (
-    <span className="">{text}</span>
-  )
-
-  if (link) {
+  if (href) {
     return (
-      <LinkComponent
-        href={link}
-        className={`cu-badge cu-badge--${color} cu-badge--radius-${rounded}`}
-        {...rest}
-      >
-        {content}
+      // eslint-disable-next-line react-hooks/static-components -- LinkComponent is injected via context, stable across renders
+      <LinkComponent href={href} className={classes} {...rest}>
+        {text}
       </LinkComponent>
     )
   }
 
   return (
-    <span className={`cu-badge cu-badge--${color} cu-badge--radius-${rounded}`} {...rest}>
+    <span className={classes} {...rest}>
       {text}
     </span>
   )
