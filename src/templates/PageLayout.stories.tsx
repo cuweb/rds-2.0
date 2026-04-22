@@ -23,7 +23,7 @@ const SinglePara = () => (
   </p>
 );
 
-export const PageLayout: Story = {
+export const BasicPage: Story = {
   parameters: {
     a11y: {
       config: {
