@@ -12,3 +12,11 @@ export const gridColumnClasses = {
   '1/3': 'one-third',
   '2/3': 'two-thirds',
 }
+
+export const borderRadiusClasses = {
+  none: 'none',
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg',
+  full: 'full',
+}

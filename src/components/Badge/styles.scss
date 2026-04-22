@@ -1,0 +1,98 @@
+a.cu-badge {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.cu-badge {
+    display: block;
+    font-size: var(--rds--font-size-x-small);
+    font-weight: var(--rds--font-weight-bold);
+    line-height: var(--rds--line-height-x-small);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: var(--rds--radius-lg);
+    border-width: 1px;
+    border-style: solid;
+
+    &--radius-sm {
+        border-radius: var(--rds--radius-sm);
+    }
+
+    &--radius-md {
+        border-radius: var(--rds--radius-md);
+    }
+
+    &--radius-full {
+        border-radius: var(--rds--radius-full);
+    }
+    
+    &--radius-none {
+        border-radius: 0;
+    }
+    
+    &--grey {
+        background-color: var(--rds--color-grey-pale);
+        border-color: var(--rds--color-grey-pale);
+        color: var(--rds--color-grey-dark);
+    }
+    
+    &--white {
+        background-color: var(--rds--color-white);
+        border-color: var(--rds--color-white);
+        color: var(--rds--color-grey-dark);
+    }
+    
+    &--green {
+        background-color: var(--rds--color-success);
+        border-color: var(--rds--color-success);
+        color: var(--rds--color-white);
+    }
+    
+    &--red {
+        background-color: var(--rds--color-error);
+        border-color: var(--rds--color-error);
+        color: var(--rds--color-white);
+    }
+    
+    &--yellow {
+        background-color: var(--rds--color-warning);
+        border-color: var(--rds--color-warning);
+        color: var(--rds--color-black);
+    }
+
+    &--blue {
+        background-color: var(--rds--color-info);
+        border-color: var(--rds--color-info);
+        color: var(--rds--color-black);
+    }
+    
+    &--purple {
+        background-color: var(--rds--color-purple);
+        border-color: var(--rds--color-purple);
+        color: var(--rds--color-white);
+    }
+    
+    &--teal {
+        background-color: var(--rds--color-teal);
+        border-color: var(--rds--color-teal);
+        color: var(--rds--color-white);
+    }
+    
+    &--black80 {
+        background-color: rgba(0,0,0,0.8);
+        border-color: rgba(0,0,0,0.8);
+        color: var(--rds--color-white);
+    }
+    
+    &--white80 {
+        background-color: rgba(255,255,255,0.8);
+        border-color: rgba(255,255,255,0.8);
+        color: var(--rds--color-grey-dark);
+    }
+}

@@ -1,0 +1,9 @@
+.cu-badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rds--spacing-2x-small);
+    
+    @include above(768px) {
+        flex: 1 1 0%;
+    }
+}

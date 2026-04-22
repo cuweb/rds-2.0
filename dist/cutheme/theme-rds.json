@@ -310,7 +310,8 @@
       "radius": {
         "sm": "2px",
         "md": "4px",
-        "lg": "8px"
+        "lg": "8px",
+        "full": "9999px"
       }
     },
     "useRootPaddingAwareAlignments": true
@@ -393,7 +394,7 @@
           "fontWeight": "300"
         },
         "color": {
-          "text": "#dba617"
+          "text": "#f4c83c"
         }
       },
       "button": {
@@ -408,7 +409,7 @@
         },
         ":hover": {
           "color": {
-            "text": "#e91c24"
+            "text": "#d31820"
           }
         }
       }

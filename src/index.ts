@@ -1,5 +1,3 @@
-// Main library entry — re-exports all components
-
 // Import base styles so Vite extracts them to dist/style.css
 import './styles/main.scss';
 
@@ -10,3 +8,10 @@ export { Body } from './components/Body/Body';
 export { Column } from './components/Column/Column';
 export { Main } from './components/Main/Main';
 export { Section } from './components/Section/Section';
+
+// Components
+export { Badge } from './components/Badge/Badge';
+export { BadgeGroup } from './components/BadgeGroup/BadgeGroup';
+
+// LinkProvider
+export { LinkProvider } from './components/LinkProvider/index'
