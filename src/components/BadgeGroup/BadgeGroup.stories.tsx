@@ -3,7 +3,7 @@ import { Badge } from '../Badge/Badge'
 import { BadgeGroup } from './BadgeGroup'
 
 const meta: Meta<typeof BadgeGroup> = {
-  title: 'Components/Badge Group',
+  title: 'Components/Elements/Badge Group',
   component: BadgeGroup,
   tags: ['autodocs'],
   parameters: {
