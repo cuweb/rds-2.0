@@ -1,63 +1,63 @@
 @use '../../styles/auto/variables' as *;
 
 .cu-column {
-    display: grid;
-    gap: var(--rds--spacing-large);
+  display: grid;
+  gap: var(--rds--spacing-large);
 
-    &--one {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+  &--one {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  &--two {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $rds-media-query-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &--three {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $rds-media-query-md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &--four {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $rds-media-query-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    &--two {
-        grid-template-columns: 1fr;
-
-        @media (min-width: $rds-media-query-md) {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+    @media (min-width: $rds-media-query-lg) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+  }
 
-    &--three {
-        grid-template-columns: 1fr;
+  &--one-third {
+    grid-template-columns: 1fr;
 
-        @media (min-width: $rds-media-query-md) {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
+    @media (min-width: $rds-media-query-md) {
+      grid-template-columns: 33% auto;
     }
+  }
 
-    &--four {
-        grid-template-columns: 1fr;
+  &--two-thirds {
+    grid-template-columns: 1fr;
 
-        @media (min-width: $rds-media-query-md) {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        @media (min-width: $rds-media-query-lg) {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
+    @media (min-width: $rds-media-query-md) {
+      grid-template-columns: 66% auto;
     }
-
-    &--one-third {
-        grid-template-columns: 1fr;
-
-        @media (min-width: $rds-media-query-md) {
-            grid-template-columns: 33% auto;
-        }
-    }
-
-    &--two-thirds {
-        grid-template-columns: 1fr;
-
-        @media (min-width: $rds-media-query-md) {
-            grid-template-columns: 66% auto;
-        }
-    }
+  }
 }
 
 /* Ordering */
 .cu-column > div {
-    order: 1;
+  order: 1;
 }
 
 .cu-column > div.is-first {
-    order: 0;
+  order: 0;
 }

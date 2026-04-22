@@ -1,4 +1,4 @@
-import { useContext } from 'react'
-import { LinkContext } from './LinkContext'
+import { useContext } from 'react';
+import { LinkContext } from './LinkContext';
 
-export const useLinkContext = () => useContext(LinkContext)
+export const useLinkContext = () => useContext(LinkContext);

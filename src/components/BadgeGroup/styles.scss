@@ -1,11 +1,11 @@
 @use '../../styles/auto/variables' as *;
 
 .cu-badge-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--rds--spacing-2x-small);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rds--spacing-2x-small);
 
-    @media (min-width: $rds-media-query-md) {
-        flex: 1 1 0%;
-    }
+  @media (min-width: $rds-media-query-md) {
+    flex: 1 1 0%;
+  }
 }
