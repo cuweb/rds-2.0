@@ -19,9 +19,9 @@
   --rds--color-teal: #3A8082;
   --rds--color-teal-light: #C8DAD7;
   --rds--color-success: #007c24;
-  --rds--color-warning: #dba617;
+  --rds--color-warning: #f4c83c;
   --rds--color-error: #d31820;
-  --rds--color-info: #72aee6;
+  --rds--color-info: #b8d9f2;
 
   /* Gradients */
   --rds--gradient-red-to-dark-red: linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%);

@@ -63,13 +63,13 @@ a.cu-badge {
     &--yellow {
         background-color: var(--rds--color-warning);
         border-color: var(--rds--color-warning);
-        color: var(--rds--color-white);
+        color: var(--rds--color-black);
     }
-    
+
     &--blue {
         background-color: var(--rds--color-info);
         border-color: var(--rds--color-info);
-        color: var(--rds--color-white);
+        color: var(--rds--color-black);
     }
     
     &--purple {
