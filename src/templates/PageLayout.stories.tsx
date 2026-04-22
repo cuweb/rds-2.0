@@ -3,7 +3,7 @@ import { Main } from '../components/Main/Main';
 import { Section } from '../components/Section/Section';
 
 const meta: Meta = {
-  title: 'Templates/Layouts',
+  title: 'Overview/Templates/Page Layouts',
   parameters: {
     layout: 'fullscreen',
   },
@@ -23,7 +23,7 @@ const SinglePara = () => (
   </p>
 );
 
-export const PageLayout: Story = {
+export const BasicPage: Story = {
   parameters: {
     a11y: {
       config: {

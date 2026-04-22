@@ -9,17 +9,6 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        loadPaths: [path.join(dirname, 'src/styles/base')],
-        additionalData: (source: string, fp: string) => {
-          if (fp.includes('main.scss') || fp.includes('_mixins.scss')) return source;
-          return `@use 'mixins' as *;\n${source}`;
-        },
-      },
-    },
-  },
   test: {
     projects: [{
       extends: true,

@@ -1,0 +1,1 @@
+Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});const e=require(`../chunk-Bmb41Sf3.cjs`);let t=require(`react`);t=e.t(t,1);let n=require(`react/jsx-runtime`);var r=({children:e,isSticky:t,topSpace:r=0})=>(0,n.jsx)(`aside`,{className:`relative cu-aside cu-prose`,children:t?(0,n.jsx)(`div`,{className:`sticky`,style:{top:`${r}px`},children:e}):e});exports.Aside=r;
