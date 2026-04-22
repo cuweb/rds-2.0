@@ -1,0 +1,1 @@
+Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`}),require(`../chunk-Bmb41Sf3.cjs`);const e=require(`../useLinkContext-kynpB_O6.cjs`);let t=require(`react/jsx-runtime`);var n=({component:n,children:r})=>(0,t.jsx)(e.n.Provider,{value:n,children:r});exports.LinkContext=e.n,exports.LinkProvider=n,exports.useLinkContext=e.t;

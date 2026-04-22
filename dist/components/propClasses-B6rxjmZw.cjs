@@ -1,0 +1,1 @@
+var e={aligncontent:`aligncontent`,alignwide:`alignwide`,alignfull:`alignfull`},t={1:`one`,2:`two`,3:`three`,4:`four`,"1/3":`one-third`,"2/3":`two-thirds`};Object.defineProperty(exports,`n`,{enumerable:!0,get:function(){return e}}),Object.defineProperty(exports,`t`,{enumerable:!0,get:function(){return t}});

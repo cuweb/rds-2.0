@@ -1,0 +1,1 @@
+Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});const e=require(`../chunk-Bmb41Sf3.cjs`);let t=require(`react`);t=e.t(t,1);let n=require(`react/jsx-runtime`);var r=({children:e})=>(0,n.jsx)(`main`,{children:(0,n.jsx)(`div`,{className:`alignfull has-global-padding is-layout-constrained`,children:e})});exports.Main=r;

@@ -7,20 +7,29 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "sideEffects": ["**/*.css", "**/*.scss"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./styles": "./dist/style.css"
+    "./styles": "./dist/style.css",
+    "./styles.css": "./dist/style.css",
+    "./*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.mjs",
+      "require": "./dist/components/*/index.cjs"
+    },
+    "./*.css": "./dist/components/*/styles.css",
+    "./*.scss": "./dist/components/*/styles.scss"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "npm run c2b && storybook dev -p 6006",
-    "build": "vite build && npm run c2b",
+    "build": "vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
     "build-storybook": "storybook build",
     "c2b": "c2b generate",
     "test": "vitest run",
@@ -71,7 +80,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@troychaplin/component2block": "^0.3.0",
+    "@troychaplin/component2block": "^0.3.1",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.0.1",

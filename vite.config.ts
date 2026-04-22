@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 
@@ -12,17 +11,6 @@ export default defineConfig({
       rollupTypes: true,
     }),
   ],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        loadPaths: [resolve(__dirname, 'src/styles/base')],
-        additionalData: (source: string, fp: string) => {
-          if (fp.includes('main.scss') || fp.includes('_mixins.scss')) return source;
-          return `@use 'mixins' as *;\n${source}`;
-        },
-      },
-    },
-  },
   build: {
     lib: {
       entry: 'src/index.ts',

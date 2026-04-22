@@ -1,0 +1,1 @@
+Object.defineProperty(exports,Symbol.toStringTag,{value:`Module`});const e=require(`../chunk-Bmb41Sf3.cjs`);let t=require(`react`);t=e.t(t,1);let n=require(`react/jsx-runtime`);var r=({children:e,content:t})=>t?(0,n.jsx)(`article`,{dangerouslySetInnerHTML:{__html:t}}):(0,n.jsx)(`article`,{children:e});exports.Article=r;
