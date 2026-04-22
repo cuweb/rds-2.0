@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export interface AsideProps {
-  children: React.ReactNode
-  isSticky?: boolean
-  topSpace?: number
+  children: React.ReactNode;
+  isSticky?: boolean;
+  topSpace?: number;
 }
 
 export const Aside = ({ children, isSticky, topSpace = 0 }: AsideProps) => {
@@ -17,5 +17,5 @@ export const Aside = ({ children, isSticky, topSpace = 0 }: AsideProps) => {
         children
       )}
     </aside>
-  )
-}
+  );
+};

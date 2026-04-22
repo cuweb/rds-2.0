@@ -23,7 +23,11 @@ export function BorderRadiusSamples({ title, description }: BorderRadiusSamplesP
           <div key={name} className="sb-swatch">
             <div
               className="sb-swatch__color"
-              style={{ backgroundColor: 'transparent', border: '1px solid #191919', borderRadius: value }}
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid #191919',
+                borderRadius: value,
+              }}
             />
             <strong className="sb-swatch__name">{name}</strong>
             <code className="sb-swatch__var">

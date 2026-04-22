@@ -2,7 +2,7 @@ export const maxWidthClasses = {
   aligncontent: 'aligncontent',
   alignwide: 'alignwide',
   alignfull: 'alignfull',
-}
+};
 
 export const gridColumnClasses = {
   '1': 'one',
@@ -11,7 +11,7 @@ export const gridColumnClasses = {
   '4': 'four',
   '1/3': 'one-third',
   '2/3': 'two-thirds',
-}
+};
 
 export const borderRadiusClasses = {
   none: 'none',
@@ -19,4 +19,4 @@ export const borderRadiusClasses = {
   md: 'md',
   lg: 'lg',
   full: 'full',
-}
+};

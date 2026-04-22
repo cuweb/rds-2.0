@@ -1,33 +1,33 @@
-import React from 'react'
-import './styles.scss'
+import React from 'react';
+import './styles.scss';
 
 export interface BadgeGroupProps {
-  children: React.ReactNode
-  isAbsolute?: boolean
-  top?: number
-  right?: number
-  bottom?: number
-  left?: number
+  children: React.ReactNode;
+  isAbsolute?: boolean;
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
 }
 
 const getPositionStyles = (top?: number, right?: number, bottom?: number, left?: number) => {
-  const styles: React.CSSProperties = {}
+  const styles: React.CSSProperties = {};
 
   if (top !== undefined) {
-    styles.top = `${top}px`
+    styles.top = `${top}px`;
   }
   if (right !== undefined) {
-    styles.right = `${right}px`
+    styles.right = `${right}px`;
   }
   if (bottom !== undefined) {
-    styles.bottom = `${bottom}px`
+    styles.bottom = `${bottom}px`;
   }
   if (left !== undefined) {
-    styles.left = `${left}px`
+    styles.left = `${left}px`;
   }
 
-  return styles
-}
+  return styles;
+};
 
 export const BadgeGroup = ({
   children,
@@ -45,5 +45,5 @@ export const BadgeGroup = ({
     <div className="cu-badge-group" style={positionStyles}>
       {children}
     </div>
-  )
-}
+  );
+};

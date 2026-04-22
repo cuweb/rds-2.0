@@ -1,32 +1,36 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Main } from '../Main/Main'
-import { Section } from '../Section/Section'
-import { Column } from '../Column/Column'
-import { Aside } from './Aside'
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Main } from '../Main/Main';
+import { Section } from '../Section/Section';
+import { Column } from '../Column/Column';
+import { Aside } from './Aside';
+import { MultiParagraph, SampleList } from '../../data/storyContent';
 
 const meta: Meta<typeof Aside> = {
   title: 'Components/Layout/Aside',
   component: Aside,
   tags: ['autodocs'],
+  argTypes: {
+    topSpace: {
+      control: { type: 'number', min: 0 },
+    },
+  },
   parameters: {
     controls: {
       sort: 'requiredFirst',
     },
   },
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Aside>
+export default meta;
+type Story = StoryObj<typeof Aside>;
 
 export const Primary: Story = {
   args: {
     children: 'Aside HTML5 tag as component',
-    isSticky: false,
-    topSpace: 0,
   },
-}
+};
 
-export const AsRightSidebar: Story = {
+export const RightSidebar: Story = {
   parameters: {
     a11y: {
       config: {
@@ -34,52 +38,24 @@ export const AsRightSidebar: Story = {
       },
     },
   },
-  render: () => {
-    return (
-      <Main>
-        <Section>
-          <Column cols="2/3">
-            <Column.Content>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-            </Column.Content>
-            <Aside>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla.
-              </p>
-              <ul>
-                <li>Item One</li>
-                <li>Item Two</li>
-                <li>Item Three</li>
-              </ul>
-            </Aside>
-          </Column>
-        </Section>
-      </Main>
-    )
-  },
-}
+  render: () => (
+    <Main>
+      <Section>
+        <Column cols="2/3">
+          <Column.Content>
+            <MultiParagraph count={4} />
+          </Column.Content>
+          <Aside>
+            <MultiParagraph count={1} />
+            <SampleList />
+          </Aside>
+        </Column>
+      </Section>
+    </Main>
+  ),
+};
 
-export const LeftSidebarWithSticky: Story = {
+export const LeftSidebarSticky: Story = {
   args: {
     isSticky: true,
     topSpace: 16,
@@ -91,67 +67,19 @@ export const LeftSidebarWithSticky: Story = {
       },
     },
   },
-  render: (args) => {
-    return (
-      <Main>
-        <Section>
-          <Column cols="1/3">
-            <Aside {...args}>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla.
-              </p>
-              <ul>
-                <li>Item One</li>
-                <li>Item Two</li>
-                <li>Item Three</li>
-              </ul>
-            </Aside>
-            <Column.Content>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-              <p>
-                Left. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam augue turpis, feugiat vitae
-                viverra in, egestas vitae nulla. Quisque auctor ultrices mauris, et semper urna aliquam quis. Duis sed
-                malesuada metus, et tristique dolor. Suspendisse vestibulum hendrerit.
-              </p>
-              <p>
-                Aliquam blandit tellus odio, nec commodo est efficitur sit amet. Proin molestie, risus in mollis
-                laoreet, lectus dui egestas augue, eu maximus velit dui sed quam. Pellentesque iaculis suscipit libero
-                gravida tempus. Phasellus in egestas sapien ac libero.
-              </p>
-            </Column.Content>
-          </Column>
-        </Section>
-      </Main>
-    )
-  },
-}
+  render: (args) => (
+    <Main>
+      <Section>
+        <Column cols="1/3">
+          <Aside {...args}>
+            <MultiParagraph count={1} />
+            <SampleList />
+          </Aside>
+          <Column.Content>
+            <MultiParagraph count={4} />
+          </Column.Content>
+        </Column>
+      </Section>
+    </Main>
+  ),
+};

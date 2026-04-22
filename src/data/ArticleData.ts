@@ -90,4 +90,4 @@ export const ArticleData = `
     Id dolor praesent donec est. Odio penatibus risus viverra tellus
     varius sit neque erat velit.
     </p>
-`
+`;

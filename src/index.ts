@@ -14,4 +14,4 @@ export { Badge } from './components/Badge/Badge';
 export { BadgeGroup } from './components/BadgeGroup/BadgeGroup';
 
 // LinkProvider
-export { LinkProvider } from './components/LinkProvider/index'
+export { LinkProvider } from './components/LinkProvider/index';
