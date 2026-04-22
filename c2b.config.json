@@ -19,10 +19,6 @@
             "primary-dark": "#a21218",
             "secondary": "#426587",
             "secondary-dark": { "value": "#2c3c4e", "cssOnly": true },
-            "success": { "value": "#00a32a", "cssOnly": true },
-            "warning": { "value": "#dba617", "cssOnly": true },
-            "error": { "value": "#e91c24", "cssOnly": true },
-            "info": { "value": "#72aee6", "cssOnly": true },
             "black": "#191919",
             "grey-dark": "#434343",
             "grey": "#767676",
@@ -34,7 +30,11 @@
             "purple": { "value": "#636FAC", "cssOnly": true },
             "purple-light": { "value": "#D3DAE9", "cssOnly": true },
             "teal": { "value": "#3A8082", "cssOnly": true },
-            "teal-light": { "value": "#C8DAD7", "cssOnly": true }
+            "teal-light": { "value": "#C8DAD7", "cssOnly": true },
+            "success": { "value": "#007c24", "cssOnly": true },
+            "warning": { "value": "#dba617", "cssOnly": true },
+            "error": { "value": "#d31820", "cssOnly": true },
+            "info": { "value": "#72aee6", "cssOnly": true }
         },
 
         "gradient": {

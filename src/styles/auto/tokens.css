@@ -6,10 +6,6 @@
   --rds--color-primary-dark: #a21218;
   --rds--color-secondary: #426587;
   --rds--color-secondary-dark: #2c3c4e;
-  --rds--color-success: #00a32a;
-  --rds--color-warning: #dba617;
-  --rds--color-error: #e91c24;
-  --rds--color-info: #72aee6;
   --rds--color-black: #191919;
   --rds--color-grey-dark: #434343;
   --rds--color-grey: #767676;
@@ -22,6 +18,10 @@
   --rds--color-purple-light: #D3DAE9;
   --rds--color-teal: #3A8082;
   --rds--color-teal-light: #C8DAD7;
+  --rds--color-success: #007c24;
+  --rds--color-warning: #dba617;
+  --rds--color-error: #d31820;
+  --rds--color-info: #72aee6;
 
   /* Gradients */
   --rds--gradient-red-to-dark-red: linear-gradient(135deg,rgb(233,28,36) 0%,rgb(25,25,25) 100%);
