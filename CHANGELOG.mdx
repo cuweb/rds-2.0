@@ -15,8 +15,13 @@ Prefix the change with one of these keywords:
 - _Fixed_: for any bug fixes.
 - _Security_: in case of vulnerabilities.
 
+
 ## [Unreleased]
 
+- _Added_: `Button` component with variants, sizes, and full style support ([src/components/Button/Button.tsx], [src/components/Button/styles.scss])
+- _Added_: `ButtonGroup` component for grouping buttons ([src/components/ButtonGroup/ButtonGroup.tsx], [src/components/ButtonGroup/styles.scss])
+- _Added_: Storybook stories for `Button` and `ButtonGroup` ([src/components/Button/Button.stories.tsx], [src/components/ButtonGroup/ButtonGroup.stories.tsx])
+- _Added_: New and updated image, logo, and favicon assets in `public/assets/` and `public/assets/bg-images/`
 - _Added_: `Badge` component with color, radius, and link support ([src/components/Badge/Badge.tsx](src/components/Badge/Badge.tsx), [src/components/Badge/styles.scss](src/components/Badge/styles.scss))
 - _Added_: `BadgeGroup` component for grouping badges with optional absolute positioning ([src/components/BadgeGroup/BadgeGroup.tsx](src/components/BadgeGroup/BadgeGroup.tsx), [src/components/BadgeGroup/styles.scss](src/components/BadgeGroup/styles.scss))
 - _Added_: Storybook stories for `Badge` and `BadgeGroup` ([src/components/Badge/Badge.stories.tsx](src/components/Badge/Badge.stories.tsx), [src/components/BadgeGroup/BadgeGroup.stories.tsx](src/components/BadgeGroup/BadgeGroup.stories.tsx))
@@ -26,6 +31,8 @@ Prefix the change with one of these keywords:
 - _Changed_: Updated `create-release.prompt.md` and `update-changelog.prompt.md` to clarify and automate release and changelog workflows, ensuring all types of changes (code, config, docs, prompts, automation, workflow, styles) are included in the changelog and release process.
 - _Changed_: Exported `Badge`, `BadgeGroup`, and `LinkProvider` from package entry point ([src/index.ts](src/index.ts))
 - _Changed_: Refactored and standardized Storybook stories for all layout and UI components for improved consistency and maintainability. Updated related component code and styles for clarity and formatting. (Multiple files in `src/components/`, `src/data/`, `src/styles/`, and `.storybook/preview.ts`)
+- _Changed_: Updated `public/assets/bg-images/bg-image-list.js` for new background images
+- _Changed_: Updated `package.json` and `pnpm-lock.yaml` for new component exports and dependencies
 
 ## [0.2.1]
 
