@@ -13,6 +13,7 @@ export { Section } from './components/Section/Section';
 export { Badge } from './components/Badge/Badge';
 export { BadgeGroup } from './components/BadgeGroup/BadgeGroup';
 export { Button } from './components/Button/Button';
+export { ButtonGroup } from './components/ButtonGroup/ButtonGroup';
 
 // LinkProvider
 export { LinkProvider } from './components/LinkProvider/index';

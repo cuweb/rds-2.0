@@ -20,3 +20,9 @@ export const borderRadiusClasses = {
   lg: 'lg',
   full: 'full',
 };
+
+export const justifyClasses = {
+  start: 'start',
+  end: 'end',
+  center: 'center',
+};

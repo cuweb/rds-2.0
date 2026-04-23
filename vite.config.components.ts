@@ -13,6 +13,7 @@ const componentNames = [
   'BadgeGroup',
   'Body',
   'Button',
+  'ButtonGroup',
   'Column',
   'LinkProvider',
   'Main',
