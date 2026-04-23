@@ -1,4 +1,6 @@
 import React from 'react';
+import { Icon } from '../Icon/Icon';
+import type { IconName } from '../Icon';
 import './styles.scss';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
@@ -11,13 +13,13 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 
 export interface ButtonTitleProps extends ButtonProps {
   title: string;
-  icon?: string;
+  icon?: IconName;
   ariaLabel?: string;
 }
 
 export interface ButtonNoTitleProps extends ButtonProps {
   title?: string;
-  icon: string;
+  icon: IconName;
   ariaLabel: string;
 }
 
@@ -44,7 +46,7 @@ export const Button = ({
       disabled={isDisabled}
       {...rest}
     >
-      {icon && <span className="cu-icon" data-icon={icon} aria-hidden="true" />}
+      {icon && <Icon className="cu-icon" name={icon} size={isSmall ? 16 : 20} />}
       {title}
     </button>
   );

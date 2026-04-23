@@ -1,6 +1,7 @@
 .cu-buttongroup {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--rds--spacing-2x-small);
 }
 @media (min-width: 784px) {
   .cu-buttongroup {
@@ -16,12 +17,12 @@
 .cu-buttongroup--gap-lg {
   gap: var(--rds--spacing-medium);
 }
-.cu-buttongroup--align-start {
+.cu-buttongroup--justify-start {
   justify-content: flex-start;
 }
-.cu-buttongroup--align-center {
+.cu-buttongroup--justify-center {
   justify-content: center;
 }
-.cu-buttongroup--align-end {
+.cu-buttongroup--justify-end {
   justify-content: flex-end;
 }
