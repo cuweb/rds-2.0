@@ -7,7 +7,10 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "sideEffects": ["**/*.css", "**/*.scss"],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -103,7 +106,7 @@
     "storybook": "^10.3.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.0",
-    "vite": "^8.0.9",
+    "vite": "^8.0.10",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.5"
   }
