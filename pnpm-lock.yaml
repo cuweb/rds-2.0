@@ -12,8 +12,8 @@ importers:
         specifier: ^5.1.2
         version: 5.1.2(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@cuweb/rds-icons':
-        specifier: file:../rds-icons
-        version: file:../rds-icons(react@18.3.1)
+        specifier: ^0.1.5
+        version: 0.1.5(react@18.3.1)
       '@eslint/js':
         specifier: ^9.39.4
         version: 9.39.4
@@ -209,8 +209,8 @@ packages:
     peerDependencies:
       storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
 
-  '@cuweb/rds-icons@file:../rds-icons':
-    resolution: {directory: ../rds-icons, type: directory}
+  '@cuweb/rds-icons@0.1.5':
+    resolution: {integrity: sha512-e+tDh/wLgOQJCJZdeFnJ45fTXu82eBBjABkb93pDoHoKOJlBRBfzXoOUazd0/kSOTOIO0plLerp0wE4aHGeafQ==, tarball: https://npm.pkg.github.com/download/@cuweb/rds-icons/0.1.5/27257503fae36773950f10f815f10b1dc39094bd}
     peerDependencies:
       react: ^18.0.0
 
@@ -2911,7 +2911,7 @@ snapshots:
       - '@chromatic-com/cypress'
       - '@chromatic-com/playwright'
 
-  '@cuweb/rds-icons@file:../rds-icons(react@18.3.1)':
+  '@cuweb/rds-icons@0.1.5(react@18.3.1)':
     dependencies:
       react: 18.3.1
 

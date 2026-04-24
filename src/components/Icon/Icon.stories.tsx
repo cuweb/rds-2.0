@@ -67,7 +67,7 @@ export const AllIcons: Story = {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
-        gap: '0.5rem',
+        gap: '0.75rem',
         padding: '1.5rem',
         width: '100%',
         boxSizing: 'border-box',
@@ -81,11 +81,11 @@ export const AllIcons: Story = {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '0.5rem',
+            gap: '0.75rem',
             padding: '1.25rem 1rem',
             border: '1px solid var(--rds--color-grey-lighter)',
             borderRadius: 'var(--rds--radius-md)',
-            fontSize: '1rem',
+            fontSize: '0.75rem',
             textAlign: 'center',
             wordBreak: 'break-word',
           }}
