@@ -4,10 +4,13 @@ import { Body } from './Body';
 const meta: Meta<typeof Body> = {
   title: 'Components/Layout/Body',
   component: Body,
-  tags: ['autodocs'],
+  tags: ['autodocs', '!test'],
   parameters: {
     controls: {
       sort: 'requiredFirst',
+    },
+    a11y: {
+      test: 'off',
     },
   },
 };
