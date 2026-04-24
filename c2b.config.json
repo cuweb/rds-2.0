@@ -72,16 +72,16 @@
 
         "fontSize": {
             "x-small": { "value": "0.75rem", "fluid": { "min": "0.65rem", "max": "0.75rem" }, "cssOnly": true },
-            "small":   { "value": "0.9rem", "fluid": { "min": "0.75rem", "max": "0.9rem" } },
-            "medium":  { "value": "1rem", "fluid": { "min": "0.875rem", "max": "1rem" } },
-            "large":   { "value": "1.125rem", "fluid": { "min": "1rem", "max": "1.125rem" } },
+            "small":   { "value": "0.9rem", "fluid": { "min": "0.725rem", "max": "0.9rem" } },
+            "medium":  { "value": "1rem", "fluid": { "min": "0.825rem", "max": "1rem" } },
+            "large":   { "value": "1.125rem", "fluid": { "min": "0.9rem", "max": "1.125rem" } },
             "x-large": { "value": "1.25rem", "fluid": { "min": "1.125rem", "max": "1.25rem" } },
             "2x-large": { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
             "heading-small":   { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
-            "heading-medium":  { "value": "2rem",   "fluid": { "min": "1.75rem", "max": "2rem" } },
-            "heading-large":   { "value": "2.5rem", "fluid": { "min": "2rem",    "max": "2.5rem" } },
-            "heading-x-large": { "value": "3rem",   "fluid": { "min": "2.5rem",  "max": "3rem" } },
-            "heading-primary": { "value": "3.5rem", "fluid": { "min": "3rem",    "max": "3.5rem" } }
+            "heading-medium":  { "value": "2rem",   "fluid": { "min": "1.5rem", "max": "2rem" } },
+            "heading-large":   { "value": "2.5rem", "fluid": { "min": "1.75rem",    "max": "2.5rem" } },
+            "heading-x-large": { "value": "3rem",   "fluid": { "min": "2rem",  "max": "3rem" } },
+            "heading-primary": { "value": "3.5rem", "fluid": { "min": "2.25rem",    "max": "3.5rem" } }
         },
 
         "spacing": {

@@ -41,7 +41,7 @@ export const BasicPage: Story = {
       <header>
         <nav aria-label="Primary">
           <a href="/">Raven Design System 2.0</a>
-          <ul>
+          {/* <ul>
             <li>
               <a href="/about">About</a>
             </li>
@@ -51,12 +51,12 @@ export const BasicPage: Story = {
             <li>
               <a href="/contact">Contact</a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
       </header>
 
       <Main>
-        <h1>Basic Markup</h1>
+        <h1>Heading One: Page Title</h1>
 
         <p>
           This is an example page. It is different from a blog post because it will stay in one
@@ -64,44 +64,8 @@ export const BasicPage: Story = {
           About page that introduces them to potential site visitors. It might say something like
           this:
         </p>
-        <p>
-          Hi there! I am a bike messenger by day, aspiring actor by night, and this is my website. I
-          live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And getting
-          caught in the rain.)
-        </p>
-
-        <SinglePara />
-
-        <div
-          className="alignwide has-global-padding is-layout-constrained"
-          style={{
-            backgroundColor: 'var(--rds--color-grey-pale)',
-            padding: 'var(--rds--spacing-large)',
-          }}
-        >
-          <h2>Inline Elements</h2>
-          <p>
-            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
-            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
-            <mark>highlighted text</mark>. Keyboard shortcuts look like <kbd>Cmd</kbd> +{' '}
-            <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
-            render with dotted underlines.
-          </p>
-        </div>
-
-        <Section as="section" maxWidth="alignfull" isGrey>
-          <h2>Inline Elements</h2>
-          <p>
-            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
-            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
-            <mark>highlighted text</mark>. Keyboard shortcuts look like <kbd>Cmd</kbd> +{' '}
-            <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
-            render with dotted underlines.
-          </p>
-        </Section>
 
         <h2>Heading Two</h2>
-        <SinglePara />
         <SinglePara />
 
         <h3>Heading Three</h3>
@@ -163,6 +127,42 @@ export const BasicPage: Story = {
         </ol>
 
         <SinglePara />
+
+        <p>
+          Hi there! I am a bike messenger by day, aspiring actor by night, and this is my website. I
+          live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And getting
+          caught in the rain.)
+        </p>
+
+        <SinglePara />
+
+        <div
+          className="alignwide has-global-padding is-layout-constrained"
+          style={{
+            backgroundColor: 'var(--rds--color-grey-pale)',
+            padding: 'var(--rds--spacing-large)',
+          }}
+        >
+          <h2>Inline Elements</h2>
+          <p>
+            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+            <mark>highlighted text</mark>. Keyboard shortcuts look like <kbd>Cmd</kbd> +{' '}
+            <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
+            render with dotted underlines.
+          </p>
+        </div>
+
+        <Section as="section" maxWidth="alignfull" isGrey>
+          <h2>Inline Elements</h2>
+          <p>
+            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+            <mark>highlighted text</mark>. Keyboard shortcuts look like <kbd>Cmd</kbd> +{' '}
+            <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
+            render with dotted underlines.
+          </p>
+        </Section>
       </Main>
 
       <FooterStandard type="standard" />
