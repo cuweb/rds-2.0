@@ -1,5 +1,5 @@
 {
-  "name": "@carletonuniversity/rds-2.0",
+  "name": "@cuweb/rds-2.0",
   "version": "0.2.1",
   "description": "React component library and design system for Carleton University",
   "type": "module",
@@ -7,7 +7,10 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "sideEffects": ["**/*.css", "**/*.scss"],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -56,6 +59,7 @@
     }
   ],
   "peerDependencies": {
+    "@cuweb/rds-icons": "^0.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -71,6 +75,7 @@
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
     "@chromatic-com/storybook": "^5.1.2",
+    "@cuweb/rds-icons": "^0.1.5",
     "@eslint/js": "^9.39.4",
     "@size-limit/file": "^12.1.0",
     "@storybook/addon-a11y": "^10.3.5",
@@ -103,7 +108,7 @@
     "storybook": "^10.3.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.0",
-    "vite": "^8.0.9",
+    "vite": "^8.0.10",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.5"
   }

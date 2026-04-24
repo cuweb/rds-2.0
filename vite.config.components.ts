@@ -12,6 +12,8 @@ const componentNames = [
   'Badge',
   'BadgeGroup',
   'Body',
+  'Button',
+  'ButtonGroup',
   'Column',
   'LinkProvider',
   'Main',

@@ -12,6 +12,15 @@ export { Section } from './components/Section/Section';
 // Components
 export { Badge } from './components/Badge/Badge';
 export { BadgeGroup } from './components/BadgeGroup/BadgeGroup';
+export { Button } from './components/Button/Button';
+export { ButtonGroup } from './components/ButtonGroup/ButtonGroup';
+
+// Icon — the Icon component lives here; icon names, map, and list come from the
+// private @cuweb/rds-icons peer dependency. Consumers import named
+// icons directly from that package.
+export { Icon } from './components/Icon/Icon';
+export type { IconProps } from './components/Icon';
+export type { IconName } from '@cuweb/rds-icons';
 
 // LinkProvider
 export { LinkProvider } from './components/LinkProvider/index';

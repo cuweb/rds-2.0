@@ -1,0 +1,35 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-buttongroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rds--spacing-2x-small);
+
+  @media (min-width: $rds-media-query-md) {
+    flex: 1 1 0%;
+  }
+
+  &--gap-sm {
+    gap: var(--rds--spacing-x-small);
+  }
+
+  &--gap-md {
+    gap: var(--rds--spacing-small);
+  }
+
+  &--gap-lg {
+    gap: var(--rds--spacing-medium);
+  }
+
+  &--justify-start {
+    justify-content: flex-start;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+}
