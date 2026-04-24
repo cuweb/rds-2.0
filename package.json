@@ -1,5 +1,5 @@
 {
-  "name": "@carletonuniversity/rds-2.0",
+  "name": "@cuweb/rds-2.0",
   "version": "0.2.1",
   "description": "React component library and design system for Carleton University",
   "type": "module",
@@ -31,9 +31,8 @@
     "dist"
   ],
   "scripts": {
-    "dev": "npm run c2b && npm run icons && storybook dev -p 6006",
-    "build": "npm run icons && vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
-    "icons": "node scripts/generate-icons.mjs",
+    "dev": "npm run c2b && storybook dev -p 6006",
+    "build": "vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
     "build-storybook": "storybook build",
     "c2b": "c2b generate",
     "test": "vitest run",
@@ -60,6 +59,7 @@
     }
   ],
   "peerDependencies": {
+    "@cuweb/rds-icons": "^0.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -84,6 +84,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
+    "@cuweb/rds-icons": "file:../rds-icons",
     "@troychaplin/component2block": "^0.3.1",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",

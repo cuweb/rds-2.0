@@ -27,7 +27,3 @@ Thumbs.db
 
 # Logs
 *.log
-
-# Generated icons (produced by scripts/generate-icons.mjs)
-src/components/Icon/generated/
-src/components/Icon/iconList.ts

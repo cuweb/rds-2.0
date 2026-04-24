@@ -18,6 +18,13 @@ Prefix the change with one of these keywords:
 
 ## [Unreleased]
 
+- _Breaking_: Renamed package scope from `@carletonuniversity` to `@cuweb` to match the GitHub organization. Consumers must update imports from `@carletonuniversity/rds-2.0` to `@cuweb/rds-2.0`.
+- _Added_: `Icon` component sourced from the private `@cuweb/rds-icons` peer package ([src/components/Icon/Icon.tsx](src/components/Icon/Icon.tsx), [src/components/Icon/Icon.stories.tsx](src/components/Icon/Icon.stories.tsx))
+- _Added_: Font Awesome Pro icon architecture documentation ([docs/ICONS.md](docs/ICONS.md)) — split-repo design for license compliance, consumer setup, developer workflow
+- _Added_: `.nvmrc` pinning Node 22.12.0 to match Vite's minimum version
+- _Changed_: `Button`'s `icon` prop is now typed as `IconName` (from `@cuweb/rds-icons`) instead of `string`, enabling autocomplete and compile-time validation of icon names
+- _Removed_: Font Awesome Pro SVG assets (`public/assets/font-awesome/`) — moved to the private `@cuweb/rds-icons` package for Pro license compliance
+- _Removed_: `scripts/generate-icons.mjs` — moved to `@cuweb/rds-icons`
 - _Added_: `Button` component with variants, sizes, and full style support ([src/components/Button/Button.tsx], [src/components/Button/styles.scss])
 - _Added_: `ButtonGroup` component for grouping buttons ([src/components/ButtonGroup/ButtonGroup.tsx], [src/components/ButtonGroup/styles.scss])
 - _Added_: Storybook stories for `Button` and `ButtonGroup` ([src/components/Button/Button.stories.tsx], [src/components/ButtonGroup/ButtonGroup.stories.tsx])

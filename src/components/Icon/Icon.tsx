@@ -1,5 +1,5 @@
 import type { SVGProps } from 'react';
-import { iconMap, type IconName } from './generated/registry';
+import { iconMap, type IconName } from '@cuweb/rds-icons';
 
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'name'> {
   name: IconName;

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { iconList, type IconName } from '@cuweb/rds-icons';
 import { Icon } from './Icon';
-import { iconList } from './iconList';
 
 const meta: Meta<typeof Icon> = {
   title: 'Components/Elements/Icon',
@@ -90,7 +90,7 @@ export const AllIcons: Story = {
             wordBreak: 'break-word',
           }}
         >
-          <Icon name={entry.value as never} size={24} />
+          <Icon name={entry.value as IconName} size={24} />
           <span>{entry.value}</span>
         </div>
       ))}

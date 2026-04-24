@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is **Raven Design System (RDS) 2.0** — Carleton University's React component library and design system. Package: `@carletonuniversity/rds-2.0`.
+This is **Raven Design System (RDS) 2.0** — Carleton University's React component library and design system. Package: `@cuweb/rds-2.0`.
 
 ## Tech Stack
 

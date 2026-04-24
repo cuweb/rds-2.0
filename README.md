@@ -12,7 +12,7 @@ theme files.
 ## Package
 
 ```
-@carletonuniversity/rds-2.0
+@cuweb/rds-2.0
 ```
 
 ## Quick start
@@ -63,10 +63,10 @@ dist/
 
 ```tsx
 // Import the full stylesheet once (tokens + globals + components)
-import '@carletonuniversity/rds-2.0/styles';
+import '@cuweb/rds-2.0/styles';
 
 // Import components
-import { Button } from '@carletonuniversity/rds-2.0';
+import { Button } from '@cuweb/rds-2.0';
 ```
 
 ### WordPress block themes
@@ -81,7 +81,7 @@ Import per-component CSS in a block's stylesheets:
 
 ```scss
 // block-name/src/editor.scss
-@import '@carletonuniversity/rds-2.0/components/Button/style.css';
+@import '@cuweb/rds-2.0/components/Button/style.css';
 ```
 
 ## Design tokens
