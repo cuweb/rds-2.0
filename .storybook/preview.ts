@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react-vite';
 import '../src/styles/main.scss';
+// Dev-only: override --rds--asset-* to point at public/_assets served by Vite at /_assets
+import '../src/styles/auto/_assets-dev.scss';
 
 const unwrapRender = (code: string): string => {
   if (!code) return code;

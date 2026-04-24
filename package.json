@@ -31,9 +31,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "npm run c2b && storybook dev -p 6006",
-    "build": "vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
-    "build-storybook": "storybook build",
+    "dev": "npm run assets && npm run c2b && storybook dev -p 6006",
+    "build": "npm run assets && vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
+    "build-storybook": "npm run assets && storybook build",
+    "assets": "node scripts/build-assets.mjs",
     "c2b": "c2b generate",
     "test": "vitest run",
     "test:watch": "vitest",
