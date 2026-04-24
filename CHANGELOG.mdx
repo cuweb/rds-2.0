@@ -19,6 +19,23 @@ Prefix the change with one of these keywords:
 
 ## [Unreleased]
 
+- _Added_: Centralized asset path config in [src/config/assets.json](src/config/assets.json), generated to [src/config/assets.ts](src/config/assets.ts) + [src/styles/auto/_assets.scss](src/styles/auto/_assets.scss) by [scripts/build-assets.mjs](scripts/build-assets.mjs). Production uses the Carleton CDN; Storybook dev pulls from `public/_assets/` via a separate `_assets-dev.scss` override wired through [.storybook/preview.ts](.storybook/preview.ts). All 68 asset paths (logos, wave graphics, banners, bg images, favicons, lexical icons, Ravens logos) are exposed as camelCase TS constants (`assets.cuLogoColorVerticalOutlined`, `assets.ravensLogo`, etc.) and as kebab-case CSS custom properties (`var(--rds--asset-cu-waves-footer-red)`).
+- _Added_: `assets` npm script that regenerates the asset files; chained into `dev`, `build`, and `build-storybook` ahead of downstream steps.
+- _Changed_: Footer components no longer hardcode CDN URLs — `FooterStandard.tsx`, `Footer.tsx`, `FooterData.ts`, and `FooterStandard/styles.scss` now read from the generated `assets` constants and `--rds--asset-*` CSS variables.
+- _Added_: `Footer` component — minimal footer with the Carleton logo and copyright/privacy/accessibility links ([src/components/Footer/Footer.tsx](src/components/Footer/Footer.tsx))
+- _Added_: `FooterStandard` component — full university footer driven by a `type` prop (`'standard' | 'athletics' | 'futureFunder'`). Link data resolves via the `footerLinksByType` registry in [FooterData.ts](src/data/FooterData.ts) ([src/components/FooterStandard/FooterStandard.tsx](src/components/FooterStandard/FooterStandard.tsx))
+- _Added_: `FooterType` public type export for consumer typing
+- _Added_: `DepartmentBar` component (renamed from `FooterDept`) — department contact strip with optional action buttons ([src/components/DepartmentBar/DepartmentBar.tsx](src/components/DepartmentBar/DepartmentBar.tsx))
+- _Added_: `CookieBanner` component (renamed from `FooterCookie`) — fixed-position cookie consent banner with helpers split into [cookies.ts](src/components/CookieBanner/cookies.ts) ([src/components/CookieBanner/CookieBanner.tsx](src/components/CookieBanner/CookieBanner.tsx))
+- _Added_: `src/data/FooterData.ts` — Carleton link columns, contact info, social icons, footer buttons, plus `FooterType` union and `footerLinksByType` registry (includes a `futureFunder` placeholder cloned from `standard`)
+- _Added_: `sr-only` global utility class in [src/styles/base/_utils.scss](src/styles/base/_utils.scss)
+- _Changed_: Replaced Tailwind utility classes in all footer components with BEM SCSS using `var(--rds--*)` tokens
+- _Changed_: Inline social `<svg>` arrays replaced with `<Icon />` from `@cuweb/rds-icons`
+- _Removed_: Legacy `src/components/Footer/FooterBasic`, `FooterStandard`, `FooterAthletics`, `FooterDept`, `FooterCookie`, and `FooterLogoLinks` nested folders
+- _Removed_: `FooterAthletics` as a standalone component — consumers now use `<FooterStandard type="athletics" />`
+- _Removed_: `src/components/FooterStandard/parts.tsx` — parts now inlined in `FooterStandard.tsx`
+- _Removed_: `src/components/Footer/Examples.stories.TODO.tsx` (referenced a `Nav` component that does not yet exist)
+
 ## [0.3.0] - 2026-04-24
 
 - _Breaking_: Renamed package scope from `@carletonuniversity` to `@cuweb` to match the GitHub organization. Consumers must update imports from `@carletonuniversity/rds-2.0` to `@cuweb/rds-2.0`.

@@ -14,6 +14,15 @@ export { Badge } from './components/Badge/Badge';
 export { BadgeGroup } from './components/BadgeGroup/BadgeGroup';
 export { Button } from './components/Button/Button';
 export { ButtonGroup } from './components/ButtonGroup/ButtonGroup';
+export { CookieBanner } from './components/CookieBanner/CookieBanner';
+export type { CookieBannerProps } from './components/CookieBanner/CookieBanner';
+export { DepartmentBar } from './components/DepartmentBar/DepartmentBar';
+export type { DepartmentBarProps } from './components/DepartmentBar/DepartmentBar';
+export { Footer } from './components/Footer/Footer';
+export type { FooterProps } from './components/Footer/Footer';
+export { FooterStandard } from './components/FooterStandard/FooterStandard';
+export type { FooterStandardProps } from './components/FooterStandard/FooterStandard';
+export type { FooterType } from './data/FooterData';
 
 // Icon — the Icon component lives here; icon names, map, and list come from the
 // private @cuweb/rds-icons peer dependency. Consumers import named

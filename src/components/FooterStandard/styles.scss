@@ -1,0 +1,228 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-footer {
+  margin-top: auto;
+  margin-bottom: 0;
+  color: var(--rds--color-grey-light);
+  background-color: var(--rds--color-black);
+  background-image: var(--rds--asset-cu-waves-footer-red);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.cu-footer--basic {
+  padding-top: 2rem;
+  background-size: cover;
+
+  @media (min-width: $rds-media-query-sm) {
+    padding-top: 3rem;
+  }
+}
+
+.cu-footer--standard,
+.cu-footer--athletics,
+.cu-footer--futureFunder {
+  padding: 2rem;
+  background-size: 100.5%;
+
+  @media (min-width: $rds-media-query-md) {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.cu-footer__inner {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--rds--layout-wide-size);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cu-footer__acknowledgment {
+  padding-bottom: 2rem;
+  text-align: center;
+
+  @media (min-width: $rds-media-query-md) {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--rds--color-grey-dark);
+  }
+
+  p {
+    margin: 0;
+    color: var(--rds--color-white);
+    font-size: var(--rds--font-size-small);
+    font-weight: var(--rds--font-weight-medium);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+  }
+}
+
+.cu-footer__columns {
+  display: none;
+
+  @media (min-width: $rds-media-query-md) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--rds--color-grey-dark);
+  }
+}
+
+.cu-footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.cu-footer__column-group + .cu-footer__column-group {
+  margin-top: 2rem;
+}
+
+.cu-footer__column-heading {
+  margin: 0;
+  color: var(--rds--color-white);
+  font-size: var(--rds--font-size-medium);
+  font-weight: var(--rds--font-weight-bold);
+}
+
+.cu-footer__column-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cu-footer__column-item {
+  margin-top: 0.625rem;
+  font-size: var(--rds--font-size-small);
+}
+
+.cu-footer__column-link {
+  color: var(--rds--color-grey-light);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--rds--color-white);
+  }
+}
+
+.cu-footer__column-media {
+  display: inline-block;
+  margin-top: 2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cu-footer__contact {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  color: var(--rds--color-grey-light);
+  font-size: var(--rds--font-size-medium);
+
+  @media (min-width: $rds-media-query-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: var(--rds--font-size-small);
+  }
+}
+
+.cu-footer__contact-lead,
+.cu-footer__contact-address {
+  margin: 0;
+}
+
+.cu-footer__contact-address {
+  text-align: center;
+}
+
+.cu-footer__contact-link {
+  color: var(--rds--color-white);
+  font-weight: var(--rds--font-weight-bold);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--rds--color-primary);
+  }
+}
+
+.cu-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $rds-media-query-lg) {
+    justify-content: flex-end;
+  }
+}
+
+.cu-footer__social-link {
+  display: inline-flex;
+  color: var(--rds--color-grey-light);
+
+  &:hover {
+    color: var(--rds--color-primary);
+  }
+}
+
+.cu-footer__logo-links {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 6rem;
+
+  @media (min-width: $rds-media-query-sm) {
+    padding-bottom: 9rem;
+  }
+  @media (min-width: $rds-media-query-lg) {
+    padding-bottom: 11rem;
+  }
+}
+
+.cu-footer__logo {
+  width: auto;
+  height: 8rem;
+  margin: 0 auto 1.5rem;
+
+  @media (min-width: $rds-media-query-sm) {
+    height: 11rem;
+  }
+}
+
+.cu-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--rds--color-grey-light);
+  font-size: var(--rds--font-size-x-small);
+
+  @media (min-width: $rds-media-query-sm) {
+    gap: 1.5rem;
+    font-size: var(--rds--font-size-small);
+  }
+}
+
+.cu-footer__meta-link {
+  color: var(--rds--color-grey-light);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--rds--color-white);
+  }
+}

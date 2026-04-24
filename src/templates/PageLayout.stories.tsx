@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Main } from '../components/Main/Main';
 import { Section } from '../components/Section/Section';
+import { FooterStandard } from '../components/FooterStandard';
+import { CookieBanner } from '../components/CookieBanner';
 
 const meta: Meta = {
   title: 'Overview/Templates/Page Layouts',
@@ -163,9 +165,8 @@ export const BasicPage: Story = {
         <SinglePara />
       </Main>
 
-      <footer>
-        <p>&copy; Carleton University — Raven Design System 2.0</p>
-      </footer>
+      <FooterStandard type="standard" />
+      <CookieBanner cookieName="storybook-preview-consent" />
     </>
   ),
 };
