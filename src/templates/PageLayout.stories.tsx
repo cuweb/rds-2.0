@@ -136,13 +136,7 @@ export const BasicPage: Story = {
 
         <SinglePara />
 
-        <div
-          className="alignwide has-global-padding is-layout-constrained"
-          style={{
-            backgroundColor: 'var(--rds--color-grey-pale)',
-            padding: 'var(--rds--spacing-large)',
-          }}
-        >
+        <Section as="section" isGrey>
           <h2>Inline Elements</h2>
           <p>
             A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
@@ -151,7 +145,22 @@ export const BasicPage: Story = {
             <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
             render with dotted underlines.
           </p>
-        </div>
+        </Section>
+
+        <SinglePara />
+
+        <Section as="section" maxWidth="alignwide" isGrey>
+          <h2>Inline Elements</h2>
+          <p>
+            A paragraph can contain <strong>bold text</strong>, <em>italic text</em>,{' '}
+            <code>inline code</code>, <a href="https://carleton.ca">a link</a>, and{' '}
+            <mark>highlighted text</mark>. Keyboard shortcuts look like <kbd>Cmd</kbd> +{' '}
+            <kbd>K</kbd>, and abbreviations like <abbr title="Raven Design System">RDS</abbr> should
+            render with dotted underlines.
+          </p>
+        </Section>
+
+        <SinglePara />
 
         <Section as="section" maxWidth="alignfull" isGrey>
           <h2>Inline Elements</h2>
