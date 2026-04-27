@@ -7,51 +7,6 @@ body {
   line-height: var(--rds--line-height-normal);
   color: var(--rds--color-black);
   background-color: var(--rds--color-white);
-  --rds--root-padding-top: 0;
-  --rds--root-padding-right: var(--rds--spacing-large);
-  --rds--root-padding-bottom: 0;
-  --rds--root-padding-left: var(--rds--spacing-large);
-  --rds--root-block-gap: var(--rds--spacing-medium);
-}
-
-:where(.is-layout-constrained) > * + * {
-  margin-block-start: var(--rds--root-block-gap);
-}
-
-:where(.is-layout-flex) {
-  gap: var(--rds--root-block-gap);
-}
-
-:where(.is-layout-grid) {
-  gap: var(--rds--root-block-gap);
-}
-
-.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-  max-width: var(--rds--layout-content-size);
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.is-layout-constrained > .alignwide {
-  max-width: var(--rds--layout-wide-size);
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.has-global-padding {
-  padding-right: var(--rds--root-padding-right);
-  padding-left: var(--rds--root-padding-left);
-}
-
-.has-global-padding > .alignfull {
-  max-width: none;
-  margin-right: calc(var(--rds--root-padding-right) * -1);
-  margin-left: calc(var(--rds--root-padding-left) * -1);
-}
-
-.has-global-padding > .alignfull > .has-global-padding {
-  padding-right: var(--rds--root-padding-right);
-  padding-left: var(--rds--root-padding-left);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {

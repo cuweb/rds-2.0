@@ -72,16 +72,16 @@
 
         "fontSize": {
             "x-small": { "value": "0.75rem", "fluid": { "min": "0.65rem", "max": "0.75rem" }, "cssOnly": true },
-            "small":   { "value": "0.9rem", "fluid": { "min": "0.75rem", "max": "0.9rem" } },
-            "medium":  { "value": "1rem", "fluid": { "min": "0.875rem", "max": "1rem" } },
-            "large":   { "value": "1.125rem", "fluid": { "min": "1rem", "max": "1.125rem" } },
+            "small":   { "value": "0.9rem", "fluid": { "min": "0.725rem", "max": "0.9rem" } },
+            "medium":  { "value": "1rem", "fluid": { "min": "0.825rem", "max": "1rem" } },
+            "large":   { "value": "1.125rem", "fluid": { "min": "0.9rem", "max": "1.125rem" } },
             "x-large": { "value": "1.25rem", "fluid": { "min": "1.125rem", "max": "1.25rem" } },
             "2x-large": { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
             "heading-small":   { "value": "1.5rem", "fluid": { "min": "1.25rem", "max": "1.5rem" } },
-            "heading-medium":  { "value": "2rem",   "fluid": { "min": "1.75rem", "max": "2rem" } },
-            "heading-large":   { "value": "2.5rem", "fluid": { "min": "2rem",    "max": "2.5rem" } },
-            "heading-x-large": { "value": "3rem",   "fluid": { "min": "2.5rem",  "max": "3rem" } },
-            "heading-primary": { "value": "3.5rem", "fluid": { "min": "3rem",    "max": "3.5rem" } }
+            "heading-medium":  { "value": "2rem",   "fluid": { "min": "1.5rem", "max": "2rem" } },
+            "heading-large":   { "value": "2.5rem", "fluid": { "min": "1.75rem",    "max": "2.5rem" } },
+            "heading-x-large": { "value": "3rem",   "fluid": { "min": "2rem",  "max": "3rem" } },
+            "heading-primary": { "value": "3.5rem", "fluid": { "min": "2.25rem",    "max": "3.5rem" } }
         },
 
         "spacing": {
@@ -117,6 +117,7 @@
             "sm": "2px",
             "md": "4px",
             "lg": "8px",
+            "xl": "12px",
             "full": "9999px"
         }
     },
@@ -134,17 +135,19 @@
             "fontFamily": "inter",
             "color": "black"
         },
-        "h1": { "fontSize": "heading-primary", "fontWeight": "600" },
-        "h2": { "fontSize": "heading-x-large", "fontWeight": "600" },
-        "h3": { "fontSize": "heading-large", "fontWeight": "600" },
-        "h4": { "fontSize": "heading-medium", "fontWeight": "600" },
-        "h5": { "fontSize": "heading-small", "fontWeight": "600" },
-        "h6": { "fontSize": "heading-small", "fontWeight": "600", "fontStyle": "italic" },
+        "h1": { "fontSize": "heading-primary", "fontWeight": "600", "marginBlockStart": "x-large" },
+        "h2": { "fontSize": "heading-x-large", "fontWeight": "600", "marginBlockStart": "large" },
+        "h3": { "fontSize": "heading-large", "fontWeight": "600", "marginBlockStart": "medium" },
+        "h4": { "fontSize": "heading-medium", "fontWeight": "600", "marginBlockStart": "medium" },
+        "h5": { "fontSize": "heading-small", "fontWeight": "600", "marginBlockStart": "medium" },
+        "h6": { "fontSize": "heading-small", "fontWeight": "600", "fontStyle": "italic", "marginBlockStart": "medium" },
         "caption": { "fontSize": "small", "fontStyle": "italic", "fontWeight": "light", "color": "warning" },
         "button": { "color": "white", "background": "primary" },
         "link": { "color": "primary", "hoverColor": "error" },
         "spacing": {
             "blockGap": "medium",
+            "afterHeading": "small",
+            "listItem": "x-small",
             "padding": {
                 "top": "0",
                 "right": "large",

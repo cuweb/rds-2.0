@@ -15,13 +15,12 @@ Prefix the change with one of these keywords:
 - _Fixed_: for any bug fixes.
 - _Security_: in case of vulnerabilities.
 
-
-
 ## [Unreleased]
 
 - _Added_: Centralized asset path config in [src/config/assets.json](src/config/assets.json), generated to [src/config/assets.ts](src/config/assets.ts) + [src/styles/auto/_assets.scss](src/styles/auto/_assets.scss) by [scripts/build-assets.mjs](scripts/build-assets.mjs). Production uses the Carleton CDN; Storybook dev pulls from `public/_assets/` via a separate `_assets-dev.scss` override wired through [.storybook/preview.ts](.storybook/preview.ts). All 68 asset paths (logos, wave graphics, banners, bg images, favicons, lexical icons, Ravens logos) are exposed as camelCase TS constants (`assets.cuLogoColorVerticalOutlined`, `assets.ravensLogo`, etc.) and as kebab-case CSS custom properties (`var(--rds--asset-cu-waves-footer-red)`).
 - _Added_: `assets` npm script that regenerates the asset files; chained into `dev`, `build`, and `build-storybook` ahead of downstream steps.
-- _Changed_: Footer components no longer hardcode CDN URLs — `FooterStandard.tsx`, `Footer.tsx`, `FooterData.ts`, and `FooterStandard/styles.scss` now read from the generated `assets` constants and `--rds--asset-*` CSS variables.
+- _Added_: Auto-generated base and typography CSS files: `src/styles/auto/base-styles.css`, `src/styles/auto/typography.css`, and `dist/cutheme/typography.css`.
+- _Added_: New `ContentFlow.stories.tsx` in `src/docs/stylebook/` to demonstrate content and heading flow.
 - _Added_: `Footer` component — minimal footer with the Carleton logo and copyright/privacy/accessibility links ([src/components/Footer/Footer.tsx](src/components/Footer/Footer.tsx))
 - _Added_: `FooterStandard` component — full university footer driven by a `type` prop (`'standard' | 'athletics' | 'futureFunder'`). Link data resolves via the `footerLinksByType` registry in [FooterData.ts](src/data/FooterData.ts) ([src/components/FooterStandard/FooterStandard.tsx](src/components/FooterStandard/FooterStandard.tsx))
 - _Added_: `FooterType` public type export for consumer typing
@@ -29,6 +28,12 @@ Prefix the change with one of these keywords:
 - _Added_: `CookieBanner` component (renamed from `FooterCookie`) — fixed-position cookie consent banner with helpers split into [cookies.ts](src/components/CookieBanner/cookies.ts) ([src/components/CookieBanner/CookieBanner.tsx](src/components/CookieBanner/CookieBanner.tsx))
 - _Added_: `src/data/FooterData.ts` — Carleton link columns, contact info, social icons, footer buttons, plus `FooterType` union and `footerLinksByType` registry (includes a `futureFunder` placeholder cloned from `standard`)
 - _Added_: `sr-only` global utility class in [src/styles/base/_utils.scss](src/styles/base/_utils.scss)
+- _Changed_: Updated typography and heading spacing tokens in `c2b.config.json` and `dist/cutheme/tokens.css` for improved type scale and spacing consistency.
+- _Changed_: Upgraded `@troychaplin/component2block` to v0.4.1 in `package.json` and `pnpm-lock.yaml`.
+- _Changed_: Refined `Main` and `Section` components and styles for improved layout and padding logic (`src/components/Main/Main.tsx`, `src/components/Main/styles.scss`, `src/components/Section/styles.scss`).
+- _Changed_: Updated and regenerated layout and token CSS files for new spacing and radius tokens (`dist/cutheme/layout.css`, `dist/cutheme/theme-rds.json`, `src/styles/auto/layout.css`, `src/styles/auto/tokens.css`).
+- _Changed_: Updated dependencies in `pnpm-lock.yaml` for improved compatibility and performance.
+- _Changed_: Footer components no longer hardcode CDN URLs — `FooterStandard.tsx`, `Footer.tsx`, `FooterData.ts`, and `FooterStandard/styles.scss` now read from the generated `assets` constants and `--rds--asset-*` CSS variables.
 - _Changed_: Replaced Tailwind utility classes in all footer components with BEM SCSS using `var(--rds--*)` tokens
 - _Changed_: Inline social `<svg>` arrays replaced with `<Icon />` from `@cuweb/rds-icons`
 - _Removed_: Legacy `src/components/Footer/FooterBasic`, `FooterStandard`, `FooterAthletics`, `FooterDept`, `FooterCookie`, and `FooterLogoLinks` nested folders
@@ -116,4 +121,3 @@ Prefix the change with one of these keywords:
 - _Added_: Husky pre-commit hook running lint and typecheck
 - _Added_: Size-limit checks for published JS and CSS bundles (10 kB each)
 - _Added_: WordPress theme output via `c2b generate` for syncing tokens to `theme.json`-compatible formats
-
