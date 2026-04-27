@@ -15,8 +15,6 @@ Prefix the change with one of these keywords:
 - _Fixed_: for any bug fixes.
 - _Security_: in case of vulnerabilities.
 
-
-
 ## [Unreleased]
 
 - _Added_: Centralized asset path config in [src/config/assets.json](src/config/assets.json), generated to [src/config/assets.ts](src/config/assets.ts) + [src/styles/auto/_assets.scss](src/styles/auto/_assets.scss) by [scripts/build-assets.mjs](scripts/build-assets.mjs). Production uses the Carleton CDN; Storybook dev pulls from `public/_assets/` via a separate `_assets-dev.scss` override wired through [.storybook/preview.ts](.storybook/preview.ts). All 68 asset paths (logos, wave graphics, banners, bg images, favicons, lexical icons, Ravens logos) are exposed as camelCase TS constants (`assets.cuLogoColorVerticalOutlined`, `assets.ravensLogo`, etc.) and as kebab-case CSS custom properties (`var(--rds--asset-cu-waves-footer-red)`).
@@ -123,4 +121,3 @@ Prefix the change with one of these keywords:
 - _Added_: Husky pre-commit hook running lint and typecheck
 - _Added_: Size-limit checks for published JS and CSS bundles (10 kB each)
 - _Added_: WordPress theme output via `c2b generate` for syncing tokens to `theme.json`-compatible formats
-
