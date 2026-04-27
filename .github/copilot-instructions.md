@@ -4,7 +4,7 @@
 
 **Raven Design System (RDS) 2.0** — Carleton University's React component library. Package: `@cuweb/rds-2.0`. Paired with `@cuweb/rds-icons` (private peer dep) for Font Awesome Pro icons.
 
-Consumed by: Next.js apps, WordPress block plugins, block themes, hybrid themes, Timber/Twig. See `docs/AI-CONTEXT.md` for deeper context and `docs/wordpress/` for integration patterns.
+Consumed by: Next.js apps, WordPress block plugins, block themes, hybrid themes, Timber/Twig. See `docs/contributing/ai-context.md` for an AI bootstrap snippet, `docs/contributing/architecture.md` for the build pipeline and two-package model, and `docs/consumers/wordpress/` for WordPress integration patterns.
 
 ## Tech Stack
 
@@ -50,7 +50,7 @@ import { CircleCheckIcon } from '@cuweb/rds-icons';
 import { iconList } from '@cuweb/rds-icons';
 ```
 
-Never add SVG files to rds-2.0 itself. FA Pro licensing requires icons stay in the private package. See `docs/ICONS.md`.
+Never add SVG files to rds-2.0 itself. FA Pro licensing requires icons stay in the private package. See `docs/contributing/architecture.md#two-package-icon-model`.
 
 ## Changelog
 

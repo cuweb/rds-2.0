@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Overview/Getting Started/Accessibility" />
+
+# Accessibility
+
+Accessibility is a hard gate in RDS, not an aspirational goal. Every story is tested; every component ships with sensible defaults.
+
+## Automated testing
+
+Every Storybook story runs through [axe](https://github.com/dequelabs/axe-core) at the `error` threshold via `@storybook/addon-a11y`. A violation in any story fails CI.
+
+```ts
+// .storybook/preview.ts
+parameters: {
+  a11y: {
+    test: 'error',
+  },
+}
+```
+
+Run locally with:
+
+```sh
+pnpm test:storybook
+```
+
+This walks every story, mounts it in headless Playwright, and runs axe. Slow (~30s+ across the catalogue) but comprehensive.
+
+## What the components handle for you
+
+- **Decorative icons** — `<Icon>` defaults to `aria-hidden="true"` + `focusable="false"`, so screen readers don't announce them.
+- **Meaningful icons** — pass a `title` prop; `<Icon>` switches to `role="img"` + a `<title>` element so the icon announces itself.
+- **Focus styles** — global focus outline applied via `:focus-visible` (2px primary outline, 2px offset). Don't override this without a strong reason.
+- **Color contrast** — semantic and badge color combinations are picked to meet WCAG AA. The Badge component uses black text for yellow/info backgrounds and white text for others.
+- **Landmarks** — layout components (`<Main>`, `<Aside>`, `<Section>`) emit the correct semantic elements.
+- **`...rest` passthrough** — interactive components extend their underlying element's HTMLAttributes, so any ARIA attribute you pass reaches the DOM.
+
+## What you still have to do
+
+Components handle structure and styling; you supply meaning. Specifically:
+
+- **Provide labels.** A `<Button>` with only an icon needs a label — pass `aria-label` or visible text. Don't ship icon-only buttons without naming.
+- **Use the right component.** Wrapping content in `<Main>` once per page; using `<Article>` for self-contained content; `<Aside>` for related-but-separate content.
+- **Test with a real screen reader.** Automated checks catch a lot but not everything. VoiceOver (Mac) and NVDA (Windows) are free.
+
+## When axe flags something
+
+If `pnpm test:storybook` fails with an axe error, the fix is almost always one of:
+
+1. **Real bug in the component or your story.** Fix the component or the story content.
+2. **Missing label on a control.** Add `aria-label` or visible text.
+3. **Story-structure artifact.** A demo story renders an `<aside>` standalone for documentation purposes, and axe flags `landmark-complementary-is-top-level`. In this case (and only this case), disable the specific rule on the story:
+
+   ```tsx
+   parameters: {
+     a11y: {
+       config: {
+         rules: [{ id: 'landmark-complementary-is-top-level', enabled: false }],
+       },
+     },
+   }
+   ```
+
+   Never disable `color-contrast` without fixing the underlying token or component design.
+
+## Standards we target
+
+- WCAG 2.1 Level AA, with AAA where it doesn't compromise the design (e.g., enhanced contrast in body text)
+- Keyboard navigability for all interactive elements
+- No color-only signaling (status badges pair color with text)
+- Respect for `prefers-reduced-motion` in components with motion (planned — flag any new motion-using component)
+
+## Reporting an issue
+
+If you find an accessibility issue with a shipped component, open an issue on [`cuweb/rds-2.0`](https://github.com/cuweb/rds-2.0/issues) tagged `accessibility`. Include:
+
+- The component and prop combination
+- The assistive technology you're using (VoiceOver / NVDA / JAWS / etc.)
+- What you expected and what happens
+
+A11y bugs are treated as priority bugs.

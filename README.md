@@ -101,11 +101,20 @@ All CSS variables use the `--rds--` prefix (double dash). Token categories:
 Every Storybook story is tested against axe with `test: 'error'` — stories
 that fail accessibility checks will not pass CI.
 
-## Roadmap
+## Documentation
 
-See [`docs/`](docs/) for the current TODO list and implementation plans.
+Docs are organized by audience under [`docs/`](docs/):
+
+- [`docs/consumers/`](docs/consumers/) — installing and using RDS in Next.js, WordPress, and other contexts
+- [`docs/contributing/`](docs/contributing/) — local setup, architecture, conventions, testing
+- [`docs/maintenance/`](docs/maintenance/) — releasing, branch protection, automation prompts
+
+For contributors, [`CONTRIBUTING.md`](CONTRIBUTING.md) is the entry point.
+
+For a live, browsable reference, visit the Storybook deployment.
 
 ## Links
 
 - [Storybook (GitHub Pages)](https://cuweb.github.io/rds-2.0/)
 - [Source](https://github.com/cuweb/rds-2.0)
+- [Changelog](CHANGELOG.mdx)
