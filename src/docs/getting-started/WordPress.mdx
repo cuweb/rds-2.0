@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Overview/Getting Started/WordPress" />
+
+# WordPress integration
+
+Using `@cuweb/rds-2.0` (and `@cuweb/rds-icons`) inside WordPress projects. WordPress integration spans several distinct scenarios — pick the one that matches your project, then read the corresponding deep-dive in [`docs/consumers/wordpress/`](https://github.com/cuweb/rds-2.0/tree/main/docs/consumers/wordpress).
+
+## Prerequisites
+
+All WordPress projects follow the base [Installation](?path=/docs/overview-getting-started-installation--docs) flow:
+
+```sh
+echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
+pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+```
+
+## Pick your scenario
+
+| If you're building… | Read |
+|---|---|
+| A custom block whose save markup is static HTML | [blocks-static.md](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/blocks-static.md) |
+| A custom block rendered server-side via `render.php` | [blocks-dynamic.md](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/blocks-dynamic.md) |
+| A block theme (no classic PHP templates) | [block-themes.md](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/block-themes.md) |
+| A hybrid theme (classic PHP templates + blocks) | [hybrid-themes.md](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/hybrid-themes.md) |
+| A Timber theme with Twig templates | [timber-twig.md](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/timber-twig.md) |
+
+Some projects span multiple scenarios — a site might have a block theme with custom dynamic blocks and a Timber-based admin plugin. Each layer follows its own doc.
+
+## The underlying principle
+
+Gutenberg has two rendering modes, and icon consumption differs between them:
+
+- **Static blocks** (save.tsx returns full JSX) — `<Icon>` renders once at save time, serializes to SVG HTML, and is stored in `post_content`. The frontend emits pre-rendered HTML — no React runtime needed.
+- **Dynamic blocks** (render.php) — React can't run on PHP request time. RDS uses a **hybrid save** pattern: `save.tsx` returns just the icon SVG, and `render.php` wraps that server-side with dynamic content.
+
+Block themes, hybrid themes, and Timber are choices about *where* and *how* the frontend renders — the two modes above cover the icon integration. PHP-only templates that don't go through a block use a small `cuweb_icon()` PHP helper that reads SVGs from the shipped package.
+
+## FA Pro compliance reminder
+
+The `rds-icons` package ships raw SVG files alongside the generated React components. When PHP code reads from `node_modules/@cuweb/rds-icons/src/svg/`, the web server **must not** expose `node_modules/` publicly. Test with `curl` before shipping:
+
+```sh
+curl -I https://your-site.com/wp-content/themes/your-theme/node_modules/@cuweb/rds-icons/src/svg/circle-check.svg
+```
+
+A `200 OK` is **not safe** — see the [hybrid-themes.md compliance section](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/wordpress/hybrid-themes.md#compliance-dont-serve-node_modules-publicly) for the fix.

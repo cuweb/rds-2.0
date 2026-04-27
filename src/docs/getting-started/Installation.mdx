@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Overview/Getting Started/Installation" />
+
+# Installation
+
+How to install `@cuweb/rds-2.0` and its peer dependency `@cuweb/rds-icons` in any consumer project.
+
+## Prerequisites — GitHub Packages auth
+
+`@cuweb/rds-icons` is private; without auth, `pnpm install` fails with `ERR_PNPM_FETCH_401`. Set up auth once per machine by following the [rds-icons → Developer onboarding](https://github.com/cuweb/rds-icons#developer-onboarding-one-time) guide. It writes a token line to your user-level `~/.npmrc`.
+
+For CI, see the [rds-icons → CI authentication](https://github.com/cuweb/rds-icons#ci-authentication) snippet.
+
+## 1. Add the scope config
+
+Create or edit `.npmrc` at your project root:
+
+```
+@cuweb:registry=https://npm.pkg.github.com
+```
+
+Commit this file. It tells pnpm/npm to look for `@cuweb/*` packages on GitHub Packages, not the public npm registry. It does **not** contain any secrets.
+
+## 2. Install both packages
+
+```sh
+pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+```
+
+`rds-icons` is a peer dependency of `rds-2.0` — your package manager will warn if only one is installed.
+
+## 3. Import styles
+
+Once, near the top of your application:
+
+```tsx
+import '@cuweb/rds-2.0/styles';
+```
+
+This imports the bundled stylesheet — design tokens, base element styles, and every component's CSS.
+
+## 4. Use components
+
+```tsx
+import { Badge, Button, Icon } from '@cuweb/rds-2.0';
+
+<Badge text="New" color="green" />
+<Button title="Get started" icon="circle-check" />
+<Icon name="calendar-clock" size={24} />
+```
+
+For framework-specific setup, see [Next.js](?path=/docs/overview-getting-started-next-js--docs) or [WordPress](?path=/docs/overview-getting-started-wordpress--docs).
+
+## Per-component CSS (optional)
+
+If you don't want the full bundled stylesheet, import individual component styles:
+
+```tsx
+import { Badge } from '@cuweb/rds-2.0';
+import '@cuweb/rds-2.0/Badge.css';
+```
+
+This is most useful inside WordPress block bundles. See the full pattern at [`docs/consumers/per-component-css.md`](https://github.com/cuweb/rds-2.0/blob/main/docs/consumers/per-component-css.md).
+
+## Troubleshooting
+
+| Error | Fix |
+|---|---|
+| `ERR_PNPM_FETCH_401 Unauthorized` | Auth not set up, or token expired — repeat the rds-icons onboarding |
+| `ERR_PNPM_FETCH_404 Not Found` on `@cuweb/rds-icons` | Project's `.npmrc` is missing `@cuweb:registry=https://npm.pkg.github.com` |
+
+For deeper diagnosis, see the [rds-icons → Troubleshooting](https://github.com/cuweb/rds-icons#troubleshooting).

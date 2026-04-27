@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Overview/Getting Started/Overview" />
+
+# Getting Started
+
+How to install and use Raven Design System 2.0 in your project.
+
+## Pick your context
+
+| If you're building… | Read |
+|---|---|
+| A Next.js app or other modern React framework | [Installation](?path=/docs/overview-getting-started-installation--docs) → [Next.js](?path=/docs/overview-getting-started-next-js--docs) |
+| A WordPress block, block theme, hybrid theme, or Timber site | [WordPress](?path=/docs/overview-getting-started-wordpress--docs) |
+| Anything where accessibility matters (it always does) | [Accessibility](?path=/docs/overview-getting-started-accessibility--docs) |
+
+## Two-package model
+
+`@cuweb/rds-2.0` ships with `@cuweb/rds-icons` as a peer dependency. Both packages must be installed.
+
+- `@cuweb/rds-2.0` (this package) — components, tokens, styles
+- `@cuweb/rds-icons` — Font Awesome Pro icon components, distributed as a private package on GitHub Packages
+
+The second package being private is what enforces FA Pro license compliance — anyone can install rds-2.0, but the `<Icon>` component won't resolve without rds-icons present at install time. See the [icons architecture rationale](https://github.com/cuweb/rds-2.0/blob/main/docs/contributing/architecture.md#two-package-icon-model) for the full story.
+
+## Quick start
+
+```sh
+# 1. One-time per machine: GitHub Packages auth
+#    See: https://github.com/cuweb/rds-icons#developer-onboarding-one-time
+
+# 2. In your project
+echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
+pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+```
+
+```tsx
+import { Button, Icon } from '@cuweb/rds-2.0';
+import '@cuweb/rds-2.0/styles';
+
+<Button title="Save" icon="floppy-disk" />
+```
+
+For the full install flow with troubleshooting, see [Installation](?path=/docs/overview-getting-started-installation--docs).
+
+## Companion docs
+
+The repo's [`docs/consumers/`](https://github.com/cuweb/rds-2.0/tree/main/docs/consumers) folder has deeper guides — including all the WordPress integration scenarios — in raw markdown for easy reading on GitHub. The MDX pages in this section summarize the most common paths.

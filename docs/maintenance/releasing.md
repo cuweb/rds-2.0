@@ -58,7 +58,7 @@ The `pnpm version` command:
 - Creates a commit
 - Creates a git tag (e.g. `v0.1.1`)
 
-Pushing the tag triggers [.github/workflows/publish.yml](../../rds-icons/.github/workflows/publish.yml) which:
+Pushing the tag triggers [.github/workflows/publish.yml](../../../rds-icons/.github/workflows/publish.yml) which:
 1. Installs deps
 2. Runs the generator + Vite build → `dist/`
 3. Publishes to GitHub Packages at `@cuweb/rds-icons@<version>`
@@ -116,7 +116,7 @@ git push
 git push --tags
 ```
 
-(The publish workflow for rds-2.0 isn't set up in this repo yet. When you add one, it should mirror [rds-icons publish.yml](../../rds-icons/.github/workflows/publish.yml) but target public npm or GitHub Packages depending on your choice.)
+(The publish workflow for rds-2.0 isn't set up in this repo yet. When you add one, it should mirror [rds-icons publish.yml](../../../rds-icons/.github/workflows/publish.yml) but target public npm or GitHub Packages depending on your choice.)
 
 ### Updating the `rds-icons` peer dep range
 

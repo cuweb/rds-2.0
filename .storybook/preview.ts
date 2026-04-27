@@ -48,7 +48,13 @@ const preview: Preview = {
       storySort: {
         order: [
           'Overview',
-          ['About RDS', 'Getting Started', 'Changelog', 'Stylebook'],
+          [
+            'About RDS',
+            'Getting Started',
+            ['Overview', 'Installation', 'Next.js', 'WordPress', 'Accessibility'],
+            'Stylebook',
+            'Changelog',
+          ],
           'Templates',
           'Components',
           'Layouts',

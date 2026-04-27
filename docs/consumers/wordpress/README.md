@@ -10,7 +10,7 @@ All WordPress projects follow the base consumer setup:
 2. Add `.npmrc` with `@cuweb:registry=https://npm.pkg.github.com` in the project root
 3. `pnpm add @cuweb/rds-2.0 @cuweb/rds-icons`
 
-See [CONSUMING.md](../CONSUMING.md) for the full install flow.
+See [the consumer guide](../README.md) for the full install flow.
 
 ## Pick the scenario that matches your project
 
@@ -35,4 +35,4 @@ Everything else (block themes, hybrid themes, Timber) is a choice of where and h
 
 ## The FA Pro compliance reminder
 
-The rds-icons package ships raw SVG files in addition to generated TSX. When your PHP code reads from `node_modules/@cuweb/rds-icons/src/svg/`, make sure your web server **does not** expose `node_modules/` publicly. Test with `curl` before shipping. See [ICONS.md](../ICONS.md#fa-pro-license-compliance-checklist) for the full compliance checklist.
+The rds-icons package ships raw SVG files in addition to generated TSX. When your PHP code reads from `node_modules/@cuweb/rds-icons/src/svg/`, make sure your web server **does not** expose `node_modules/` publicly. Test with `curl` before shipping. See [the icons guide](../icons.md#fa-pro-license-compliance-checklist) for the full compliance checklist.

@@ -1,0 +1,60 @@
+# Next.js usage
+
+Using `@cuweb/rds-2.0` in a Next.js app. Assumes you've completed [installation](installation.md).
+
+## Import styles once
+
+In `app/layout.tsx` (App Router) or `pages/_app.tsx` (Pages Router):
+
+```tsx
+import '@cuweb/rds-2.0/styles';
+```
+
+This imports the bundled stylesheet (tokens + globals + all components). For per-component CSS, see [per-component-css.md](per-component-css.md).
+
+## Wire up Next.js Link
+
+Wrap your app in `<LinkProvider>` so RDS components that accept an `href` prop route through Next.js's `Link` instead of a plain `<a>` — enabling prefetching and client-side navigation.
+
+```tsx
+// app/layout.tsx
+import Link from 'next/link';
+import { LinkProvider } from '@cuweb/rds-2.0';
+import '@cuweb/rds-2.0/styles';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <LinkProvider component={Link}>{children}</LinkProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+Without `LinkProvider`, RDS link-aware components fall back to a plain anchor tag — they still work, but you lose Next.js routing benefits.
+
+## Compose components
+
+```tsx
+import { Badge, Button, Column, Icon, Main, Section } from '@cuweb/rds-2.0';
+
+export default function Page() {
+  return (
+    <Main>
+      <Section>
+        <Column cols="2">
+          <Badge text="New" color="green" />
+          <Button title="Get started" icon="circle-check" />
+          <Icon name="calendar-clock" size={24} />
+        </Column>
+      </Section>
+    </Main>
+  );
+}
+```
+
+## CI authentication
+
+Your Vercel / GitHub Actions / other deploy pipeline needs GitHub Packages auth too — see the [rds-icons README → CI authentication](https://github.com/cuweb/rds-icons#ci-authentication) for the workflow snippet.

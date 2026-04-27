@@ -162,6 +162,6 @@ This is the minimum-viable integration. Works fine for themes that only need the
 
 ## Gotchas
 
-- **Serving `node_modules/` publicly** is possible on misconfigured web servers. If you ever reference `get_theme_file_uri('/node_modules/...')`, audit that the path isn't denied in production. See the compliance checklist in [ICONS.md](../ICONS.md#fa-pro-license-compliance-checklist).
+- **Serving `node_modules/` publicly** is possible on misconfigured web servers. If you ever reference `get_theme_file_uri('/node_modules/...')`, audit that the path isn't denied in production. See the compliance checklist in [the icons guide](../icons.md#fa-pro-license-compliance-checklist).
 - **`theme.json` merging** is one-way: the generated cuweb theme.json is a starting point, not a live dependency. Re-merge on RDS updates.
 - **Pattern HTML is static**: if you update an icon's SVG source, existing usages of your pattern keep the old HTML. Same as static-block gotcha — this is WordPress, not a CDN.
