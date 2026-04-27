@@ -2,5 +2,3 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
 approveBuildsFor: esbuild,@parcel/watcher
-overrides:
-  '@troychaplin/component2block': link:../component2block

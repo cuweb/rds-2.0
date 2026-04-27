@@ -35,7 +35,7 @@ export const ContentFlow: Story = {
   },
   render: () => (
     <Main>
-      <h1>Heading One: Page Title</h1>
+      <h1>Heading One</h1>
 
       <p>
         This is an example page. It is different from a blog post because it will stay in one place

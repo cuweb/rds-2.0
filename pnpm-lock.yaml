@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  '@troychaplin/component2block': link:../component2block
-
 importers:
 
   .:
@@ -45,8 +42,8 @@ importers:
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
       '@troychaplin/component2block':
-        specifier: link:../component2block
-        version: link:../component2block
+        specifier: ^0.4.1
+        version: 0.4.1
       '@types/react':
         specifier: ^18.3.28
         version: 18.3.28
@@ -851,6 +848,11 @@ packages:
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
+
+  '@troychaplin/component2block@0.4.1':
+    resolution: {integrity: sha512-xslsPc2HTtTXB/CaqpvkDj+DNchdLF09RCgv0LTk0fcZrcdNSnWGCZFUMFz4smTE4iWRRHoWztMDu3i3cmlw7w==}
+    engines: {node: '>=20'}
+    hasBin: true
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -3447,6 +3449,8 @@ snapshots:
   '@testing-library/user-event@14.6.1(@testing-library/dom@10.4.1)':
     dependencies:
       '@testing-library/dom': 10.4.1
+
+  '@troychaplin/component2block@0.4.1': {}
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
