@@ -5,7 +5,7 @@ body {
   --rds--root-padding-right: var(--rds--spacing-large);
   --rds--root-padding-bottom: 0;
   --rds--root-padding-left: var(--rds--spacing-large);
-  --rds--root-block-gap: var(--rds--spacing-medium);
+  --rds--root-block-gap: 0;
 }
 
 :where(.is-layout-constrained) > * {

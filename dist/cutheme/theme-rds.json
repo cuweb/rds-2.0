@@ -329,7 +329,7 @@
       "background": "var(--wp--preset--color--white)"
     },
     "spacing": {
-      "blockGap": "var(--wp--preset--spacing--50)",
+      "blockGap": "0",
       "padding": {
         "top": "0",
         "right": "var(--wp--preset--spacing--60)",

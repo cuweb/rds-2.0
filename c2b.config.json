@@ -145,7 +145,7 @@
         "button": { "color": "white", "background": "primary" },
         "link": { "color": "primary", "hoverColor": "error" },
         "spacing": {
-            "blockGap": "medium",
+            "blockGap": "0",
             "afterHeading": "small",
             "listItem": "x-small",
             "padding": {
