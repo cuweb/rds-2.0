@@ -27,14 +27,18 @@
 .cu-card__header h2,
 .cu-card__header h3 {
     font-size: var(--rds--font-size-x-large);
-    color: var(--rds--color-black);
     line-height: var(--rds--line-height-tight);
     margin: 0 0 var(--rds--spacing-x-small) 0;
     
     a {
-        color: var(--rds--color-primary);
+        color: var(--rds--color-black);
         text-decoration: none;
+        
+        &:hover {
+            color: var(--rds--color-primary);
+        }
     }
+    
 }
 
 .cu-card__header-meta {

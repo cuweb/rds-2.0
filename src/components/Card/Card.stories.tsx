@@ -5,50 +5,39 @@ import { Card } from './Card';
 
 import { NewsData } from '../../data/NewsData';
 
-const meta: Meta<typeof Card> = {
+const meta: Meta = {
   title: 'Components/Elements/Card',
-  component: Card,
-  tags: ['autodocs'],
   parameters: {
-    controls: {
-      sort: 'requiredFirst',
-    },
+    layout: 'fullscreen',
+    controls: { disable: true },
   },
 };
 
 export default meta;
-type Story = StoryObj<typeof Card>;
+type Story = StoryObj;
 
 const EXCERPT =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst. Nulla porta posuere est, aliquam mollis mi accumsan id. Morbi mauris ex, gravida eu sodales sed, tempor vel mauris.';
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst. Nulla porta posuere est, aliquam mollis mi accumsan id.';
 
-export const Primary: Story = {
-  render: (args) => (
+export const NewsCards: Story = {
+  render: () => (
     <Main>
-      <Card {...args}>
-        <Card.Header title="How to Write for the Web" />
-        <Card.Body>
-          <Card.Excerpt text={EXCERPT} />
-        </Card.Body>
-      </Card>
-    </Main>
-  ),
-};
-
-export const NewsCard: Story = {
-  render: (args) => (
-    <Main>
-      <Column cols="2">
-        {NewsData.slice(0, 2).map(({ id, link, title, image, alt, date }) => (
-          <Card key={id} {...args}>
-            <Card.Figure>
-              <img src={image} alt={alt} width="400" height="300" />
-            </Card.Figure>
-            <Card.Header title={title} date={date} readTime="7" />
-            <Card.Body>
-              <Card.Excerpt text={EXCERPT} />
-            </Card.Body>
-          </Card>
+      <Column cols="3">
+        {NewsData.slice(0, 3).map((item) => (
+            <Card key={`c2-${item.id}`}>
+                <Card.Figure>
+                    <img src={item.image} alt={item.alt} width="400" height="300" />
+                </Card.Figure>
+                <Card.Header
+                    title={item.title}
+                    link={item.link}
+                    date={item.date}
+                    readTime="7"
+                />
+                <Card.Body>
+                    <Card.Excerpt text={EXCERPT} />
+                </Card.Body>
+            </Card>
         ))}
       </Column>
     </Main>
