@@ -1,34 +1,21 @@
 @use '../../styles/auto/variables' as *;
 
 .cu-card {
-  // Surface vars — overrideable by ancestor scope (e.g., future .cu-dark)
-//   --cu-card-bg: var(--rds--color-white);
-//   --cu-card-fg: var(--rds--color-black);
-//   --cu-card-fg-muted: var(--rds--color-grey-dark);
-//   --cu-card-fg-subtle: var(--rds--color-grey);
-//   --cu-card-shadow: var(--rds--shadow-card);
-//   --cu-card-shadow-hover: var(--rds--shadow-card-hover);
-//   --cu-card-radius: var(--rds--radius-lg);
-
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0;
-    // gap: var(--rds--spacing-x-small);
     background: var(--rds--color-white);
     color: var(--rds--color-black);
-    padding: var(--rds--spacing-medium);
-    border: 1px solid var(--rds--color-grey-pale);
+    padding: 1.25rem;
     border-radius: var(--rds--radius-lg);
-    // box-shadow: var(--rds--shadow-natural);
-    // box-shadow: 0 0 0 1px var(--rds--color-grey-lighter), 0 1px 1px -0.5px var(--rds--color-grey-pale), 0 3px 3px -1.5px var(--rds--color-grey-pale), 0 6px 6px -3px var(--rds--color-grey-light), 0 12px 12px -6px var(--rds--color-grey-light), 0 24px 24px -12px var(--rds--color-grey-light);
-    // transition: box-shadow 0.3s ease-in;
+    box-shadow: var(--rds--shadow-natural);
 }
 
 .cu-card__figure {
-    margin: calc(var(--rds--spacing-large) * -0.7);
-    margin-bottom: var(--rds--spacing-medium);
+    margin: calc(1.25rem * -1);
+    margin-bottom: 1.25rem;
     line-height: 0;
 
     img {
@@ -40,13 +27,30 @@
 .cu-card__header h2,
 .cu-card__header h3 {
     font-size: var(--rds--font-size-x-large);
+    color: var(--rds--color-black);
+    line-height: var(--rds--line-height-tight);
+    margin: 0 0 var(--rds--spacing-x-small) 0;
+    
+    a {
+        color: var(--rds--color-primary);
+        text-decoration: none;
+    }
+}
+
+.cu-card__header-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--rds--spacing-x-small);
+}
+
+.cu-card__header-meta time,
+.cu-card__header-meta p {
+    font-size: var(--rds--font-size-small);
+    font-style: italic;
     margin: 0;
 }
 
-.cu-card__header-meta p {
+.cu-card__excerpt {
+    font-size: var(--rds--font-size-medium);
     margin: 0;
-
-    &:last-child {
-        margin-bottom: var(--rds--spacing-x-small);
-    }
 }

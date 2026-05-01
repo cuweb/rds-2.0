@@ -6,7 +6,7 @@ import { Card } from './Card';
 import { NewsData } from '../../data/NewsData';
 
 const meta: Meta<typeof Card> = {
-  title: 'Components/Layout/Card',
+  title: 'Components/Elements/Card',
   component: Card,
   tags: ['autodocs'],
   parameters: {
@@ -30,14 +30,6 @@ export const Primary: Story = {
         <Card.Body>
           <Card.Excerpt text={EXCERPT} />
         </Card.Body>
-        <Card.Footer>
-          <a
-            href="https://carleton.ca/webservices"
-            className="cu-button cu-button--red cu-button--small"
-          >
-            More info
-          </a>
-        </Card.Footer>
       </Card>
     </Main>
   ),
@@ -52,15 +44,10 @@ export const NewsCard: Story = {
             <Card.Figure>
               <img src={image} alt={alt} width="400" height="300" />
             </Card.Figure>
-            <Card.Header title={title} datePrefix="Published on" date={date} readTime="7" />
+            <Card.Header title={title} date={date} readTime="7" />
             <Card.Body>
               <Card.Excerpt text={EXCERPT} />
             </Card.Body>
-            <Card.Footer>
-              <a href={link} className="cu-button cu-button--red cu-button--small">
-                Read more
-              </a>
-            </Card.Footer>
           </Card>
         ))}
       </Column>

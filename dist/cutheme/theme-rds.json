@@ -276,28 +276,13 @@
       "presets": [
         {
           "slug": "natural",
-          "shadow": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+          "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
           "name": "Natural"
         },
         {
           "slug": "sharp",
           "shadow": "6px 6px 0px rgba(0, 0, 0, 0.2)",
           "name": "Sharp"
-        },
-        {
-          "slug": "outlined",
-          "shadow": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(214, 214, 214)",
-          "name": "Outlined"
-        },
-        {
-          "slug": "card",
-          "shadow": "0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06)",
-          "name": "Card"
-        },
-        {
-          "slug": "card-hover",
-          "shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.08)",
-          "name": "Card Hover"
         }
       ]
     },
@@ -313,7 +298,7 @@
         "bold": "700"
       },
       "lineHeight": {
-        "tight": "1.2",
+        "tight": "1.3",
         "normal": "1.6",
         "loose": "1.8"
       },
