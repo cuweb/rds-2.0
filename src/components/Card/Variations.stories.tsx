@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Column } from '../Column/Column';
 import { Main } from '../Main/Main';
 import { Card } from './Card';
-import { Status } from '../Status/Status';
+// import { Status } from '../Status/Status';
 
 import { NewsData } from '../../data/NewsData';
 import { EventData } from '../../data/EventData';
-import { IconData } from '../../data/IconData';
-import { PeopleData } from '../../data/PeopleData';
-import { StatData } from '../../data/StatData';
-import { VideoData } from '../../data/VideoData';
+// import { IconData } from '../../data/IconData';
+// import { PeopleData } from '../../data/PeopleData';
+// import { StatData } from '../../data/StatData';
+// import { VideoData } from '../../data/VideoData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -27,14 +27,14 @@ const EXCERPT =
 
 const news = NewsData[0];
 const event = EventData[0];
-const page = NewsData[1];
-const featured = NewsData[2];
-const icon = IconData[0];
-const person = PeopleData[0];
-const hours = NewsData[3];
-const wave = NewsData[0];
-const stat = StatData[0];
-const video = VideoData[0];
+// const page = NewsData[1];
+// const featured = NewsData[2];
+// const icon = IconData[0];
+// const person = PeopleData[0];
+// const hours = NewsData[3];
+// const wave = NewsData[0];
+// const stat = StatData[0];
+// const video = VideoData[0];
 
 export const Variants: Story = {
   render: () => (
@@ -79,7 +79,7 @@ export const Variants: Story = {
         </Card>
 
         {/* Page card — date below title */}
-        <Card>
+        {/* <Card>
           <Card.Header
             title={page.title}
             link={page.link}
@@ -90,10 +90,10 @@ export const Variants: Story = {
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* Featured card — small image thumb, no hover */}
-        <Card noHover>
+        {/* <Card noHover>
           <Card.ImageThumb>
             <img src={featured.image} alt={featured.alt} width="200" height="133" />
           </Card.ImageThumb>
@@ -101,19 +101,19 @@ export const Variants: Story = {
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* Icon card */}
-        <Card>
+        {/* <Card>
           <Card.IconThumb icon={icon.icon} />
           <Card.Header title={icon.title} link={icon.link} />
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* People card — round figure, centered */}
-        <Card isCenter>
+        {/* <Card isCenter>
           <Card.Figure isRound>
             <img src={person.image} alt={person.alt} width={280} height={280} />
           </Card.Figure>
@@ -123,10 +123,10 @@ export const Variants: Story = {
               <a href={`mailto:${person.email}`}>{person.email}</a>
             </Card.PeopleMeta>
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* Hours card — Status component */}
-        <Card>
+        {/* <Card>
           <Card.Figure>
             <img src={hours.image} alt={hours.alt} width="400" height="300" />
           </Card.Figure>
@@ -136,34 +136,34 @@ export const Variants: Story = {
               <Status variant="success">Open today until 8:00 PM</Status>
             </Card.Content>
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* Wave card — grey background with decorative wave */}
-        <Card isGrey hasWave>
+        {/* <Card isGrey hasWave>
           <Card.Header title={wave.title} link={wave.link} />
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card>
+        </Card> */}
 
         {/* Stat card — left border, no hover */}
-        <Card leftBorder noHover>
+        {/* <Card leftBorder noHover>
           <Card.Stats stat={stat.stat} desc={stat.desc} />
-        </Card>
+        </Card> */}
 
         {/* Video card */}
-        <Card noHover>
+        {/* <Card noHover>
           <Card.Video source={video.source} />
           <Card.Header title={video.title} />
-        </Card>
+        </Card> */}
 
         {/* Primary card — simplest variant */}
-        <Card>
+        {/* <Card>
           <Card.Header title="How to Write for the Web" link="https://carleton.ca/webservices" />
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card>
+        </Card> */}
       </Column>
     </Main>
   ),
