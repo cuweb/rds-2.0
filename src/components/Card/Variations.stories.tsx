@@ -39,68 +39,6 @@ const video = VideoData[0];
 export const Variants: Story = {
   render: () => (
     <Main>
-      {/* ───── Column counts (same NewsCard, varying columns) ───── */}
-
-      <Column cols="2">
-        {NewsData.slice(0, 2).map((item) => (
-          <Card key={`c2-${item.id}`}>
-            <Card.Figure>
-              <img src={item.image} alt={item.alt} width="400" height="300" />
-            </Card.Figure>
-            <Card.Header
-              title={item.title}
-              link={item.link}
-              datePrefix="Published on"
-              date={item.date}
-              readTime="7"
-            />
-            <Card.Body>
-              <Card.Excerpt text={EXCERPT} />
-            </Card.Body>
-          </Card>
-        ))}
-      </Column>
-
-      <Column cols="3">
-        {NewsData.slice(0, 3).map((item) => (
-          <Card key={`c3-${item.id}`}>
-            <Card.Figure>
-              <img src={item.image} alt={item.alt} width="400" height="300" />
-            </Card.Figure>
-            <Card.Header
-              title={item.title}
-              link={item.link}
-              datePrefix="Published on"
-              date={item.date}
-              readTime="7"
-            />
-            <Card.Body>
-              <Card.Excerpt text={EXCERPT} />
-            </Card.Body>
-          </Card>
-        ))}
-      </Column>
-
-      <Column cols="4">
-        {NewsData.slice(0, 4).map((item) => (
-          <Card key={`c4-${item.id}`}>
-            <Card.Figure>
-              <img src={item.image} alt={item.alt} width="400" height="300" />
-            </Card.Figure>
-            <Card.Header
-              title={item.title}
-              link={item.link}
-              datePrefix="Published on"
-              date={item.date}
-              readTime="7"
-            />
-            <Card.Body>
-              <Card.Excerpt text={EXCERPT} />
-            </Card.Body>
-          </Card>
-        ))}
-      </Column>
-
       {/* ───── Card variants (each variant rendered once) ───── */}
 
       <Column cols="3">

@@ -4,6 +4,7 @@ import { Main } from '../Main/Main';
 import { Card } from './Card';
 
 import { NewsData } from '../../data/NewsData';
+import { EventData } from '../../data/EventData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -16,17 +17,14 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-const EXCERPT =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst. Nulla porta posuere est, aliquam mollis mi accumsan id.';
-
 export const NewsCards: Story = {
   render: () => (
     <Main>
       <Column cols="3">
-        {NewsData.slice(0, 3).map((item) => (
-            <Card key={`c2-${item.id}`}>
+        {NewsData.slice(0, 24).map((item) => (
+            <Card key={`news-${item.id}`}>
                 <Card.Figure>
-                    <img src={item.image} alt={item.alt} width="400" height="300" />
+                    <img src={item.image} alt={item.alt} width="600" height="400" />
                 </Card.Figure>
                 <Card.Header
                     title={item.title}
@@ -35,7 +33,35 @@ export const NewsCards: Story = {
                     readTime="7"
                 />
                 <Card.Body>
-                    <Card.Excerpt text={EXCERPT} />
+                    <Card.Excerpt text={item.excerpt} />
+                </Card.Body>
+            </Card>
+        ))}
+      </Column>
+    </Main>
+  ),
+};
+
+export const EventCards: Story = {
+  render: () => (
+    <Main>
+      <Column cols="3">
+        {EventData.slice(0, 24).map((item) => (
+            <Card key={`event-${item.id}`}>
+                <Card.Figure>
+                    <img src={item.image} alt={item.alt} width="600" height="400" />
+                </Card.Figure>
+                <Card.DateThumb startDate={item.startDate} endDate={item.endDate} />
+                <Card.Header title={item.title} link={item.link} />
+                <Card.Body>
+                    <Card.EventMeta
+                        startDateTime={item.startDate}
+                        endDateTime={item.endDate}
+                        onCampus={item.on_campus}
+                        onCampusBuilding={item.on_campus_building}
+                        onCampusRoomNumber={item.on_campus_room_number}
+                        eventAddress={item.event_address}
+                    />
                 </Card.Body>
             </Card>
         ))}
