@@ -11,7 +11,7 @@
   &--two {
     grid-template-columns: 1fr;
 
-    @media (min-width: $rds-media-query-md) {
+    @media (min-width: $rds-media-query-sm) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -19,7 +19,7 @@
   &--three {
     grid-template-columns: 1fr;
 
-    @media (min-width: $rds-media-query-md) {
+    @media (min-width: $rds-media-query-sm) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
@@ -27,7 +27,7 @@
   &--four {
     grid-template-columns: 1fr;
 
-    @media (min-width: $rds-media-query-md) {
+    @media (min-width: $rds-media-query-sm) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 

@@ -56,6 +56,8 @@
   --rds--shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
   --rds--shadow-sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
   --rds--shadow-outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(214, 214, 214);
+  --rds--shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  --rds--shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
 
   /* Font Weights */
   --rds--font-weight-light: 300;

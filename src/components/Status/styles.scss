@@ -1,0 +1,30 @@
+.cu-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__dot {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--cu-status-color);
+  }
+
+  &--success {
+    --cu-status-color: var(--rds--color-success);
+  }
+
+  &--error {
+    --cu-status-color: var(--rds--color-error);
+  }
+
+  &--warning {
+    --cu-status-color: var(--rds--color-warning);
+  }
+
+  &--info {
+    --cu-status-color: var(--rds--color-info);
+  }
+}

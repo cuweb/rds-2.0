@@ -95,9 +95,11 @@
         },
 
         "shadow": {
-            "natural":  "6px 6px 9px rgba(0, 0, 0, 0.2)",
-            "sharp":    "6px 6px 0px rgba(0, 0, 0, 0.2)",
-            "outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(214, 214, 214)"
+            "natural":    "6px 6px 9px rgba(0, 0, 0, 0.2)",
+            "sharp":      "6px 6px 0px rgba(0, 0, 0, 0.2)",
+            "outlined":   "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(214, 214, 214)",
+            "card":       "0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06)",
+            "card-hover": "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.08)"
         },
 
         "fontWeight": {

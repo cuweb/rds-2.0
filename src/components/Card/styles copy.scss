@@ -1,0 +1,500 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-card {
+  // Surface vars — overrideable by ancestor scope (e.g., future .cu-dark)
+  --cu-card-bg: var(--rds--color-white);
+  --cu-card-fg: var(--rds--color-black);
+  --cu-card-fg-muted: var(--rds--color-grey-dark);
+  --cu-card-fg-subtle: var(--rds--color-grey);
+  --cu-card-shadow: var(--rds--shadow-card);
+  --cu-card-shadow-hover: var(--rds--shadow-card-hover);
+  --cu-card-radius: var(--rds--radius-lg);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rds--spacing-x-small);
+  background: var(--cu-card-bg);
+  color: var(--cu-card-fg);
+  border-radius: var(--cu-card-radius);
+  box-shadow: var(--cu-card-shadow);
+  transition: box-shadow 0.3s ease-in;
+  overflow: hidden;
+
+  @media (min-width: $rds-media-query-md) {
+    max-width: 36rem;
+  }
+
+  // Heading link hover — always on (links should always feel interactive)
+  header h2 a,
+  header h3 a {
+    display: block;
+
+    &:hover {
+      color: var(--rds--color-primary-dark);
+    }
+  }
+
+  // Last-child spacing replaces previous @apply pb-7 / mb-6
+  > *:not(a):not(figure):not(.cu-card__stats):not(svg):last-child {
+    padding-bottom: var(--rds--spacing-medium);
+  }
+
+  > figure:last-child {
+    margin-bottom: var(--rds--spacing-medium);
+  }
+
+  // Card-level hover — suppressed by --no-hover modifier
+  &:not(.cu-card--no-hover):hover {
+    box-shadow: var(--cu-card-shadow-hover);
+
+    h2,
+    h3 {
+      color: var(--rds--color-primary-dark);
+    }
+  }
+
+  // ---------- Modifiers ----------
+
+  &--grey {
+    --cu-card-bg: var(--rds--color-grey-pale);
+    --cu-card-shadow: none;
+    --cu-card-shadow-hover: none;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--center-desktop {
+    @media (min-width: $rds-media-query-md) {
+      text-align: center;
+    }
+  }
+
+  &--left-border {
+    border-left: 8px solid var(--rds--color-primary);
+  }
+
+  &--has-wave {
+    padding-bottom: 7rem;
+
+    @media (min-width: $rds-media-query-sm) {
+      padding-bottom: 11rem;
+    }
+
+    @media (min-width: $rds-media-query-md) {
+      padding-bottom: 5rem;
+    }
+  }
+
+  // ---------- Wave overlay ----------
+  // TODO: migrate to a CDN-hosted white wave asset and use background-image
+  // (matching FooterStandard's --rds--asset-cu-waves-footer-red pattern).
+  &__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  // ---------- Header ----------
+  &__header {
+    padding-inline: var(--rds--spacing-medium);
+
+    &:first-child {
+      margin-top: var(--rds--spacing-medium);
+    }
+  }
+
+  &__header-meta {
+    display: flex;
+    flex-direction: row;
+    gap: var(--rds--spacing-2x-small);
+    width: 100%;
+    margin-bottom: var(--rds--spacing-x-small);
+  }
+
+  &__header-time,
+  &__header-readtime {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--rds--font-size-small);
+    font-style: italic;
+    color: var(--cu-card-fg-subtle);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+  }
+
+  &__header-readtime--with-divider {
+    margin-left: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--rds--color-grey-lighter);
+  }
+
+  &__header-extra {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    font-size: var(--rds--font-size-small);
+    font-style: italic;
+    color: var(--cu-card-fg-subtle);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+  }
+
+  &__header-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: var(--rds--font-size-large);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--cu-card-fg);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-x-large);
+      line-height: 1.4;
+    }
+  }
+
+  &__header-date-bottom {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: var(--rds--font-size-small);
+    font-style: italic;
+    color: var(--cu-card-fg-subtle);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+  }
+
+  // ---------- Body / Content / Excerpt ----------
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--rds--spacing-medium);
+  }
+
+  &__content {
+    font-size: var(--rds--font-size-medium);
+    color: var(--cu-card-fg-muted);
+  }
+
+  &__excerpt {
+    font-size: var(--rds--font-size-medium);
+    color: var(--cu-card-fg-muted);
+
+    &--truncate-mobile {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @media (min-width: $rds-media-query-md) {
+        display: block;
+        -webkit-line-clamp: none;
+        overflow: visible;
+      }
+    }
+  }
+
+  &__excerpt-more {
+    font-weight: 600;
+  }
+
+  // ---------- Footer ----------
+  &__footer {
+    margin-top: auto;
+    padding-top: var(--rds--spacing-x-small);
+    padding-inline: var(--rds--spacing-medium);
+
+    @media (min-width: $rds-media-query-md) {
+      padding-top: var(--rds--spacing-small);
+    }
+  }
+
+  // ---------- Figure ----------
+  &__figure {
+    position: relative;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    border-top-left-radius: var(--cu-card-radius);
+    border-top-right-radius: var(--cu-card-radius);
+
+    img,
+    svg {
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--round {
+      padding: 2rem var(--rds--spacing-medium) 0.5rem;
+      border-radius: 0;
+
+      img,
+      svg {
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        margin-inline: auto;
+        object-fit: cover;
+        border: 4px solid var(--rds--color-white);
+        border-radius: 50%;
+
+        @media (min-width: $rds-media-query-md) {
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+  }
+
+  // ---------- ImageThumb ----------
+  &__image-thumb {
+    margin: var(--rds--spacing-medium) var(--rds--spacing-medium) 0.5rem;
+    overflow: hidden;
+    max-width: 45%;
+    border-radius: var(--rds--radius-md);
+    aspect-ratio: 4 / 2.7;
+
+    @media (min-width: $rds-media-query-lg) {
+      max-width: 25%;
+    }
+
+    &--square {
+      aspect-ratio: 1 / 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // ---------- IconThumb ----------
+  &__icon-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: var(--rds--spacing-medium) var(--rds--spacing-medium) 0.375rem;
+    overflow: hidden;
+
+    svg {
+      width: auto;
+      height: 100%;
+      fill: var(--rds--color-primary);
+    }
+  }
+
+  // ---------- DateThumb ----------
+  &__date-thumb {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    margin: -4rem var(--rds--spacing-medium) 0.5rem;
+    background: var(--rds--color-white);
+    border-radius: var(--rds--radius-md);
+    box-shadow: var(--rds--shadow-card);
+  }
+
+  &__date-thumb-month {
+    display: block;
+    font-size: var(--rds--font-size-x-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--rds--color-primary);
+  }
+
+  &__date-thumb-day {
+    display: block;
+    font-size: var(--rds--font-size-2x-large);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--rds--color-black);
+  }
+
+  // ---------- Initials ----------
+  &__initials {
+    position: relative;
+    padding: 2rem var(--rds--spacing-medium) 0.5rem;
+
+    img {
+      display: block;
+      width: 8rem;
+      height: 8rem;
+      margin-inline: auto;
+      object-fit: cover;
+      border: 4px solid var(--rds--color-white);
+      border-radius: 50%;
+
+      @media (min-width: $rds-media-query-md) {
+        width: 12rem;
+        height: 12rem;
+      }
+    }
+  }
+
+  &__initials-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--rds--color-grey-pale);
+    color: var(--rds--color-grey-dark);
+    font-size: var(--rds--font-size-2x-large);
+
+    @media (min-width: $rds-media-query-sm) {
+      font-size: var(--rds--font-size-heading-small);
+    }
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-heading-medium);
+    }
+
+    @media (min-width: $rds-media-query-lg) {
+      font-size: var(--rds--font-size-heading-large);
+    }
+  }
+
+  // ---------- Video ----------
+  &__video {
+    position: relative;
+    padding-top: 56.25%;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    background: var(--rds--color-grey-dark);
+    border-top-left-radius: var(--cu-card-radius);
+    border-top-right-radius: var(--cu-card-radius);
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // ---------- Event meta ----------
+  &__event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: var(--rds--font-size-small);
+    color: var(--cu-card-fg-subtle);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      flex-shrink: 0;
+      margin-right: 0.5rem;
+    }
+  }
+
+  // ---------- People meta ----------
+  &__people-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: var(--rds--font-size-small);
+    color: var(--cu-card-fg-subtle);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-medium);
+    }
+  }
+
+  &__people-meta-job {
+    font-size: var(--rds--font-size-medium);
+    font-style: italic;
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-large);
+    }
+  }
+
+  &__people-meta-email {
+    font-weight: 600;
+    word-break: break-all;
+    color: var(--rds--color-primary-dark);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // ---------- Stats ----------
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem var(--rds--spacing-medium);
+    overflow: hidden;
+
+    &--reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__stats-desc {
+    font-size: var(--rds--font-size-medium);
+    color: var(--cu-card-fg-subtle);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-large);
+    }
+  }
+
+  &__stats-stat {
+    font-size: var(--rds--font-size-2x-large);
+    font-weight: 600;
+    color: var(--rds--color-black);
+
+    @media (min-width: $rds-media-query-md) {
+      font-size: var(--rds--font-size-heading-medium);
+    }
+
+    @media (min-width: $rds-media-query-lg) {
+      font-size: var(--rds--font-size-heading-large);
+    }
+  }
+
+  &:not(.cu-card--no-hover):hover &__stats-stat {
+    color: var(--rds--color-primary);
+  }
+}

@@ -6,7 +6,7 @@ import { ArticleData as data } from '../../data/ArticleData';
 import { MultiParagraph } from '../../data/storyContent';
 
 const meta: Meta<typeof Article> = {
-  title: 'Components/Layout/Article',
+  title: 'Components/Template Parts/Article',
   component: Article,
   tags: ['autodocs'],
   parameters: {

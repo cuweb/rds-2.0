@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Body } from './Body';
 
 const meta: Meta<typeof Body> = {
-  title: 'Components/Layout/Body',
+  title: 'Components/Template Parts/Body',
   component: Body,
   tags: ['autodocs', '!test'],
   parameters: {
