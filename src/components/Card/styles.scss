@@ -89,3 +89,15 @@
     text-transform: uppercase;
     color: var(--rds--color-black);
 }
+
+.cu-card__event-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    svg {
+        color: var(--rds--color-primary);
+        margin-right: var(--rds--spacing-2x-small);
+        vertical-align: middle;
+    }
+}

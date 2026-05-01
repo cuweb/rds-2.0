@@ -11,7 +11,16 @@ export interface CardEventMetaProps {
 }
 
 const ICON_SIZE = 20;
-const ICON_COLOR = '#f48c90';
+
+const toIso = (raw: string) => raw.replace(' ', 'T');
+const toIsoDate = (raw: string) => raw.split(' ')[0];
+
+const formatTime = (date: Date) => {
+  const hours = date.getHours() % 12 || 12;
+  const minutes = format(date, 'mm');
+  const ampm = format(date, 'a');
+  return `${hours}:${minutes} ${ampm}`;
+};
 
 export const CardEventMeta = ({
   startDateTime,
@@ -22,42 +31,48 @@ export const CardEventMeta = ({
   eventAddress,
 }: CardEventMetaProps) => {
   const startDate = parse(startDateTime, 'yyyy-MM-dd HH:mm:ss', new Date());
-  const startMonth = format(startDate, 'MMMM');
-  const startDay = getDate(startDate);
-  const startHours = startDate.getHours() % 12 || 12;
-  const startMinutes = format(startDate, 'mm');
-  const startAmPm = format(startDate, 'a');
-
   const endDate = parse(endDateTime, 'yyyy-MM-dd HH:mm:ss', new Date());
-  const endMonth = format(endDate, 'MMMM');
-  const endDay = getDate(endDate);
-  const endHours = endDate.getHours() % 12 || 12;
-  const endMinutes = format(endDate, 'mm');
-  const endAmPm = format(endDate, 'a');
-
-  const startTime = `${startHours}:${startMinutes} ${startAmPm}`;
-  const endTime = `${endHours}:${endMinutes} ${endAmPm}`;
 
   const isEventSameDay = isSameDay(startDate, endDate);
+
+  const startMonth = format(startDate, 'MMMM');
+  const startDay = getDate(startDate);
+  const endMonth = format(endDate, 'MMMM');
+  const endDay = getDate(endDate);
+
+  const startTime = formatTime(startDate);
+  const endTime = formatTime(endDate);
+
+  const location = onCampus ? `${onCampusRoomNumber} ${onCampusBuilding}` : eventAddress;
 
   return (
     <ul className="cu-card__event-meta">
       <li>
-        {!isEventSameDay ? (
+        {isEventSameDay ? (
           <>
-            <Icon name="calendar-days" size={ICON_SIZE} color={ICON_COLOR} />
-            {`${startMonth} ${startDay} — ${endMonth} ${endDay}`}
+            <Icon name="clock" size={ICON_SIZE} title="When" />
+            <time dateTime={toIso(startDateTime)}>
+              {startMonth} {startDay}, {startTime}
+            </time>
+            {' — '}
+            <time dateTime={toIso(endDateTime)}>{endTime}</time>
           </>
         ) : (
           <>
-            <Icon name="clock" size={ICON_SIZE} color={ICON_COLOR} />
-            {`${startTime} — ${endTime}`}
+            <Icon name="calendar-days" size={ICON_SIZE} title="When" />
+            <time dateTime={toIsoDate(startDateTime)}>
+              {startMonth} {startDay}
+            </time>
+            {' — '}
+            <time dateTime={toIsoDate(endDateTime)}>
+              {endMonth} {endDay}
+            </time>
           </>
         )}
       </li>
       <li>
-        <Icon name="location-dot" size={ICON_SIZE} color={ICON_COLOR} />
-        {onCampus ? `${onCampusRoomNumber} ${onCampusBuilding}` : eventAddress}
+        <Icon name="location-dot" size={ICON_SIZE} title="Where" />
+        {location}
       </li>
     </ul>
   );
