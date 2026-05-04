@@ -1,0 +1,1 @@
+require(`./chunk-D3uCBrYO.cjs`);let e=require(`react`),t=require(`react/jsx-runtime`);var n=(0,e.createContext)(e=>(0,t.jsx)(`a`,{...e})),r=()=>(0,e.useContext)(n);Object.defineProperty(exports,`n`,{enumerable:!0,get:function(){return n}}),Object.defineProperty(exports,`t`,{enumerable:!0,get:function(){return r}});

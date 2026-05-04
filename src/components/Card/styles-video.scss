@@ -1,0 +1,98 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-card__figure--video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--rds--color-grey-lighter);
+    overflow: hidden;
+
+    img,
+    iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+    }
+
+    img {
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.cu-card__figure--playing {
+    background: var(--rds--color-black);
+}
+
+.cu-card__figure-link {
+    position: absolute;
+    inset: 0;
+    display: block;
+    text-decoration: none;
+
+    &:focus-visible {
+        outline: 3px solid var(--rds--color-primary);
+        outline-offset: -3px;
+    }
+}
+
+.cu-card__figure-skeleton,
+.cu-card__figure-placeholder {
+    position: absolute;
+    inset: 0;
+}
+
+.cu-card__figure-skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--rds--color-grey-lighter) 0%,
+        var(--rds--color-grey-light) 50%,
+        var(--rds--color-grey-lighter) 100%
+    );
+    background-size: 200% 100%;
+    animation: cu-card-figure-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes cu-card-figure-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.cu-card__figure-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    transition: transform 150ms ease;
+    pointer-events: none;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.cu-card__figure-play-bg {
+    fill: var(--rds--color-black);
+    fill-opacity: 0.8;
+    transition: fill 150ms ease, fill-opacity 150ms ease;
+}
+
+.cu-card__figure-play-arrow {
+    fill: var(--rds--color-white);
+}
+
+// .cu-card__figure-link:hover .cu-card__figure-play,
+// .cu-card__figure-link:focus-visible .cu-card__figure-play {
+//     transform: translate(-50%, -50%) scale(1.05);
+// }
+
+.cu-card__figure-link:hover .cu-card__figure-play-bg {
+    fill: var(--rds--color-primary);
+    fill-opacity: 1;
+}

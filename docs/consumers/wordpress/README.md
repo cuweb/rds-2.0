@@ -21,6 +21,7 @@ See [the consumer guide](../README.md) for the full install flow.
 | A block theme (no classic PHP templates) | [block-themes.md](block-themes.md) |
 | A hybrid theme (classic PHP templates + blocks) | [hybrid-themes.md](hybrid-themes.md) |
 | A Timber theme with Twig templates | [timber-twig.md](timber-twig.md) |
+| A video gallery (lite-embed cards, no React on the frontend) | [video-cards.md](video-cards.md) |
 
 Some projects span multiple scenarios — a site might have a block theme with custom dynamic blocks and a Timber-based admin plugin. In that case, each layer follows its own doc.
 

@@ -9,7 +9,7 @@ export interface CardHeaderProps {
   date?: string | Date;
   datePrefix?: string;
   readTime?: string;
-  datePosition?: 'top' | 'bottom';
+  position?: 'top' | 'bottom';
 }
 
 export const CardHeader = ({
@@ -20,7 +20,7 @@ export const CardHeader = ({
   date,
   datePrefix,
   readTime,
-  datePosition = 'top',
+  position = 'top',
 }: CardHeaderProps) => {
   const LinkComponent = useLinkContext();
   const HeaderComponent = as;
@@ -34,7 +34,7 @@ export const CardHeader = ({
 
   return (
     <header className="cu-card__header">
-      {((date && datePosition === 'top') || readTime) && (
+      {((date && position === 'top') || (readTime && position === 'top')) && (
         <div className="cu-card__header-meta">
           {date && (
             <time className="cu-card__header-time">
@@ -62,7 +62,7 @@ export const CardHeader = ({
         {link ? <LinkComponent href={link}>{title}</LinkComponent> : title}
       </HeaderComponent>
 
-      {((date && datePosition === 'bottom') || readTime) && (
+      {((date && position === 'bottom') || (readTime && position === 'bottom')) && (
         <div className="cu-card__header-meta">
           {date && (
             <time className="cu-card__header-time">

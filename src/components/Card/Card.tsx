@@ -12,7 +12,7 @@ import { CardImageThumb } from './CardImageThumb';
 import { CardInitials } from './CardInitials';
 import { CardPeopleMeta } from './CardPeopleMeta';
 import { CardStats } from './CardStats';
-import { CardVideo } from './CardVideo';
+import { CardVideoFigure } from './CardVideoFigure';
 import './styles.scss';
 
 export interface CardProps {
@@ -71,11 +71,11 @@ export const CardWrapper = ({
 
 export const Card = Object.assign(CardWrapper, {
   Figure: CardFigure,
+  VideoFigure: CardVideoFigure,
   DateThumb: CardDateThumb,
   IconThumb: CardIconThumb,
   ImageThumb: CardImageThumb,
   Initials: CardInitials,
-  Video: CardVideo,
   Header: CardHeader,
   Body: CardBody,
   Content: CardContent,

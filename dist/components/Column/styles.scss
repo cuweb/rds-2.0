@@ -8,7 +8,7 @@
 .cu-column--two {
   grid-template-columns: 1fr;
 }
-@media (min-width: 784px) {
+@media (min-width: 600px) {
   .cu-column--two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -16,7 +16,7 @@
 .cu-column--three {
   grid-template-columns: 1fr;
 }
-@media (min-width: 784px) {
+@media (min-width: 600px) {
   .cu-column--three {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -24,7 +24,7 @@
 .cu-column--four {
   grid-template-columns: 1fr;
 }
-@media (min-width: 784px) {
+@media (min-width: 600px) {
   .cu-column--four {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

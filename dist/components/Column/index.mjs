@@ -1,4 +1,4 @@
-import { t as e } from "../propClasses-BYwQ18j0.js";
+import { t as e } from "../_shared/propClasses-DJmghRDw.mjs";
 import "react";
 import { jsx as t } from "react/jsx-runtime";
 //#region src/components/Column/ColumnContent.tsx

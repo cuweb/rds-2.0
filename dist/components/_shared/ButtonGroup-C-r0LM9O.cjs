@@ -1,0 +1,1 @@
+const e=require(`./chunk-D3uCBrYO.cjs`);let t=require(`react`);t=e.t(t,1);let n=require(`react/jsx-runtime`);var r=({children:e,align:t=`start`})=>(0,n.jsx)(`div`,{className:`cu-buttongroup cu-buttongroup--justify-${t}`,children:e});Object.defineProperty(exports,`t`,{enumerable:!0,get:function(){return r}});

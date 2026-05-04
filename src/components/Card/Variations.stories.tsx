@@ -92,8 +92,8 @@ export const Variants: Story = {
         </Card>
 
         {/* Video card */}
-        <Card noHover>
-          <Card.Video source={video.source} />
+        <Card>
+          <Card.VideoFigure url={video.source} title={video.title} />
           <Card.Header title={video.title} />
         </Card>
 
@@ -104,7 +104,7 @@ export const Variants: Story = {
             link={page.link}
             date={page.date}
             datePrefix="Modified on "
-            datePosition="bottom"
+            position="bottom"
           />
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />

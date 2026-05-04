@@ -106,7 +106,7 @@ export const PageCards: Story = {
                     link={item.link}
                     date={item.date}
                     datePrefix="Modified on "
-                    datePosition="bottom"
+                    position="bottom"
                 />
                 <Card.Body>
                     <Card.Excerpt text={item.excerpt} />
@@ -123,10 +123,10 @@ export const VideoCards: Story = {
     <Main>
       <Column cols="3">
         {VideoData.slice(0, 24).map((item) => (
-            <Card key={`video-${item.id}`}>
-                <Card.Video source={item.source} />
-                <Card.Header title={item.title} />
-            </Card>
+          <Card key={`video-${item.id}`}>
+            <Card.VideoFigure url={item.source} title={item.title} />
+            <Card.Header title={item.title} />
+          </Card>
         ))}
       </Column>
     </Main>
