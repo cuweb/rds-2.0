@@ -28,13 +28,13 @@
   --rds--gradient-dark-grey-to-black: linear-gradient(135deg,rgb(118,118,118) 0%,rgb(25,25,25) 100%);
 
   /* Spacing */
-  --rds--spacing-2x-small: 0.44rem;
+  --rds--spacing-2-x-small: 0.44rem;
   --rds--spacing-x-small: 0.67rem;
   --rds--spacing-small: min(1rem, 1vw);
   --rds--spacing-medium: min(1.5rem, 2vw);
   --rds--spacing-large: min(2.25rem, 3vw);
   --rds--spacing-x-large: min(3.38rem, 4vw);
-  --rds--spacing-2x-large: min(5.06rem, 6vw);
+  --rds--spacing-2-x-large: min(5.06rem, 6vw);
 
   /* Font Families */
   --rds--font-family-inter: Inter, sans-serif;
@@ -45,7 +45,7 @@
   --rds--font-size-medium: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.292), 1rem);
   --rds--font-size-large: clamp(0.9rem, 0.9rem + ((1vw - 0.2rem) * 0.375), 1.125rem);
   --rds--font-size-x-large: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.208), 1.25rem);
-  --rds--font-size-2x-large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.417), 1.5rem);
+  --rds--font-size-2-x-large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.417), 1.5rem);
   --rds--font-size-heading-small: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.417), 1.5rem);
   --rds--font-size-heading-medium: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.833), 2rem);
   --rds--font-size-heading-large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 1.25), 2.5rem);

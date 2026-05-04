@@ -81,7 +81,7 @@
         {
           "slug": "20",
           "size": "0.44rem",
-          "name": "2x Small"
+          "name": "2 X Small"
         },
         {
           "slug": "30",
@@ -111,7 +111,7 @@
         {
           "slug": "80",
           "size": "min(5.06rem, 6vw)",
-          "name": "2x Large"
+          "name": "2 X Large"
         }
       ],
       "customSpacingSize": false,

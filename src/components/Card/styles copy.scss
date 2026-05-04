@@ -112,7 +112,7 @@
   &__header-meta {
     display: flex;
     flex-direction: row;
-    gap: var(--rds--spacing-2x-small);
+    gap: var(--rds--spacing-2-x-small);
     width: 100%;
     margin-bottom: var(--rds--spacing-x-small);
   }
@@ -329,7 +329,7 @@
 
   &__date-thumb-day {
     display: block;
-    font-size: var(--rds--font-size-2x-large);
+    font-size: var(--rds--font-size-2-x-large);
     font-weight: 700;
     text-transform: uppercase;
     color: var(--rds--color-black);
@@ -363,7 +363,7 @@
     transform: translate(-50%, -50%);
     background: var(--rds--color-grey-pale);
     color: var(--rds--color-grey-dark);
-    font-size: var(--rds--font-size-2x-large);
+    font-size: var(--rds--font-size-2-x-large);
 
     @media (min-width: $rds-media-query-sm) {
       font-size: var(--rds--font-size-heading-small);
@@ -481,7 +481,7 @@
   }
 
   &__stats-stat {
-    font-size: var(--rds--font-size-2x-large);
+    font-size: var(--rds--font-size-2-x-large);
     font-weight: 600;
     color: var(--rds--color-black);
 

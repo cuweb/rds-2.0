@@ -142,9 +142,9 @@
 /* ---------- Welcome page ---------- */
 
 .welcome-hero {
-  padding: var(--rds--spacing-2x-large) 0;
+  padding: var(--rds--spacing-2-x-large) 0;
   border-bottom: 1px solid var(--rds--color-grey-lighter);
-  margin-bottom: var(--rds--spacing-2x-large);
+  margin-bottom: var(--rds--spacing-2-x-large);
 }
 
 .welcome-hero .welcome-hero__title {
@@ -175,7 +175,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--rds--spacing-medium);
-  margin-bottom: var(--rds--spacing-2x-large);
+  margin-bottom: var(--rds--spacing-2-x-large);
 }
 
 .welcome-highlights .welcome-highlight {

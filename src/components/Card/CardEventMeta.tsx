@@ -10,7 +10,7 @@ export interface CardEventMetaProps {
   eventAddress?: string;
 }
 
-const ICON_SIZE = 20;
+const ICON_SIZE = 18;
 
 const toIso = (raw: string) => raw.replace(' ', 'T');
 const toIsoDate = (raw: string) => raw.split(' ')[0];
@@ -46,16 +46,14 @@ export const CardEventMeta = ({
   const location = onCampus ? `${onCampusRoomNumber} ${onCampusBuilding}` : eventAddress;
 
   return (
-    <ul className="cu-card__event-meta">
+    <ul className="cu-card__meta">
       <li>
         {isEventSameDay ? (
           <>
             <Icon name="clock" size={ICON_SIZE} title="When" />
-            <time dateTime={toIso(startDateTime)}>
-              {startMonth} {startDay}, {startTime}
+            <time dateTime={`${toIso(startDateTime)}/${toIso(endDateTime)}`}>
+              {startTime} — {endTime}
             </time>
-            {' — '}
-            <time dateTime={toIso(endDateTime)}>{endTime}</time>
           </>
         ) : (
           <>
