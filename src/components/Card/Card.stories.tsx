@@ -7,6 +7,7 @@ import { NewsData } from '../../data/NewsData';
 import { EventData } from '../../data/EventData';
 import { PeopleData } from '../../data/PeopleData';
 import { PageData } from '../../data/PageData';
+import { VideoData } from '../../data/VideoData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -110,6 +111,21 @@ export const PageCards: Story = {
                 <Card.Body>
                     <Card.Excerpt text={item.excerpt} />
                 </Card.Body>
+            </Card>
+        ))}
+      </Column>
+    </Main>
+  ),
+};
+
+export const VideoCards: Story = {
+  render: () => (
+    <Main>
+      <Column cols="3">
+        {VideoData.slice(0, 24).map((item) => (
+            <Card key={`video-${item.id}`}>
+                <Card.Video source={item.source} />
+                <Card.Header title={item.title} />
             </Card>
         ))}
       </Column>

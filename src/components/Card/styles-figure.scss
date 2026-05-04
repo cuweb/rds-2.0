@@ -1,6 +1,7 @@
 @use '../../styles/auto/variables' as *;
 
-.cu-card__figure {
+.cu-card__figure,
+.cu-card__video {
     margin: calc(1.25rem * -1);
     margin-bottom: 1.25rem;
     line-height: 0;

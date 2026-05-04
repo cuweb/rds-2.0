@@ -9,7 +9,7 @@ import { EventData } from '../../data/EventData';
 import { PeopleData } from '../../data/PeopleData';
 // import { IconData } from '../../data/IconData';
 // import { StatData } from '../../data/StatData';
-// import { VideoData } from '../../data/VideoData';
+import { VideoData } from '../../data/VideoData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -34,7 +34,7 @@ const page = NewsData[1];
 // const hours = NewsData[3];
 // const wave = NewsData[0];
 // const stat = StatData[0];
-// const video = VideoData[0];
+const video = VideoData[0];
 
 export const Variants: Story = {
   render: () => (
@@ -89,6 +89,12 @@ export const Variants: Story = {
               <a href={`mailto:${person.email}`}>{person.email}</a>
             </Card.PeopleMeta>
           </Card.Body>
+        </Card>
+
+        {/* Video card */}
+        <Card noHover>
+          <Card.Video source={video.source} />
+          <Card.Header title={video.title} />
         </Card>
 
         {/* Page card — date below title */}
@@ -149,20 +155,6 @@ export const Variants: Story = {
         {/* Stat card — left border, no hover */}
         {/* <Card leftBorder noHover>
           <Card.Stats stat={stat.stat} desc={stat.desc} />
-        </Card> */}
-
-        {/* Video card */}
-        {/* <Card noHover>
-          <Card.Video source={video.source} />
-          <Card.Header title={video.title} />
-        </Card> */}
-
-        {/* Primary card — simplest variant */}
-        {/* <Card>
-          <Card.Header title="How to Write for the Web" link="https://carleton.ca/webservices" />
-          <Card.Body>
-            <Card.Excerpt text={EXCERPT} />
-          </Card.Body>
         </Card> */}
       </Column>
     </Main>
