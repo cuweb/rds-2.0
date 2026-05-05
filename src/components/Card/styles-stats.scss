@@ -1,0 +1,22 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-card__stats {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: var(--rds--spacing-x-small);
+    
+    .cu-card__stats-stat {
+        font-size: var(--rds--font-size-heading-medium);
+        font-weight: var(--rds--font-weight-bold);
+        line-height: var(--rds--line-height-tight);
+        margin: 0;
+    }
+    
+    .cu-card__stats-desc {
+        font-size: var(--rds--font-size-small);
+        line-height: var(--rds--line-height-tight);
+        margin: 0;
+    }
+}

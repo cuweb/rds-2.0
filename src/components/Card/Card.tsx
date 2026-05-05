@@ -39,7 +39,7 @@ export const CardWrapper = ({
     isCenter && 'cu-card--center',
     isCenterDesktop && 'cu-card--center-desktop',
     noHover && 'cu-card--no-hover',
-    leftBorder && 'cu-card--left-border',
+    leftBorder && 'cu-card--border-left',
     hasWave && isGrey && 'cu-card--has-wave',
   ]
     .filter(Boolean)

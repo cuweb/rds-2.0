@@ -9,7 +9,7 @@ import { NewsData } from '../../data/NewsData';
 import { EventData } from '../../data/EventData';
 import { PeopleData } from '../../data/PeopleData';
 import { IconData } from '../../data/IconData';
-// import { StatData } from '../../data/StatData';
+import { StatData } from '../../data/StatData';
 import { VideoData } from '../../data/VideoData';
 
 const meta: Meta = {
@@ -27,15 +27,15 @@ const EXCERPT =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra laoreet lobortis. In hac habitasse platea dictumst. Nulla porta posuere est, aliquam mollis mi accumsan id.';
 
 const news = NewsData[0];
-const event = EventData[0];
-const person = PeopleData[0];
 const page = NewsData[1];
 const featured = NewsData[2];
+const event = EventData[0];
+const person = PeopleData[0];
+const video = VideoData[0];
 const icon = IconData[0];
+const stat = StatData[0];
 // const hours = NewsData[3];
 // const wave = NewsData[0];
-// const stat = StatData[0];
-const video = VideoData[0];
 
 export const Variants: Story = {
   render: () => (
@@ -137,6 +137,11 @@ export const Variants: Story = {
           </Card.Body>
         </Card>
 
+        {/* Stat card — left border, no hover */}
+        <Card leftBorder>
+          <Card.Stats stat={stat.stat} desc={stat.desc} />
+        </Card>
+
         {/* Hours card — Status component */}
         {/* <Card>
           <Card.Figure>
@@ -156,11 +161,6 @@ export const Variants: Story = {
           <Card.Body>
             <Card.Excerpt text={EXCERPT} />
           </Card.Body>
-        </Card> */}
-
-        {/* Stat card — left border, no hover */}
-        {/* <Card leftBorder noHover>
-          <Card.Stats stat={stat.stat} desc={stat.desc} />
         </Card> */}
       </Column>
     </Main>

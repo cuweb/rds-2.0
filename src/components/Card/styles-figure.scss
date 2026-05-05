@@ -34,7 +34,7 @@
 
 .cu-card__figure--square {
     margin: var(--rds--spacing-small) 0 1.25rem;
-    border-radius: var(--rds--radius-md);
+    border-radius: var(--rds--radius-sm);
 }
 
 .cu-card__figure--small {
@@ -42,7 +42,7 @@
     padding: 1rem 1rem 0 1rem;
 
     img {
-        border-radius: var(--rds--radius-lg);
+        border-radius: var(--rds--radius-sm);
     }
 }
 

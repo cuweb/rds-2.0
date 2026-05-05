@@ -9,7 +9,7 @@
     background: var(--rds--color-white);
     color: var(--rds--color-black);
     padding: 1.25rem 1.25rem 1.75rem 1.25rem;
-    border-radius: var(--rds--radius-lg);
+    border-radius: var(--rds--radius-md);
     box-shadow: var(--rds--shadow-natural);
     
     a {
@@ -21,6 +21,14 @@
         }
     }
 }
+
+.cu-card--border-left {
+    border-left: 3px solid var(--rds--color-primary);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+// Content
 
 .cu-card__header h2,
 .cu-card__header h3 {

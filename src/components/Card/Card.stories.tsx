@@ -10,6 +10,7 @@ import { PeopleData } from '../../data/PeopleData';
 import { PageData } from '../../data/PageData';
 import { VideoData } from '../../data/VideoData';
 import { IconData } from '../../data/IconData';
+import { StatData } from '../../data/StatData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -171,6 +172,20 @@ export const IconCards: Story = {
                 <Card.Body>
                     <Card.Excerpt text={item.excerpt} />
                 </Card.Body>
+            </Card>
+        ))}
+      </Column>
+    </Main>
+  ),
+};
+
+export const StatCards: Story = {
+  render: () => (
+    <Main>
+      <Column cols="3">
+        {StatData.slice(0, 24).map((item) => (
+            <Card key={`stat-${item.id}`} leftBorder>
+                <Card.Stats stat={item.stat} desc={item.desc} />
             </Card>
         ))}
       </Column>
