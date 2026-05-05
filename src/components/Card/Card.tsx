@@ -11,6 +11,7 @@ import { CardImageThumb } from './CardImageThumb';
 import { CardInitials } from './CardInitials';
 import { CardPeopleMeta } from './CardPeopleMeta';
 import { CardStats } from './CardStats';
+import { CardStatus } from './CardStatus';
 import { CardVideoFigure } from './CardVideoFigure';
 import './styles.scss';
 
@@ -82,6 +83,7 @@ export const Card = Object.assign(CardWrapper, {
   EventMeta: CardEventMeta,
   PeopleMeta: CardPeopleMeta,
   Stats: CardStats,
+  Status: CardStatus,
 });
 
 CardWrapper.displayName = 'Card';

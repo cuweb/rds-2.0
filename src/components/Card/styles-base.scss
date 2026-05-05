@@ -65,7 +65,8 @@
     margin: 0;
 }
 
-.cu-card__meta {
+.cu-card__meta,
+.cu-card__status {
     font-size: var(--rds--font-size-small);
     list-style: none;
     padding: 0;

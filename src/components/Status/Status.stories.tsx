@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Status } from './Status';
 
 const meta: Meta<typeof Status> = {
-  title: 'Components/Status',
+  title: 'Components/Elements/Status',
   component: Status,
   tags: ['autodocs'],
   argTypes: {

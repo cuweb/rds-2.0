@@ -3,8 +3,7 @@ import { Column } from '../Column/Column';
 import { Main } from '../Main/Main';
 import { Card } from './Card';
 import { Icon } from '../Icon/Icon';
-
-import { Status } from '../Status/Status';
+import { formatHoursStatus } from '../Status/hoursStatus';
 
 import { NewsData } from '../../data/NewsData';
 import { EventData } from '../../data/EventData';
@@ -13,7 +12,9 @@ import { PageData } from '../../data/PageData';
 import { VideoData } from '../../data/VideoData';
 import { IconData } from '../../data/IconData';
 import { StatData } from '../../data/StatData';
-import { DiningData } from '../../data/DiningData';
+import { HoursData } from '../../data/HoursData';
+import { AvailabilityData } from '../../data/AvailabilityData';
+import { SystemData } from '../../data/SystemData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -196,12 +197,14 @@ export const StatCards: Story = {
   ),
 };
 
-export const DiningCards: Story = {
+export const HoursCards: Story = {
   render: () => (
     <Main>
       <Column cols="3">
-        {DiningData.slice(0, 24).map((item) => (
-            <Card key={`dining-${item.id}`}>
+        {HoursData.map((item) => {
+          const { variant, label } = formatHoursStatus(item.openTime, item.closeTime);
+          return (
+            <Card key={`hours-${item.id}`}>
                 <Card.Figure>
                     <img src={item.image} alt={item.alt} width="600" height="400" />
                 </Card.Figure>
@@ -211,11 +214,58 @@ export const DiningCards: Story = {
                 />
                 <Card.Body>
                     <Card.Content>
-                        <Status variant="success">Open today until 8:00 PM</Status>
+                        <Card.Status type="hours" variant={variant}>{label}</Card.Status>
                         <Card.Excerpt text={item.excerpt} />
                     </Card.Content>
                 </Card.Body>
             </Card>
+          );
+        })}
+      </Column>
+    </Main>
+  ),
+};
+
+export const AvailabilityCards: Story = {
+  render: () => (
+    <Main>
+      <Column cols="3">
+        {AvailabilityData.map((item) => (
+          <Card key={`availability-${item.id}`}>
+            <Card.Figure>
+              <img src={item.image} alt={item.alt} width="600" height="400" />
+            </Card.Figure>
+            <Card.Header title={item.title} link={item.link} />
+            <Card.Body>
+              <Card.Content>
+                <Card.Status type="availability" variant={item.state} />
+                <Card.Excerpt text={item.excerpt} />
+              </Card.Content>
+            </Card.Body>
+          </Card>
+        ))}
+      </Column>
+    </Main>
+  ),
+};
+
+export const SystemCards: Story = {
+  render: () => (
+    <Main>
+      <Column cols="3">
+        {SystemData.map((item) => (
+          <Card key={`system-${item.id}`}>
+            <Card.Figure>
+              <img src={item.image} alt={item.alt} width="600" height="400" />
+            </Card.Figure>
+            <Card.Header title={item.title} link={item.link} />
+            <Card.Body>
+              <Card.Content>
+                <Card.Status type="system" variant={item.state} />
+                <Card.Excerpt text={item.excerpt} />
+              </Card.Content>
+            </Card.Body>
+          </Card>
         ))}
       </Column>
     </Main>

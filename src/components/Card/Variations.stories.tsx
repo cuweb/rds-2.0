@@ -3,7 +3,8 @@ import { Column } from '../Column/Column';
 import { Main } from '../Main/Main';
 import { Card } from './Card';
 import { Icon } from '../Icon/Icon';
-import { Status } from '../Status/Status';
+// import { Status } from '../Status/Status';
+import { formatHoursStatus } from '../Status/hoursStatus';
 
 import { NewsData } from '../../data/NewsData';
 import { EventData } from '../../data/EventData';
@@ -11,7 +12,9 @@ import { PeopleData } from '../../data/PeopleData';
 import { IconData } from '../../data/IconData';
 import { StatData } from '../../data/StatData';
 import { VideoData } from '../../data/VideoData';
-import { DiningData } from '../../data/DiningData';
+import { HoursData } from '../../data/HoursData';
+// import { AvailabilityData } from '../../data/AvailabilityData';
+// import { SystemData } from '../../data/SystemData';
 
 const meta: Meta = {
   title: 'Components/Elements/Card',
@@ -35,7 +38,9 @@ const person = PeopleData[0];
 const video = VideoData[0];
 const icon = IconData[0];
 const stat = StatData[0];
-const dining = DiningData[0];
+const hours = HoursData[0];
+// const availability = AvailabilityData[0];
+// const system = SystemData[0];
 // const wave = NewsData[0];
 
 export const Variants: Story = {
@@ -80,6 +85,39 @@ export const Variants: Story = {
           </Card.Body>
         </Card>
 
+        {/* Hours card — Card.Status with computed open/close label */}
+        <Card>
+          <Card.Figure>
+            <img src={hours.image} alt={hours.alt} width="400" height="300" />
+          </Card.Figure>
+          <Card.Header title={hours.title} link={hours.link} />
+          <Card.Body>
+            <Card.Content>
+              {(() => {
+                const { variant, label } = formatHoursStatus(hours.openTime, hours.closeTime);
+                return (
+                  <Card.Status type="hours" variant={variant}>{label}</Card.Status>
+                );
+              })()}
+              <Card.Excerpt text={EXCERPT} />
+            </Card.Content>
+          </Card.Body>
+        </Card>
+
+        {/* Featured card — small image thumb, no hover */}
+        <Card>
+          <Card.Figure isSmall>
+            <img src={featured.image} alt={featured.alt} width="400" height="300" />
+          </Card.Figure>
+          <Card.Header
+            title={featured.title}
+            link={featured.link}
+          />
+          <Card.Body>
+            <Card.Excerpt text={EXCERPT} />
+          </Card.Body>
+        </Card>
+
         {/* People card — round figure, centered */}
         <Card isCenter>
           <Card.Figure isRound>
@@ -113,20 +151,6 @@ export const Variants: Story = {
           </Card.Body>
         </Card>
 
-        {/* Featured card — small image thumb, no hover */}
-        <Card>
-          <Card.Figure isSmall>
-            <img src={featured.image} alt={featured.alt} width="400" height="300" />
-          </Card.Figure>
-          <Card.Header
-            title={featured.title}
-            link={featured.link}
-          />
-          <Card.Body>
-            <Card.Excerpt text={EXCERPT} />
-          </Card.Body>
-        </Card>
-
         {/* Icon card */}
         <Card>
           <Card.Figure isIcon>
@@ -143,18 +167,33 @@ export const Variants: Story = {
           <Card.Stats stat={stat.stat} desc={stat.desc} />
         </Card>
 
-        {/* Hours card — Status component */}
-        <Card>
+        {/* Availability card — Card.Status with registry-default label */}
+        {/* <Card>
           <Card.Figure>
-            <img src={dining.image} alt={dining.alt} width="400" height="300" />
+            <img src={availability.image} alt={availability.alt} width="400" height="300" />
           </Card.Figure>
-          <Card.Header title={dining.title} link={dining.link} />
+          <Card.Header title={availability.title} link={availability.link} />
           <Card.Body>
             <Card.Content>
-              <Status variant="success">Open today until 8:00 PM</Status>
+              <Card.Status type="availability" variant={availability.state} />
+              <Card.Excerpt text={EXCERPT} />
             </Card.Content>
           </Card.Body>
-        </Card>
+        </Card> */}
+
+        {/* System card — Card.Status with registry-default label */}
+        {/* <Card>
+          <Card.Figure>
+            <img src={system.image} alt={system.alt} width="400" height="300" />
+          </Card.Figure>
+          <Card.Header title={system.title} link={system.link} />
+          <Card.Body>
+            <Card.Content>
+              <Card.Status type="system" variant={system.state} />
+              <Card.Excerpt text={EXCERPT} />
+            </Card.Content>
+          </Card.Body>
+        </Card> */}
 
         {/* Wave card — grey background with decorative wave */}
         {/* <Card isGrey hasWave>

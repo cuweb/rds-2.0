@@ -1,3 +1,17 @@
+// =============================================================================
+// Status — independent style hooks
+// =============================================================================
+// Two contexts of use, two independent style scopes:
+//
+//   .cu-status                 — shared base (display, dot, variant colors)
+//   .cu-status--standalone     — only when used directly: <Status />
+//   .cu-status--in-card        — only when wrapped by <Card.Status />
+//
+// Add standalone-specific tweaks (size, padding, background, etc.) to the
+// `--standalone` block below. Add card-context tweaks to the `--in-card` block.
+// They never collide.
+// =============================================================================
+
 .cu-status {
   display: inline-flex;
   align-items: center;
@@ -27,4 +41,16 @@
   &--info {
     --cu-status-color: var(--rds--color-info);
   }
+}
+
+// Standalone-only styles. Targeted directly at <Status /> usage.
+.cu-status--standalone {
+  // (intentionally empty for now — add standalone-specific styles here)
+}
+
+// Card-context-only styles. Targeted at <Card.Status /> usage.
+// The wrapper element (.cu-card__status) handles its own spacing in
+// src/components/Card/styles-status.scss.
+.cu-status--in-card {
+  // (intentionally empty for now — add card-context tweaks here)
 }
