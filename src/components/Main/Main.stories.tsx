@@ -3,7 +3,7 @@ import { Main } from './Main';
 import { MultiParagraph } from '../../data/storyContent';
 
 const meta: Meta<typeof Main> = {
-  title: 'Components/Layout/Main',
+  title: 'Components/Template Parts/Main',
   component: Main,
   tags: ['autodocs'],
   parameters: {

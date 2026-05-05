@@ -16,6 +16,18 @@ Prefix the change with one of these keywords:
 - _Security_: in case of vulnerabilities.
 
 
+## [Unreleased]
+
+- _Added_: Expanded the `Card` system with additional subcomponents and composition patterns in `src/components/Card/` (including `CardDateThumb.tsx`, `CardEventMeta.tsx`, `CardPeopleMeta.tsx`, `CardStats.tsx`, `CardStatus.tsx`, and `CardVideoFigure.tsx`) plus new demos in `src/components/Card/Card.stories.tsx` and `src/components/Card/Variations.stories.tsx`.
+- _Added_: Introduced a new `Status` component and supporting status registries/types in `src/components/Status/` (`Status.tsx`, `statusTypes.json`, `types.ts`, `hoursStatus.ts`) with Storybook coverage in `src/components/Status/Status.stories.tsx`.
+- _Added_: Added reusable video embed support via `src/utils/video/` (`providers.ts`, `useOEmbed.ts`, `vanilla.ts`), bundled vanilla entrypoints in `dist/vanilla-js/`, and WordPress consumer documentation in `docs/consumers/wordpress/video-cards.md`.
+- _Added_: Added new card/story data sets under `src/data/`, including `EventData.ts`, `NewsData.ts`, `PageData.ts`, `PeopleData.ts`, `StatData.ts`, `SystemData.ts`, `VideoData.ts`, and related supporting data modules.
+- _Changed_: Updated component build/export wiring in `vite.config.components.ts`, `vite.config.vanilla.ts`, `src/index.ts`, and `package.json` to include new card/status/video capabilities and outputs.
+- _Changed_: Refined spacing and token outputs in `c2b.config.json`, `src/styles/auto/tokens.css`, and `src/styles/auto/_variables.scss`, with corresponding stylebook/docs updates in `src/docs/stylebook/` and `.storybook/preview.ts`.
+- _Changed_: Adjusted responsive column behavior in `src/components/Column/styles.scss` ("change columns breakpoints").
+- _Fixed_: Resolved oEmbed provider handling issues for video cards in `src/utils/video/providers.ts` and `src/utils/video/useOEmbed.ts`.
+
+
 ## [0.4.0] - 2026-04-30
 
 - _Added_: Top-level `CONTRIBUTING.md` and per-section READMEs ([docs/README.md](docs/README.md), [docs/consumers/README.md](docs/consumers/README.md), [docs/contributing/README.md](docs/contributing/README.md)) so each audience has a clear entry point.

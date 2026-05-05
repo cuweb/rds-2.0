@@ -1,0 +1,16 @@
+@use '../../styles/auto/variables' as *;
+
+.cu-card--grey {
+    padding-bottom: min(5.86rem, 6vw);
+    background-color: var(--rds--color-grey-pale);
+    box-shadow: none;
+}
+
+.cu-card__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+}

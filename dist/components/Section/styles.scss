@@ -1,3 +1,12 @@
 .cu-section--grey {
   background-color: var(--rds--color-grey-pale);
+  padding: var(--rds--spacing-large);
+}
+
+.cu-section--grey:not(.alignfull) {
+  border-radius: var(--rds--radius-xl);
+}
+
+.cu-main .cu-section--grey.alignfull:last-child {
+  margin-bottom: calc(-1 * var(--rds--spacing-large));
 }

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FooterStandard } from './FooterStandard';
 
 const meta: Meta<typeof FooterStandard> = {
-  title: 'Components/Layout/FooterStandard',
+  title: 'Components/Layout/Footer Standard',
   component: FooterStandard,
   tags: ['autodocs'],
   argTypes: {

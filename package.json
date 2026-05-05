@@ -19,6 +19,11 @@
     },
     "./styles": "./dist/style.css",
     "./styles.css": "./dist/style.css",
+    "./vanilla-js/videoCard": {
+      "import": "./dist/vanilla-js/videoCard.mjs",
+      "default": "./dist/vanilla-js/videoCard.js"
+    },
+    "./vanilla-js/videoCard.js": "./dist/vanilla-js/videoCard.js",
     "./*": {
       "types": "./dist/components/*/index.d.ts",
       "import": "./dist/components/*/index.mjs",
@@ -32,7 +37,7 @@
   ],
   "scripts": {
     "dev": "npm run assets && npm run c2b && storybook dev -p 6006",
-    "build": "npm run assets && vite build && vite build -c vite.config.components.ts && node scripts/build-components-scss.mjs && npm run c2b",
+    "build": "npm run assets && vite build && vite build -c vite.config.components.ts && vite build -c vite.config.vanilla.ts && node scripts/build-components-scss.mjs && npm run c2b",
     "build-storybook": "npm run assets && storybook build",
     "assets": "node scripts/build-assets.mjs",
     "c2b": "c2b generate",
@@ -79,10 +84,10 @@
     "@cuweb/rds-icons": "^0.1.5",
     "@eslint/js": "^9.39.4",
     "@size-limit/file": "^12.1.0",
-    "@storybook/addon-a11y": "^10.3.5",
-    "@storybook/addon-docs": "^10.3.5",
-    "@storybook/addon-vitest": "^10.3.5",
-    "@storybook/react-vite": "^10.3.5",
+    "@storybook/addon-a11y": "^10.3.6",
+    "@storybook/addon-docs": "^10.3.6",
+    "@storybook/addon-vitest": "^10.3.6",
+    "@storybook/react-vite": "^10.3.6",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -97,7 +102,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-storybook": "^10.3.5",
+    "eslint-plugin-storybook": "^10.3.6",
     "husky": "^9.1.7",
     "modern-normalize": "^3.0.1",
     "playwright": "^1.59.1",
@@ -106,11 +111,14 @@
     "react-dom": "^18.3.1",
     "sass": "^1.99.0",
     "size-limit": "^12.1.0",
-    "storybook": "^10.3.5",
+    "storybook": "^10.3.6",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.1",
+    "typescript-eslint": "^8.59.2",
     "vite": "^8.0.10",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
   }
 }

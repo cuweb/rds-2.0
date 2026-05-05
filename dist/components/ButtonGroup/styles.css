@@ -1,7 +1,7 @@
 .cu-buttongroup {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--rds--spacing-2x-small);
+  gap: var(--rds--spacing-2-x-small);
 }
 @media (min-width: 784px) {
   .cu-buttongroup {

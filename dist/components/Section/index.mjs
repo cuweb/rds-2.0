@@ -1,4 +1,4 @@
-import { n as e } from "../propClasses-BYwQ18j0.js";
+import { n as e } from "../_shared/propClasses-DJmghRDw.mjs";
 import "react";
 import { jsx as t } from "react/jsx-runtime";
 //#region src/components/Section/Section.tsx
