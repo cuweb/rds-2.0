@@ -129,7 +129,7 @@ export const Variants: Story = {
         {/* Icon card */}
         <Card>
           <Card.Figure isIcon>
-            <Icon name={icon.icon} size={48} color="var(--rds--color-primary)" />
+            <Icon name={icon.icon} size={40} color="var(--rds--color-primary)" />
           </Card.Figure>
           <Card.Header title={icon.title} link={icon.link} />
           <Card.Body>

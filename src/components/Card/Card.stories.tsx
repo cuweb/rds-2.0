@@ -165,7 +165,7 @@ export const IconCards: Story = {
         {IconData.slice(0, 24).map((item) => (
             <Card key={`icon-${item.id}`}>
                 <Card.Figure isIcon>
-                    <Icon name={item.icon} size={48} color="var(--rds--color-primary)" />
+                    <Icon name={item.icon} size={40} color="var(--rds--color-primary)" />
                 </Card.Figure>
                 <Card.Header title={item.title} link={item.link} />
                 <Card.Body>
