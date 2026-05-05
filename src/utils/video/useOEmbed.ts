@@ -87,7 +87,11 @@ export const useOEmbed = (url: string | undefined, options?: UseOEmbedOptions): 
     if (!promise) {
       promise = fetchOEmbed(url, controller.signal);
       inflight.set(url, promise);
-      promise.finally(() => inflight.delete(url));
+      // Clean up the inflight entry when the request settles. The trailing
+      // .catch swallows the rejection on this chain so an aborted fetch
+      // doesn't surface as an unhandled rejection — each subscriber below
+      // attaches its own .then/.catch on the underlying `promise`.
+      promise.finally(() => inflight.delete(url)).catch(() => {});
     }
 
     promise
