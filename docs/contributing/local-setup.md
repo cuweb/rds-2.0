@@ -1,6 +1,6 @@
 # Local setup
 
-How to get a working dev environment for contributing to `@cuweb/rds-2.0`.
+How to get a working dev environment for contributing to `@carletonuniversity/rds2`.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ echo "//npm.pkg.github.com/:_authToken=ghp_your_token_here" >> ~/.npmrc
 ## 2. Clone and install
 
 ```sh
-git clone git@github.com:cuweb/rds-2.0.git
+git clone git@github.com:cuweb/rds2.git
 cd rds-2.0
 nvm use
 pnpm install

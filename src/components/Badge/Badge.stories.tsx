@@ -46,7 +46,7 @@ type Story = StoryObj<typeof Badge>;
 export const Primary: Story = {
   args: {
     text: 'Badge Example',
-    href: 'https://github.com/cuweb/rds-2.0',
+    href: 'https://github.com/cuweb/rds2',
     rounded: 'full',
     color: 'grey',
   },

@@ -12,7 +12,7 @@ Same as hybrid themes:
 
 ```sh
 echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 Copy the `cuweb_icon()` helper from [hybrid-themes.md](hybrid-themes.md#the-helper-function) into `functions.php` or a theme include.
@@ -145,7 +145,7 @@ Timber::render('single-event.twig', $context);
 
 ## Enqueue the stylesheet
 
-Same as hybrid themes — enqueue `@cuweb/rds-2.0/dist/style.css` from `functions.php`. See [hybrid-themes.md → Styling](hybrid-themes.md#styling).
+Same as hybrid themes — enqueue `@carletonuniversity/rds2/dist/style.css` from `functions.php`. See [hybrid-themes.md → Styling](hybrid-themes.md#styling).
 
 ## Gotchas
 

@@ -1,6 +1,6 @@
 # Contributing to RDS 2.0
 
-Docs for developers working on the library itself. If you're using `@cuweb/rds-2.0` in a project rather than building it, you want the [consumers/](../consumers/) section.
+Docs for developers working on the library itself. If you're using `@carletonuniversity/rds2` in a project rather than building it, you want the [consumers/](../consumers/) section.
 
 ## Start here
 

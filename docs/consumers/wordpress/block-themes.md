@@ -24,7 +24,7 @@ In the theme directory:
 
 ```sh
 echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 ## Enqueuing the RDS stylesheet
@@ -34,13 +34,13 @@ pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
 // functions.php
 
 add_action('wp_enqueue_scripts', function () {
-    $rds_style = get_theme_file_path('/node_modules/@cuweb/rds-2.0/dist/style.css');
+    $rds_style = get_theme_file_path('/node_modules/@carletonuniversity/rds2/dist/style.css');
     if (!file_exists($rds_style)) {
         return;
     }
     wp_enqueue_style(
         'rds-2.0',
-        get_theme_file_uri('/node_modules/@cuweb/rds-2.0/dist/style.css'),
+        get_theme_file_uri('/node_modules/@carletonuniversity/rds2/dist/style.css'),
         [],
         filemtime($rds_style)
     );
@@ -53,7 +53,7 @@ Or, more robust for production — copy the stylesheet into `assets/` at build t
 // package.json build script
 {
   "scripts": {
-    "build:rds-css": "cp node_modules/@cuweb/rds-2.0/dist/style.css assets/rds-style.css"
+    "build:rds-css": "cp node_modules/@carletonuniversity/rds2/dist/style.css assets/rds-style.css"
   }
 }
 ```
@@ -102,7 +102,7 @@ Simplified icon-only block:
 ```tsx
 // src/icon-block/save.tsx
 import { useBlockProps } from '@wordpress/block-editor';
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 
 export default function Save({ attributes }) {
   return (
@@ -153,7 +153,7 @@ When a user inserts the pattern, the SVG lands in their post_content as-is.
 
 If your block theme has no JS build step (pure `.html` + `theme.json` + `functions.php`):
 
-1. **Don't install via pnpm** — download `@cuweb/rds-2.0/dist/style.css` from GitHub Packages via the Releases UI, or copy from another project's `node_modules/`
+1. **Don't install via pnpm** — download `@carletonuniversity/rds2/dist/style.css` from GitHub Packages via the Releases UI, or copy from another project's `node_modules/`
 2. **Place it in `assets/`** alongside other theme stylesheets
 3. **Enqueue from `functions.php`** (see snippet above but pointing at the assets path)
 4. **Copy SVG markup manually** from the rds-icons `src/svg/` directory into templates — you won't have access to the npm package locally without installing it once

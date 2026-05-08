@@ -1,6 +1,6 @@
 # WordPress integration
 
-Using `@cuweb/rds-2.0` components (and `@cuweb/rds-icons`) inside WordPress projects. This directory has a doc for each common scenario.
+Using `@carletonuniversity/rds2` components (and `@cuweb/rds-icons`) inside WordPress projects. This directory has a doc for each common scenario.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ All WordPress projects follow the base consumer setup:
 
 1. [Set up GitHub Packages auth](https://github.com/cuweb/rds-icons#developer-onboarding-one-time) (one-time per machine)
 2. Add `.npmrc` with `@cuweb:registry=https://npm.pkg.github.com` in the project root
-3. `pnpm add @cuweb/rds-2.0 @cuweb/rds-icons`
+3. `pnpm add @carletonuniversity/rds2 @cuweb/rds-icons`
 
 See [the consumer guide](../README.md) for the full install flow.
 

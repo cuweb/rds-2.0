@@ -16,12 +16,12 @@ How to install and use Raven Design System 2.0 in your project.
 
 ## Two-package model
 
-`@cuweb/rds-2.0` ships with `@cuweb/rds-icons` as a peer dependency. Both packages must be installed.
+`@carletonuniversity/rds2` ships with `@cuweb/rds-icons` as a peer dependency. Both packages must be installed.
 
-- `@cuweb/rds-2.0` (this package) — components, tokens, styles
+- `@carletonuniversity/rds2` (this package) — components, tokens, styles
 - `@cuweb/rds-icons` — Font Awesome Pro icon components, distributed as a private package on GitHub Packages
 
-The second package being private is what enforces FA Pro license compliance — anyone can install rds-2.0, but the `<Icon>` component won't resolve without rds-icons present at install time. See the [icons architecture rationale](https://github.com/cuweb/rds-2.0/blob/main/docs/contributing/architecture.md#two-package-icon-model) for the full story.
+The second package being private is what enforces FA Pro license compliance — anyone can install rds-2.0, but the `<Icon>` component won't resolve without rds-icons present at install time. See the [icons architecture rationale](https://github.com/cuweb/rds2/blob/main/docs/contributing/architecture.md#two-package-icon-model) for the full story.
 
 ## Quick start
 
@@ -31,12 +31,12 @@ The second package being private is what enforces FA Pro license compliance — 
 
 # 2. In your project
 echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 ```tsx
-import { Button, Icon } from '@cuweb/rds-2.0';
-import '@cuweb/rds-2.0/styles';
+import { Button, Icon } from '@carletonuniversity/rds2';
+import '@carletonuniversity/rds2/styles';
 
 <Button title="Save" icon="floppy-disk" />
 ```
@@ -45,4 +45,4 @@ For the full install flow with troubleshooting, see [Installation](?path=/docs/o
 
 ## Companion docs
 
-The repo's [`docs/consumers/`](https://github.com/cuweb/rds-2.0/tree/main/docs/consumers) folder has deeper guides — including all the WordPress integration scenarios — in raw markdown for easy reading on GitHub. The MDX pages in this section summarize the most common paths.
+The repo's [`docs/consumers/`](https://github.com/cuweb/rds2/tree/main/docs/consumers) folder has deeper guides — including all the WordPress integration scenarios — in raw markdown for easy reading on GitHub. The MDX pages in this section summarize the most common paths.

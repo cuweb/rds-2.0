@@ -16,7 +16,7 @@ In your theme directory:
 
 ```sh
 echo "@cuweb:registry=https://npm.pkg.github.com" >> .npmrc
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 ### The helper function
@@ -182,9 +182,9 @@ Enqueue the full RDS stylesheet in `functions.php`:
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'rds-2.0',
-        get_theme_file_uri('/node_modules/@cuweb/rds-2.0/dist/style.css'),
+        get_theme_file_uri('/node_modules/@carletonuniversity/rds2/dist/style.css'),
         [],
-        filemtime(get_theme_file_path('/node_modules/@cuweb/rds-2.0/dist/style.css'))
+        filemtime(get_theme_file_path('/node_modules/@carletonuniversity/rds2/dist/style.css'))
     );
 });
 ```

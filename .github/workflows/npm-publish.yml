@@ -1,0 +1,41 @@
+name: Publish Package to NPM
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  id-token: write
+  contents: read
+  packages: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: 'pnpm'
+
+      # Auth for installing @cuweb/rds-icons from GitHub Packages.
+      # The publish itself uses npm Trusted Publishing via OIDC — no NPM token needed.
+      - name: Add GitHub Packages auth
+        run: echo "//npm.pkg.github.com/:_authToken=\${NODE_AUTH_TOKEN}" >> ~/.npmrc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: pnpm build
+      - run: pnpm test --run
+
+      - run: pnpm publish --access public --provenance --no-git-checks

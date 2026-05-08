@@ -1,17 +1,17 @@
 # Icons
 
-Icons in RDS are split across **two packages** for Font Awesome Pro license compliance — the `<Icon>` component lives in the public `@cuweb/rds-2.0`, and the icon data lives in the private `@cuweb/rds-icons`. To use icons, install both.
+Icons in RDS are split across **two packages** for Font Awesome Pro license compliance — the `<Icon>` component lives in the public `@carletonuniversity/rds2`, and the icon data lives in the private `@cuweb/rds-icons`. To use icons, install both.
 
 For the architectural rationale (why two packages), see [contributing/architecture.md](../contributing/architecture.md#two-package-icon-model).
 
 ## Quick start
 
 ```sh
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 ```tsx
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 
 <Icon name="circle-check" size={24} />
 ```
@@ -23,7 +23,7 @@ If `pnpm install` fails with `ERR_PNPM_FETCH_401`, you need GitHub Packages auth
 Wraps the raw icon components from `@cuweb/rds-icons` with accessibility handling and a string-name API.
 
 ```tsx
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 
 // Default: decorative, inherits text color, size 1em
 <Icon name="circle-check" />
@@ -49,13 +49,13 @@ Pick the right one for your context:
 
 | Style | When | Trade-off |
 |---|---|---|
-| `<Icon name="..." />` from `@cuweb/rds-2.0` | Default for most usage | Most ergonomic; works with dynamic names; includes a11y defaults |
+| `<Icon name="..." />` from `@carletonuniversity/rds2` | Default for most usage | Most ergonomic; works with dynamic names; includes a11y defaults |
 | `<CircleCheckIcon />` from `@cuweb/rds-icons` | Bundle size matters and names are known at build time | Best tree-shaking in Next.js; no a11y wrapper |
 | `iconList` from `@cuweb/rds-icons` | CMS / Gutenberg select controls | Returns `[{ value, label }]` shape consumable by `<SelectControl>` |
 
 ```tsx
 // Central component (recommended default)
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 <Icon name="circle-check" size={24} />
 
 // Named imports (best tree-shaking for known names)

@@ -1,18 +1,18 @@
 # Per-component CSS
 
-By default, `import '@cuweb/rds-2.0/styles'` pulls in the bundled stylesheet — tokens, globals, and every component's rules. If you only need a subset of components, you can import each one's CSS individually to ship fewer bytes.
+By default, `import '@carletonuniversity/rds2/styles'` pulls in the bundled stylesheet — tokens, globals, and every component's rules. If you only need a subset of components, you can import each one's CSS individually to ship fewer bytes.
 
 ## Pattern
 
 ```tsx
-import { Badge } from '@cuweb/rds-2.0';
-import '@cuweb/rds-2.0/Badge.css';
+import { Badge } from '@carletonuniversity/rds2';
+import '@carletonuniversity/rds2/Badge.css';
 ```
 
 For SCSS contexts (e.g., a WordPress block's `editor.scss`):
 
 ```scss
-@use '@cuweb/rds-2.0/Badge.scss';
+@use '@carletonuniversity/rds2/Badge.scss';
 ```
 
 ## Available subpath exports
@@ -39,12 +39,12 @@ Per-component CSS files contain **only** that component's rules. They do **not**
 Consumers using per-component imports still need the tokens and globals once, somewhere. The simplest pattern: import the bundled stylesheet for those, and let the per-component imports be additive (CSS deduplicates, but rule order matters less when your subset is small).
 
 ```tsx
-import '@cuweb/rds-2.0/styles';        // tokens + globals + all components
+import '@carletonuniversity/rds2/styles';        // tokens + globals + all components
 // (or, in the future when split entries land:)
-// import '@cuweb/rds-2.0/tokens.css';
-// import '@cuweb/rds-2.0/globals.css';
+// import '@carletonuniversity/rds2/tokens.css';
+// import '@carletonuniversity/rds2/globals.css';
 
-import '@cuweb/rds-2.0/Badge.css';     // only needed if you want the per-component path
+import '@carletonuniversity/rds2/Badge.css';     // only needed if you want the per-component path
 ```
 
 In a WordPress block context where the bundled stylesheet is already enqueued by the theme, the per-component import in a block's `editor.scss` is what you want — see the [WordPress integration docs](wordpress/) for examples.
@@ -54,4 +54,4 @@ In a WordPress block context where the bundled stylesheet is already enqueued by
 - **WordPress blocks** — each block's `editor.scss` and `style.scss` import only the components it uses, so the editor and frontend payloads stay small per-block. CSS will be duplicated across blocks that use the same component, but that's an explicit trade-off.
 - **Bundle-size sensitive Next.js routes** — combined with `<ComponentName />` named imports for tree-shakable JS, per-component CSS keeps a small route from pulling the full RDS stylesheet.
 
-For most apps, just use `@cuweb/rds-2.0/styles` once at the root.
+For most apps, just use `@carletonuniversity/rds2/styles` once at the root.

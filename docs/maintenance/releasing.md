@@ -1,13 +1,13 @@
 # Releasing
 
-This doc is for maintainers publishing new versions of `@cuweb/rds-2.0` and `@cuweb/rds-icons`.
+This doc is for maintainers publishing new versions of `@carletonuniversity/rds2` and `@cuweb/rds-icons`.
 
 ## The two-package model
 
 ```
-@cuweb/rds-icons    (private, GitHub Packages)
+@cuweb/rds-icons             (private, GitHub Packages)
     ↑ peerDependency
-@cuweb/rds-2.0      (public or GitHub Packages — whichever you publish to)
+@carletonuniversity/rds2     (public npm)
     ↑ dependency
 Consumer project
 ```
@@ -92,7 +92,7 @@ GitHub Packages supports deleting versions:
 
 Then release a fixed version. Do not reuse the yanked version number.
 
-## Releasing `@cuweb/rds-2.0`
+## Releasing `@carletonuniversity/rds2`
 
 ### Standard release flow
 
@@ -116,7 +116,25 @@ git push
 git push --tags
 ```
 
-(The publish workflow for rds-2.0 isn't set up in this repo yet. When you add one, it should mirror [rds-icons publish.yml](../../../rds-icons/.github/workflows/publish.yml) but target public npm or GitHub Packages depending on your choice.)
+Pushing the tag triggers [.github/workflows/npm-publish.yml](../../.github/workflows/npm-publish.yml) which:
+
+1. Installs deps (with `GITHUB_TOKEN` auth so the `@cuweb/rds-icons` peer dep resolves from GitHub Packages)
+2. Runs `pnpm build` and `pnpm test --run`
+3. Publishes `@carletonuniversity/rds2@<version>` to public npm with `--provenance`
+
+Authentication uses [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers) — no `NPM_TOKEN` secret. The workflow's `id-token: write` permission lets npm verify via OIDC that the publish came from `cuweb/rds2`'s `npm-publish.yml`. Configure the trust on npmjs.com:
+
+- **Before the first publish:** add a Pending Trusted Publisher on your npm user account (Settings → Pending Trusted Publishers) pointing at `cuweb/rds2` + `npm-publish.yml`.
+- **After the first publish:** trust is permanent on the package itself (Package settings → Trusted Publishers).
+
+### Verify
+
+After the workflow completes:
+
+```sh
+pnpm info @carletonuniversity/rds2
+open https://www.npmjs.com/package/@carletonuniversity/rds2
+```
 
 ### Updating the `rds-icons` peer dep range
 
@@ -178,7 +196,7 @@ pnpm version prerelease --preid=next  # e.g. 0.2.0-next.0
 git push --tags
 ```
 
-Consumers can opt into the canary with `pnpm add @cuweb/rds-2.0@next`. Default `latest` tag is unaffected.
+Consumers can opt into the canary with `pnpm add @carletonuniversity/rds2@next`. Default `latest` tag is unaffected.
 
 ## CHANGELOG discipline
 

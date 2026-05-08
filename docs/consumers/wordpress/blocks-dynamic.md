@@ -56,7 +56,7 @@ Nothing special — normal editor UI with RDS components and controls:
 ```tsx
 import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, RangeControl } from '@wordpress/components';
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 import { iconList, type IconName } from '@cuweb/rds-icons';
 
 export default function Edit({ attributes, setAttributes }) {
@@ -105,7 +105,7 @@ export default function Edit({ attributes, setAttributes }) {
 This is the key step. The save callback returns just the icon — no surrounding dynamic content. That SVG becomes the block's static `post_content`, which render.php receives as `$content`.
 
 ```tsx
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 
 export default function Save({ attributes }) {
   return <Icon name={attributes.iconName} size={24} />;
@@ -196,7 +196,7 @@ Styles are the same as static blocks — import per-component RDS SCSS:
 
 ```scss
 // style.scss
-@use '@cuweb/rds-2.0/Badge.scss';
+@use '@carletonuniversity/rds2/Badge.scss';
 
 .cu-latest-posts {
   padding: var(--rds--spacing-medium);

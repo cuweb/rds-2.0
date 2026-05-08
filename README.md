@@ -12,7 +12,7 @@ theme files.
 ## Package
 
 ```
-@cuweb/rds-2.0
+@carletonuniversity/rds2
 ```
 
 ## Quick start
@@ -63,10 +63,10 @@ dist/
 
 ```tsx
 // Import the full stylesheet once (tokens + globals + components)
-import '@cuweb/rds-2.0/styles';
+import '@carletonuniversity/rds2/styles';
 
 // Import components
-import { Button } from '@cuweb/rds-2.0';
+import { Button } from '@carletonuniversity/rds2';
 ```
 
 ### WordPress block themes
@@ -81,7 +81,7 @@ Import per-component CSS in a block's stylesheets:
 
 ```scss
 // block-name/src/editor.scss
-@import '@cuweb/rds-2.0/components/Button/style.css';
+@import '@carletonuniversity/rds2/components/Button/style.css';
 ```
 
 ## Design tokens
@@ -115,6 +115,6 @@ For a live, browsable reference, visit the Storybook deployment.
 
 ## Links
 
-- [Storybook (GitHub Pages)](https://cuweb.github.io/rds-2.0/)
-- [Source](https://github.com/cuweb/rds-2.0)
+- [Storybook (GitHub Pages)](https://cuweb.github.io/rds2/)
+- [Source](https://github.com/cuweb/rds2)
 - [Changelog](CHANGELOG.mdx)

@@ -1,13 +1,13 @@
 # Next.js usage
 
-Using `@cuweb/rds-2.0` in a Next.js app. Assumes you've completed [installation](installation.md).
+Using `@carletonuniversity/rds2` in a Next.js app. Assumes you've completed [installation](installation.md).
 
 ## Import styles once
 
 In `app/layout.tsx` (App Router) or `pages/_app.tsx` (Pages Router):
 
 ```tsx
-import '@cuweb/rds-2.0/styles';
+import '@carletonuniversity/rds2/styles';
 ```
 
 This imports the bundled stylesheet (tokens + globals + all components). For per-component CSS, see [per-component-css.md](per-component-css.md).
@@ -19,8 +19,8 @@ Wrap your app in `<LinkProvider>` so RDS components that accept an `href` prop r
 ```tsx
 // app/layout.tsx
 import Link from 'next/link';
-import { LinkProvider } from '@cuweb/rds-2.0';
-import '@cuweb/rds-2.0/styles';
+import { LinkProvider } from '@carletonuniversity/rds2';
+import '@carletonuniversity/rds2/styles';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -38,7 +38,7 @@ Without `LinkProvider`, RDS link-aware components fall back to a plain anchor ta
 ## Compose components
 
 ```tsx
-import { Badge, Button, Column, Icon, Main, Section } from '@cuweb/rds-2.0';
+import { Badge, Button, Column, Icon, Main, Section } from '@carletonuniversity/rds2';
 
 export default function Page() {
   return (

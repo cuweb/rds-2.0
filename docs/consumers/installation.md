@@ -1,6 +1,6 @@
 # Installation
 
-How to install `@cuweb/rds-2.0` and its peer dependency `@cuweb/rds-icons` in any consumer project.
+How to install `@carletonuniversity/rds2` and its peer dependency `@cuweb/rds-icons` in any consumer project.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Commit this file. It tells pnpm/npm to look for `@cuweb/*` packages on GitHub Pa
 ## 2. Install both packages
 
 ```sh
-pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
+pnpm add @carletonuniversity/rds2 @cuweb/rds-icons
 ```
 
 `rds-icons` is a peer dependency of `rds-2.0` — your package manager will warn if only one is installed.
@@ -34,7 +34,7 @@ pnpm add @cuweb/rds-2.0 @cuweb/rds-icons
 Once, near the top of your application:
 
 ```tsx
-import '@cuweb/rds-2.0/styles';
+import '@carletonuniversity/rds2/styles';
 ```
 
 This imports the full bundled stylesheet — design tokens, base element styles, and every component's CSS. For per-component CSS instead, see [per-component-css.md](per-component-css.md).
@@ -42,7 +42,7 @@ This imports the full bundled stylesheet — design tokens, base element styles,
 ## 4. Use components
 
 ```tsx
-import { Badge, Button, Icon } from '@cuweb/rds-2.0';
+import { Badge, Button, Icon } from '@carletonuniversity/rds2';
 
 <Badge text="New" color="green" />
 <Button title="Get started" icon="circle-check" />

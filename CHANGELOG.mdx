@@ -22,9 +22,11 @@ Prefix the change with one of these keywords:
 - _Added_: Introduced a new `Status` component and supporting status registries/types in `src/components/Status/` (`Status.tsx`, `statusTypes.json`, `types.ts`, `hoursStatus.ts`) with Storybook coverage in `src/components/Status/Status.stories.tsx`.
 - _Added_: Added reusable video embed support via `src/utils/video/` (`providers.ts`, `useOEmbed.ts`, `vanilla.ts`), bundled vanilla entrypoints in `dist/vanilla-js/`, and WordPress consumer documentation in `docs/consumers/wordpress/video-cards.md`.
 - _Added_: Added new card/story data sets under `src/data/`, including `EventData.ts`, `NewsData.ts`, `PageData.ts`, `PeopleData.ts`, `StatData.ts`, `SystemData.ts`, `VideoData.ts`, and related supporting data modules.
+- _Added_: NPM publish workflow at [.github/workflows/npm-publish.yml](.github/workflows/npm-publish.yml) — triggered by `v*` tags, builds and tests before publishing `@carletonuniversity/rds2` to public npm with provenance via npm Trusted Publishing.
 - _Changed_: Updated component build/export wiring in `vite.config.components.ts`, `vite.config.vanilla.ts`, `src/index.ts`, and `package.json` to include new card/status/video capabilities and outputs.
 - _Changed_: Refined spacing and token outputs in `c2b.config.json`, `src/styles/auto/tokens.css`, and `src/styles/auto/_variables.scss`, with corresponding stylebook/docs updates in `src/docs/stylebook/` and `.storybook/preview.ts`.
 - _Changed_: Adjusted responsive column behavior in `src/components/Column/styles.scss` ("change columns breakpoints").
+- _Changed_: Renamed package from `@cuweb/rds-2.0` to `@carletonuniversity/rds2`, added a `repository` field to `package.json`, and updated all docs and examples to match. The repository will be renamed from `cuweb/rds-2.0` to `cuweb/rds2` to align.
 - _Fixed_: Resolved oEmbed provider handling issues for video cards in `src/utils/video/providers.ts` and `src/utils/video/useOEmbed.ts`.
 
 

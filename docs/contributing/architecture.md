@@ -7,7 +7,7 @@ How RDS 2.0 is put together — the moving parts you'll touch when contributing.
 ```
 @cuweb/rds-icons    (private, GitHub Packages — Carleton org only)
     ↑ peerDependency
-@cuweb/rds-2.0      (this repo)
+@carletonuniversity/rds2      (this repo)
     ↑ dependency
 Consumer project
 ```
@@ -33,7 +33,7 @@ If FA Pro SVGs were baked into `rds-2.0` and published publicly, anyone could in
 
 ```
 ┌─────────────────────────────┐        ┌─────────────────────────────┐
-│       @cuweb/rds-2.0        │        │      @cuweb/rds-icons       │
+│       @carletonuniversity/rds2        │        │      @cuweb/rds-icons       │
 │          (PUBLIC)           │        │          (PRIVATE)          │
 │                             │        │                             │
 │ - Icon component            │ ◂──────│ - iconMap                   │

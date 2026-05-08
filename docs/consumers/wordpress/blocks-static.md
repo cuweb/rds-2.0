@@ -47,7 +47,7 @@ my-plugin/
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 import { iconList, type IconName } from '@cuweb/rds-icons';
 
 export default function Edit({ attributes, setAttributes }) {
@@ -90,7 +90,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 ```tsx
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { Icon } from '@cuweb/rds-2.0';
+import { Icon } from '@carletonuniversity/rds2';
 
 export default function Save({ attributes }) {
   const blockProps = useBlockProps.save({ className: 'cu-info-card' });
@@ -129,7 +129,7 @@ Import the per-component RDS styles you want to reuse, plus your block-specific 
 
 ```scss
 // style.scss — frontend styles
-@use '@cuweb/rds-2.0/Badge.scss';
+@use '@carletonuniversity/rds2/Badge.scss';
 
 .cu-info-card {
   display: grid;
@@ -141,7 +141,7 @@ Import the per-component RDS styles you want to reuse, plus your block-specific 
 }
 ```
 
-The tokens (`--rds--*`) are available anywhere the RDS stylesheet has been enqueued — typically the theme or a sitewide plugin loads `@cuweb/rds-2.0/styles`.
+The tokens (`--rds--*`) are available anywhere the RDS stylesheet has been enqueued — typically the theme or a sitewide plugin loads `@carletonuniversity/rds2/styles`.
 
 ## Gotchas
 
@@ -151,7 +151,7 @@ The tokens (`--rds--*`) are available anywhere the RDS stylesheet has been enque
 
 ## Build
 
-@wordpress/scripts bundles edit.tsx and save.tsx via webpack. The resulting bundle imports from `@cuweb/rds-2.0` and `@cuweb/rds-icons` as external packages — tree-shaking picks up only the icons you use.
+@wordpress/scripts bundles edit.tsx and save.tsx via webpack. The resulting bundle imports from `@carletonuniversity/rds2` and `@cuweb/rds-icons` as external packages — tree-shaking picks up only the icons you use.
 
 ```json
 // package.json
@@ -164,7 +164,7 @@ The tokens (`--rds--*`) are available anywhere the RDS stylesheet has been enque
     "@wordpress/scripts": "^30.0.0"
   },
   "dependencies": {
-    "@cuweb/rds-2.0": "^0.2.0",
+    "@carletonuniversity/rds2": "^0.2.0",
     "@cuweb/rds-icons": "^0.1.0"
   }
 }
